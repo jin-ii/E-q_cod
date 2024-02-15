@@ -13,6 +13,7 @@
 </head>
 <body>
     <div id="wrap">
+        <!-- 왼쪽메뉴 -->
         <nav class="navbar">
             <h1><a href=""><img src="./images/common/logo.svg" alt="EQMS 스마트재해예방 계측시스템"></a></h1>
             <!-- 로그인 정보 -->
@@ -179,7 +180,8 @@
             </div>
              <!-- //관리자 접속정보 -->
         </nav>
-        <!-- 서브컨텐츠 -->
+        <!-- //왼쪽메뉴 -->
+        <!-- 서브콘텐츠 -->
         <div class="contents">       
             <!-- 타이틀 -->
             <div class="sub_title">
@@ -217,14 +219,128 @@
                     <select id="">
                         <option value="">2023-12-10</option>
                     </select>
-                    <button class="search_btn">검색</button>
+                    <button class="btn_search">검색</button>
                 </form>
+                <div class="search_btn_wrap">
+                     <a href="" class="btn_arrow arrow_type1"><span>홍수위 제정고 보기</span><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
             </div>
-            <!-- //상단검색바 -->
+            <!-- //상단검색바 -->          
 
+            <!-- 서브 콘텐츠 -->
+            <div class="contents_wrap">
+                <!-- 그래프영역 -->
+                <div class="area_graph1">
+                    <!-- 범례 -->
+                    <div class="legend_box">
+                        <span class=""><i class="point point1"></i>저수위(El.m)</span>
+                        <span class=""><i class="point point2"></i>사수위(El.m)</span>
+                        <span class=""><i class="point point3"></i>홍수위(El.m)</span>
+                        <span class=""><i class="point point4"></i>제정고(El.m)</span>
+                        <span class=""><i class="point point5"></i>저수율(%)</span>
+                    </div>
+                    <!-- //범례 -->
 
+                    <!-- tip -->
+                    <div class="tip_white graph_tip"><i class="fa-solid fa-circle-info"></i>저수지보정데이터는 금일기준 2일전까지 제공됩니다.</div>
+                    
+                    <!-- //tip -->
+                    <div class="graph_box">                
+                        <img src="./images/common/sample_graph1.png" alt="">               
+                    </div>
+                    
+                </div>
+                 <!-- //그래프영역 -->
+                <!-- 기본테이블 -->
+                <div class="table_type1">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th rowspan="2">순번</th>
+                            <th rowspan="2">계측일시</th>
+                            <th colspan="4">저수위</th>
+                            <th colspan="3">저수량</th>
+                            <th rowspan="2">저수율(%)</th>
+                        </tr>              
+                        <tr>
+                            <th>평균</th>
+                            <th>최대</th>
+                            <th>최소</th>
+                            <th>수위표</th>
+                            <th>평균</th>
+                            <th>최대</th>
+                            <th>최소</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2023-09-10</td>
+                            <td>69.33</td>
+                            <td>69.79</td>
+                            <td>69.02</td>
+                            <td>69.02</td>
+                            <td>173,727</td>
+                            <td>195,521</td>
+                            <td>159,221</td>
+                            <td>69.5</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2023-09-10</td>
+                            <td>69.33</td>
+                            <td>69.79</td>
+                            <td>69.02</td>
+                            <td>69.02</td>
+                            <td>173,727</td>
+                            <td>195,521</td>
+                            <td>159,221</td>
+                            <td>69.5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2023-09-10</td>
+                            <td>69.33</td>
+                            <td>69.79</td>
+                            <td>69.02</td>
+                            <td>69.02</td>
+                            <td>173,727</td>
+                            <td>195,521</td>
+                            <td>159,221</td>
+                            <td>69.5</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2023-09-10</td>
+                            <td>69.33</td>
+                            <td>69.79</td>
+                            <td>69.02</td>
+                            <td>69.02</td>
+                            <td>173,727</td>
+                            <td>195,521</td>
+                            <td>159,221</td>
+                            <td>69.5</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>2023-09-10</td>
+                            <td>69.33</td>
+                            <td>69.79</td>
+                            <td>69.02</td>
+                            <td>69.02</td>
+                            <td>173,727</td>
+                            <td>195,521</td>
+                            <td>159,221</td>
+                            <td>69.5</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //기본테이블 -->
+
+            </div>
         </div>
-        <!-- //서브컨텐츠 -->        
+        <!-- //서브콘텐츠 -->        
     </div>
     
 </body>
