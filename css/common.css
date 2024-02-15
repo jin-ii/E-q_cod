@@ -15,8 +15,8 @@
 /* 테이블 */
 .table_type1{margin-top:20px}
 .table_type1 table{width:100%;border-top:2px solid #213882}
-.table_type1 table th, .table_type1 table td{text-align:center}
-.table_type1 table th{background:#5C77D1;vertical-align:middle;padding:8px 12px;border-right:1px solid rgba(255,255,255,0.3);border-bottom:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.8)}
+.table_type1 table th,.table_type1 table td{text-align:center}
+.table_type1 table th{background:#5C77D1;vertical-align:middle;padding:8px 12px;border-right:1px solid rgba(255,255,255,0.3);border-bottom:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);font-weight:400}
 .table_type1 table td{color:#828282;height:55px;line-height:53px;border:1px solid #ddd;vertical-align:middle;}
 .table_type1 table td:first-child{border-left:0}
 .table_type1 table td:last-child{border-right:0}
@@ -27,4 +27,11 @@
 .graph_tip{position:absolute;top:20px;right:20px}
 
 
-.search_btn_wrap{position:absolute;right:20px}
+/* 서브검색바 & input */
+.custom_select{position:relative;}
+.custom_select select{background:#fff}
+.custom_select .icon{cursor:pointer;position:absolute;top:50%;right:10px;transform:translateY(-50%);}
+
+.input_icon_calendar{background:url(/images/icon/icon_input_calendar.svg) no-repeat;display:block;width:16px;height:16px;background-size:16px}
+.hyphen{display:flex;align-items:center;font-size:20px;color:#B7BFE7;margin:0 6px 0 -2px}
+

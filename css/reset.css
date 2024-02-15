@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url(./fonts.css);
+@import url(./common.css);
 @import url(./button.css);
 
 /* #Basic
@@ -18,7 +19,7 @@ table{border-spacing:0;border-collapse:collapse;}
 /* #Links
 ================================================== */
 a {text-decoration:none;outline:0}
-a:focus,a:visited{outline:0;text-decoration:underline}
+a:focus,a:visited{outline:0;text-decoration:none}
 a:hover{text-decoration:none}
 p a, p a:visited{line-height:inherit;}
 em{font-style:normal}
@@ -52,12 +53,18 @@ iframe, object, embed{max-width:100%}
 .hidden {position: absolute;top: 0;visibility: hidden}
 
 .flex{display:flex;}
-.w100{width:100%}
+
 
 .txtr{text-align:right !Important}
 .txtl{text-align:left !Important}
 .txtc{text-align:center !Important}
 
+/* #padding margin custom
+================================================== */
+.w100{width:100%}
+.w_100{width:100px}
+.w_150{width:150px}
+.w_200{width:150px}
 
 /* #form
 ================================================== */
