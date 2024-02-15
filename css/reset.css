@@ -85,7 +85,7 @@ input{border:1px solid #cdd0dd;height:45px;line-height:43px;text-indent:7px;min-
 
 /* select */
 select{border:1px solid #cdd0dd;height:45px;line-height:43px;;text-indent:7px;min-width:120px;color:#70789D;
-  background:#fff url(/images/common/arrow_select_off.png) no-repeat;background-size:12px;background-position:95% center;
+  background:#fff url(../images/common/arrow_select_off.png) no-repeat;background-size:12px;background-position:95% center;
   }
 
 /* readonly */

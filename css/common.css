@@ -32,6 +32,6 @@
 .custom_select select{background:#fff}
 .custom_select .icon{cursor:pointer;position:absolute;top:50%;right:10px;transform:translateY(-50%);}
 
-.input_icon_calendar{background:url(/images/icon/icon_input_calendar.svg) no-repeat;display:block;width:16px;height:16px;background-size:16px}
+.input_icon_calendar{background:url(../images/icon/icon_input_calendar.svg) no-repeat;display:block;width:16px;height:16px;background-size:16px}
 .hyphen{display:flex;align-items:center;font-size:20px;color:#B7BFE7;margin:0 6px 0 -2px}
 
