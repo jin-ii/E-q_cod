@@ -106,8 +106,14 @@
 .total_table th{background:#d7def1;color:#6274A9;font-weight:700;height:43px;line-height:41px;font-size:14px}
 .total_table td{min-height:45px;padding:16px 4px;text-align:center;color:#646C95;border-bottom:1px solid #c7d1e0;background:#fff}
 
+/* 스크롤바 커스텀 */
+.scrollbar_custom::-webkit-scrollbar {width:8px;}
+.scrollbar_custom::-webkit-scrollbar-thumb{background:#ebebeb;background-clip:padding-box;}
+.scrollbar_custom::-webkit-scrollbar-track{background-color:#f3f3f3;}
 
-
+.scrollbar_custom2::-webkit-scrollbar {width:8px;}
+.scrollbar_custom2::-webkit-scrollbar-thumb{background:#ebebeb;background-clip:padding-box;}
+.scrollbar_custom2::-webkit-scrollbar-track{background-color:#f3f3f3;}
 
 
 /* #sub layout
@@ -136,3 +142,4 @@
 .sub_gnb ul li a{display:flex;align-items:center;justify-content:center;min-height:55px;color:#666;min-width:140px;padding:0 30px;text-align:center;border-right:1px solid #ddd;background:#EAEAEA}
 .sub_gnb ul li:last-child a{border-right:none}
 .sub_gnb ul li a.active,.sub_gnb ul li a:hover{background:#a6b3d5;color:#fff}
+
