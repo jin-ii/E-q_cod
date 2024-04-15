@@ -81,12 +81,13 @@ vertical-align:middle;transition:border-color ease-in-out 0.225s; -webkit-transi
 select,input{font-family:"pretendard";font-size:14px}
 
 /* input  */
-input{border:1px solid #cdd0dd;height:45px;line-height:43px;text-indent:7px;min-width:120px;color:#70789D}
+input{border:1px solid #cdd0dd;height:45px;line-height:43px;min-width:120px;color:#70789D;padding:0 10px;}
 
 /* select */
-select{border:1px solid #cdd0dd;height:45px;line-height:43px;;text-indent:7px;min-width:120px;color:#70789D;
-  background:#fff url(../images/common/arrow_select_off.png) no-repeat;background-size:12px;background-position:95% center;
+select{border:1px solid #cdd0dd;height:45px;line-height:43px;min-width:120px;color:#70789D;
+  background:#fff url(../images/common/arrow_select_off.png) no-repeat;background-size:12px;background-position:95% center;padding:0 10px;
   }
+
 
 /* readonly */
 input:not([type=checkbox]):not([type=radio])[readonly] {padding:0 20px;}
