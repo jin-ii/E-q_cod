@@ -62,9 +62,17 @@ iframe, object, embed{max-width:100%}
 /* #padding margin custom
 ================================================== */
 .w100{width:100%}
+.w_80{width:80px}
 .w_100{width:100px}
+.w_130{width:130px}
 .w_150{width:150px}
 .w_200{width:150px}
+
+
+/* margin */
+.mr-1{margin-right:1px}
+.mr-4{margin-right:4px}
+
 
 /* #form
 ================================================== */
@@ -81,10 +89,10 @@ vertical-align:middle;transition:border-color ease-in-out 0.225s; -webkit-transi
 select,input{font-family:"pretendard";font-size:14px}
 
 /* input  */
-input{border:1px solid #cdd0dd;height:45px;line-height:43px;min-width:120px;color:#70789D;padding:0 10px;}
+input{border:1px solid #cdd0dd;height:45px;line-height:43px;min-width:85px;color:#70789D;padding:0 10px;}
 
 /* select */
-select{border:1px solid #cdd0dd;height:45px;line-height:43px;min-width:120px;color:#70789D;
+select{border:1px solid #cdd0dd;height:45px;line-height:43px;min-width:85px;color:#70789D;
   background:#fff url(../images/common/arrow_select_off.png) no-repeat;background-size:12px;background-position:95% center;padding:0 10px;
   }
 

@@ -1,6 +1,9 @@
 /* 검색 버튼 */
-.btn_search{cursor:pointer;border:none;height:45px;background:#5A71E9;color:#fff;padding:0 23px;}
+.btn_search{cursor:pointer;border:none;height:45px;background:#5A71E9;color:#fff;padding:0 20px;white-space:nowrap}
 .btn_search:hover{background:#4f66db;font-weight:bold}
+
+.btn_save{cursor:pointer;border:none;height:45px;background:#696969;color:#fff;padding:0 20px;white-space:nowrap}
+.btn_save:hover{background:#5a5a5a;font-weight:bold}
 
 /* 기본 버튼 */
 .btn{cursor:pointer;display:inline-block;padding:0 20px;font-size:14px;height:45px;line-height:43px;font-weight:bold;font-family:"malgungothic"}
@@ -19,3 +22,18 @@
   
 .arrow_type2{background:#828abd;color:rgba(255,255,255,0.9);}
 .arrow_type2:hover{background:#7981b4}
+
+
+/* 점검요청 점검완료 등 */
+.btn_request{display:inline-block;padding:0 20px;height:35px;line-height:33px;border-radius:3px}
+.request_inspect{background:#f5f5f5;color:#666;}
+.request_inspect:hover{background:#f2f2f2}
+
+.complete_inspect{background:#627ACC;color:#fff;}
+.complete_inspect:hover{background:#5d74c0}
+
+.ing_inspect{background:#e6ecfa;color:#395BCE;}
+.ing_inspect:hover{background:#dae1f3}
+
+.btn_cancel{background:#FFF2F2;color:#FF7373}
+.btn_cancel:hover{background:#ffe5e5}
