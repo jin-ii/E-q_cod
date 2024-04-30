@@ -44,3 +44,15 @@
 
 .cancel_inspect{background:#E5F4F2;color:#389A8D}
 .cancel_inspect:hover{background:#e2f7f4}
+
+.btn_basic{display:inline-block;padding:0 12px;height:32px;line-height:30px;border-radius:3px;font-size:14px;}
+.btn_basic i{font-size:11px;margin-right:4px}
+
+.btn_modify{background:#f5f5f5;color:#666;border:1px solid #ddd}
+.btn_modify:hover{background:#f2f2f2}
+
+.btn_delete{background:#f3f8ff;color:#686868;border:1px solid #ddd}
+.btn_delete:hover{background:#ffe5e5}
+
+.button_srch{cursor:pointer;background:#878BA1;color:#fff;border:1px solid #787c91;border-radius:3px;padding:0 14px}
+.button_srch:hover{background:#787c91;}

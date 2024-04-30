@@ -120,3 +120,30 @@
     .pagination li a.forward{transform:rotateZ(-180deg)}
     .pagination li a:hover{background-color:#cecece;text-decoration:none;color:#fff}
            
+
+.form_basic{display:flex;align-items:center;margin:7px 0}
+.form_basic label{width:150px;font-size:16px;font-weight:400;color:#333}
+.form_basic div{width:calc(100% - 150px)}
+.readonly{background:#eee}
+
+
+/* 라디오버튼 커스텀 */
+.radio_button_wrap{display:flex;align-items:center;min-height:45px}
+.radio_button_wrap .radio_button{cursor:pointer;position:relative;padding-left:30px;margin-right:10px}
+
+/* 기존 라디오 버튼 삭제 */
+.radio_button input[type="radio"] {position:absolute;opacity:0;height:0;width:0;}
+
+/* 라디오 버튼, 외부 원 */
+.radio_button_wrap .radio_button .custom_radio {position: absolute;top:0;left:0;height:20px;width:20px;border-radius:50%;
+    background-color: #fff;border:1px solid #ddd;}
+
+/* 라디오 버튼 선택 시 배경 색상 변경, 외부 원 */
+.radio_button_wrap .radio_button input[type="radio"]:checked ~ .custom_radio {background-color:#fff;}
+
+/* 내부 원 */
+.radio_button_wrap .custom_radio:after {content: "";position: absolute;display:none;top: 50%;left: 50%;transform: translate(-50%, -50%);background:#5A71E9;width:10px;height:10px;border-radius:50%}
+/* 라디오 버튼 선택 시 화면 표출, 내부 원 */
+.radio_button_wrap .radio_button input[type="radio"]:checked ~ .custom_radio:after {
+    display: block;
+}

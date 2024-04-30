@@ -222,7 +222,7 @@
             <div class="contents">       
                 <!-- 타이틀 -->
                 <div class="sub_title">
-                    <h2 class="h2_title">장비유지관리</h2>
+                    <h2 class="h2_title">장비등록관리</h2>
                     <div class="home_location">
                         <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.4873 5.66807L9.06268 0.926822C8.51507 0.341815 7.77331 0.0133057 7.00001 0.0133057C6.22671 0.0133057 5.48495 0.341815 4.93734 0.926822L0.512757 5.66807C0.349672 5.84169 0.220373 6.04826 0.132355 6.27581C0.0443376 6.50337 -0.000647734 6.74738 7.04637e-06 6.9937V13.1293C7.04637e-06 13.6266 0.184382 14.1035 0.51257 14.4551C0.840759 14.8068 1.28588 15.0043 1.75001 15.0043H12.25C12.7141 15.0043 13.1593 14.8068 13.4874 14.4551C13.8156 14.1035 14 13.6266 14 13.1293V6.9937C14.0007 6.74738 13.9557 6.50337 13.8677 6.27581C13.7796 6.04826 13.6503 5.84169 13.4873 5.66807V5.66807ZM8.75001 13.7543H5.25001V11.2956C5.25001 10.7983 5.43438 10.3214 5.76257 9.96975C6.09076 9.61811 6.53588 9.42057 7.00001 9.42057C7.46414 9.42057 7.90926 9.61811 8.23745 9.96975C8.56563 10.3214 8.75001 10.7983 8.75001 11.2956V13.7543ZM12.8333 13.1293C12.8333 13.2951 12.7719 13.4541 12.6625 13.5713C12.5531 13.6885 12.4047 13.7543 12.25 13.7543H9.91668V11.2956C9.91668 10.4668 9.60938 9.67191 9.0624 9.08586C8.51542 8.49981 7.77356 8.17057 7.00001 8.17057C6.22646 8.17057 5.48459 8.49981 4.93761 9.08586C4.39063 9.67191 4.08334 10.4668 4.08334 11.2956V13.7543H1.75001C1.5953 13.7543 1.44692 13.6885 1.33753 13.5713C1.22813 13.4541 1.16667 13.2951 1.16667 13.1293V6.9937C1.16721 6.82806 1.22862 6.66931 1.33759 6.55182L5.76218 1.81245C6.091 1.46178 6.53606 1.26491 7.00001 1.26491C7.46395 1.26491 7.90902 1.46178 8.23784 1.81245L12.6624 6.5537C12.771 6.67073 12.8323 6.82871 12.8333 6.9937V13.1293Z" fill="#65657B"/>
@@ -240,25 +240,18 @@
                 <div class="search_box">
                     <form action="">
                         <select id="">
-                            <option value="">전남</option>
-                            <option value="">경기</option>
-                            <option value="">경북</option>
-                            <option value="">경남</option>
-                            <option value="">제주</option>
+                            <option value="">본부</option>
                         </select>
                         <select id="">
-                            <option value="">구례</option>
+                            <option value="">지사</option>
                         </select>
                         <select id="" class="w_150">
-                            <option value="">항목선택</option>
+                            <option value="">시설종류</option>
                         </select>
-                        <select id="" class="w_150">
-                            <option value="">일별</option>
-                        </select>
-                        <select id="">
-                            <option value="">2023-12-10</option>
-                        </select>
-                        
+
+                        <input type="text" class="input_type1" placeholder="장비명을 검색하세요">
+
+                      
                         <div class="custom_select">
                             <select id="date" name="date" class="w_150">
                                 <option value="2024-02-15">2024-02-15</option>
@@ -278,13 +271,10 @@
                         </div>
                 
 
-                        <button class="btn_search">검색</button>
+                        <button class="btn_search mr-1">검색</button>
+                        <button class="btn_save">저장</button>
                     </form>
-                    <div class="search_btn_wrap">
-                        <a href="" class="btn_arrow arrow_type2"><span>버튼샘플2</span><i class="fa-solid fa-chevron-right"></i></a>
-                        <a href="" class="btn_arrow arrow_type1"><span>홍수위 제정고 보기</span><i class="fa-solid fa-chevron-right"></i></a>
-                    
-                    </div>
+                
                 </div>
                 <!-- //상단검색바 -->          
 
@@ -297,71 +287,51 @@
                             <thead>
                                 <tr>
                                     <th>순번</th>
-                                    <th>구분</th>
                                     <th>본부</th>
-                                    <th>자서</th>
-                                    <th>시설명</th>
+                                    <th>지사</th>
+                                    <th>시설명</th>                                    
+                                    <th>구분</th>
+                                    <th>장비명</th>
+                                    <th>장비표준코드</th>
                                     <th>모뎀번호</th>
-                                    <th>최종통신일</th>
+                                    <th>통신방식</th>
+                                    <th>설치일</th>
                                     <th>장비현황</th>
-                                    <th>점검요청일</th>
-                                    <th>요청상태</th>
-                                    <th>이력현황</th>
+                                    <th>최종통신일</th>
+                                    <th>관리</th>
                                 </tr>                           
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>저수지수로</td>
-                                    <td>정읍</td>
-                                    <td>1</td>
-                                    <td>전북</td>
-                                    <td>지산2</td>
-                                    <td>012-2054-2113</td>
-                                    <td>2024-04-19 15:02:00</td>
-                                    <td>점검취소</td>
-                                    <td>2024-04-19 15:02:00</td>
-                                    <td><a href="" class="btn_request btn_cancel">취소완료</a></td>
-                                    <td><a href="" class="btn_status">이력현황 <i class="fa-solid fa-chevron-right"></i></a></td>
+                                   <td>1</td>
+                                   <td>전북</td>
+                                   <td>정읍</td>
+                                   <td></td>
+                                   <td>저수지수로</td>
+                                   <td>굴암간선2</td>
+                                   <td>4173020021-03</td>
+                                   <td>012-2054-2113</td>
+                                   <td>LTE</td>
+                                   <td>2024-04-19</td>
+                                   <td>점검취소</td>
+                                   <td>2024-04-19 15:02:00</td>
+                                   <td><a href="" class="btn_basic btn_modify"><i class="fa-solid fa-pen"></i>수정</a></td>
                                 </tr>
                                 <tr>
-                                    <td>저수지수로</td>
-                                    <td>정읍</td>
                                     <td>1</td>
                                     <td>전북</td>
-                                    <td>지산2</td>
+                                    <td>정읍</td>
+                                    <td></td>
+                                    <td>저수지수로</td>
+                                    <td>굴암간선2</td>
+                                    <td>4173020021-03</td>
                                     <td>012-2054-2113</td>
-                                    <td>2024-04-19 15:02:00</td>
+                                    <td>LTE</td>
+                                    <td>2024-04-19</td>
                                     <td>점검취소</td>
                                     <td>2024-04-19 15:02:00</td>
-                                    <td><a href="" class="btn_request ing_inspect">점검중</a></td>
-                                    <td><a href="" class="btn_status">이력현황 <i class="fa-solid fa-chevron-right"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>저수지수로</td>
-                                    <td>정읍</td>
-                                    <td>1</td>
-                                    <td>전북</td>
-                                    <td>지산2</td>
-                                    <td>012-2054-2113</td>
-                                    <td>2024-04-19 15:02:00</td>
-                                    <td>점검취소</td>
-                                    <td>2024-04-19 15:02:00</td>
-                                    <td><a href="" class="btn_request complete_inspect">점검완료</a></td>
-                                    <td><a href="" class="btn_status">이력현황 <i class="fa-solid fa-chevron-right"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>저수지수로</td>
-                                    <td>정읍</td>
-                                    <td>1</td>
-                                    <td>전북</td>
-                                    <td>지산2</td>
-                                    <td>012-2054-2113</td>
-                                    <td>2024-04-19 15:02:00</td>
-                                    <td>요청취소</td>
-                                    <td>2024-04-19 15:02:00</td>
-                                    <td><a href="" class="btn_request cancel_inspect">요청취소</a></td>
-                                    <td><a href="" class="btn_status">이력현황 <i class="fa-solid fa-chevron-right"></i></a></td>
-                                </tr>                             
+                                    <td><a href="" class="btn_basic btn_modify"><i class="fa-solid fa-trash"></i>삭제</a></td>
+                                 </tr>
                             </tbody>
                         </table>
                     </div>
