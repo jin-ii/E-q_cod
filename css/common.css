@@ -107,3 +107,16 @@
 
 /* 타이틀 */
 .h3_title{font-size:17px;margin:20px 0 12px 0;color:#333;font-weight:500}
+
+/* pagination */
+.pagination{display:flex;justify-content:center;align-items:center;margin-top:20px;}
+    .pagination li.active > a{background-color:#d1d1d1;color:#fff;}
+    .pagination li.active > a:hover{background-color:#d1d1d1;}
+    .pagination li:first-child a{margin-left:0}
+    .pagination li a{display:block;padding:0 1px;font-size:13px;margin-right:4px;text-align:center;line-height:28px;min-width:28px;min-height:28px;background-color:#F4F4F4;color:#999;margin-left:-1px;}
+    .pagination li a.arrow{background:#F4F4F4 url(../images/common/icon_page_next.png) 50% 50% no-repeat}
+    .pagination li a.prev{transform:rotateZ(-180deg)}
+    .pagination li a.arrow2{background:#F4F4F4 url(../images/common/icon_page_forward.png) 50% 50% no-repeat}
+    .pagination li a.forward{transform:rotateZ(-180deg)}
+    .pagination li a:hover{background-color:#cecece;text-decoration:none;color:#fff}
+           
