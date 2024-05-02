@@ -1,13 +1,13 @@
 @charset "utf-8";
 /* 그래프 */
-.area_graph1{position:relative;width:100%;padding:20px;background:#333B55;display:flex;justify-content:center;align-items:center;}
-.area_graph1 .graph_box{width:100%;height:100%;margin:40px 0 0 0;display:flex;justify-content:center;}
+.area_graph1{position:relative;width:100%;padding:20px;background:#333B55;display:flex;justify-content:center;align-items:center}
+.area_graph1 .graph_box{width:100%;height:100%;margin:40px 0 0 0;display:flex;justify-content:center}
 
-.area_graph2{position:relative;width:100%;padding:20px;background:#F6F6F6;display:flex;justify-content:center;align-items:center;height:500px;}
-.area_graph2 .graph_box{width:100%;height:100%;margin:40px 0 0 0;display:flex;justify-content:center;}
+.area_graph2{position:relative;width:100%;padding:20px;background:#F6F6F6;display:flex;justify-content:center;align-items:center;height:500px}
+.area_graph2 .graph_box{width:100%;height:100%;margin:40px 0 0 0;display:flex;justify-content:center}
 
-.area_content{overflow-y:scroll;height:calc(100vh - 500px);}
-@media (min-height: 1081px) {
+.area_content{overflow-y:scroll;height:calc(100vh - 500px)}
+@media (min-height:1081px) {
     .area_graph2{flex:60%}
     .area_content{flex:40%;overflow-y:auto}
 }
@@ -31,7 +31,7 @@
 .table_type1 table th,.table_type1 table td{text-align:center}
 .table_type1 table th{background:#5C77D1;vertical-align:middle;padding:6px 12px;border-right:1px solid rgb(120, 144, 179);border-bottom:1px solid rgb(120, 144, 179);color:rgb(217 227 241);font-weight:400}
 .table_type1 table th{height:40px}
-.table_type1 table td{color:#828282;height:45px;line-height:43px;border:1px solid #ddd;vertical-align:middle;}
+.table_type1 table td{color:#828282;height:45px;line-height:43px;border:1px solid #ddd;vertical-align:middle}
 .table_type1 table td:first-child{border-left:0}
 .table_type1 table td:last-child{border-right:0}
 .table_type1 thead{position:sticky;top:0;z-index:1}
@@ -42,7 +42,7 @@
 .table_type2 table th{background:#F2F5FF;vertical-align:middle;padding:6px 12px;border-right:1px solid rgb(209, 217, 228);
     border-bottom:1px solid rgb(217 227 241);color:#6B7193;font-weight:700}
 .table_type2 table th{height:40px}
-.table_type2 table td{color:#828282;height:45px;line-height:43px;border:1px solid #ddd;vertical-align:middle;}
+.table_type2 table td{color:#828282;height:45px;line-height:43px;border:1px solid #ddd;vertical-align:middle}
 .table_type2 table td:first-child{border-left:0}
 .table_type2 table td:last-child{border-right:0}
 .table_type2 thead{position:sticky;top:0;z-index:1}
@@ -53,7 +53,7 @@
 .table_type3 table th{background:#909DC7;vertical-align:middle;padding:6px 12px;border-right:1px solid rgb(120, 144, 179);
     border-bottom:1px solid rgb(120, 144, 179);color:rgba(255,255,255,0.8);font-weight:400}
 .table_type3 table th{height:40px}
-.table_type3 table td{color:#828282;height:45px;line-height:43px;border:1px solid #ddd;vertical-align:middle;}
+.table_type3 table td{color:#828282;height:45px;line-height:43px;border:1px solid #ddd;vertical-align:middle}
 .table_type3 table td:first-child{border-left:0}
 .table_type3 table td:last-child{border-right:0}
 .table_type3 thead{position:sticky;top:0;z-index:1}
@@ -73,9 +73,9 @@
 
 
 /* 서브검색바 & input */
-.custom_select{position:relative;}
+.custom_select{position:relative}
 .custom_select select{background:#fff}
-.custom_select .icon{cursor:pointer;position:absolute;top:50%;right:10px;transform:translateY(-50%);}
+.custom_select .icon{cursor:pointer;position:absolute;top:50%;right:10px;transform:translateY(-50%)}
 
 .input_icon_calendar{background:url(../images/icon/icon_input_calendar.svg) no-repeat;display:block;width:16px;height:16px;background-size:16px}
 .hyphen{display:flex;align-items:center;font-size:20px;color:#B7BFE7;margin:0 6px 0 -2px}
@@ -90,12 +90,12 @@
 /* 탭메뉴 */
 .tab_type1 ul{display:flex;padding:0 0 10px 0;margin-top:15px}
 .tab_type1 ul li{flex:1}
-.tab_type1 ul li a{display:block;padding:0 12px;font-size:15px;text-align:center;height:45px;line-height:43px;background:#ECECEC;color:#BEBEBE;margin-right:1px;}
+.tab_type1 ul li a{display:block;padding:0 12px;font-size:15px;text-align:center;height:45px;line-height:43px;background:#ECECEC;color:#BEBEBE;margin-right:1px}
 .tab_type1 ul li a.on{background:#A7B1CB;color:#fff}
 
 .tab_type2 ul{display:flex;padding-bottom:10px}
 .tab_type2 ul li{flex:1}
-.tab_type2 ul li a{display:block;padding:0 12px;font-size:15px;text-align:center;height:45px;line-height:43px;background:#ECECEC;color:#959595;margin-right:1px;}
+.tab_type2 ul li a{display:block;padding:0 12px;font-size:15px;text-align:center;height:45px;line-height:43px;background:#ECECEC;color:#959595;margin-right:1px}
 .tab_type2 ul li a:hover,.tab_type2 ul li a.on{background:#6675C5;color:#fff}
 
 /*메인팝업2*/
@@ -109,41 +109,42 @@
 .h3_title{font-size:17px;margin:20px 0 12px 0;color:#333;font-weight:500}
 
 /* pagination */
-.pagination{display:flex;justify-content:center;align-items:center;margin-top:20px;}
-    .pagination li.active > a{background-color:#d1d1d1;color:#fff;}
-    .pagination li.active > a:hover{background-color:#d1d1d1;}
+.pagination{display:flex;justify-content:center;align-items:center;margin-top:20px}
+    .pagination li.active > a{background-color:#d1d1d1;color:#fff}
+    .pagination li.active > a:hover{background-color:#d1d1d1}
     .pagination li:first-child a{margin-left:0}
-    .pagination li a{display:block;padding:0 1px;font-size:13px;margin-right:4px;text-align:center;line-height:28px;min-width:28px;min-height:28px;background-color:#F4F4F4;color:#999;margin-left:-1px;}
+    .pagination li a{display:block;padding:0 1px;font-size:13px;margin-right:4px;text-align:center;line-height:28px;min-width:28px;min-height:28px;background-color:#F4F4F4;color:#999;margin-left:-1px}
     .pagination li a.arrow{background:#F4F4F4 url(../images/common/icon_page_next.png) 50% 50% no-repeat}
     .pagination li a.prev{transform:rotateZ(-180deg)}
     .pagination li a.arrow2{background:#F4F4F4 url(../images/common/icon_page_forward.png) 50% 50% no-repeat}
     .pagination li a.forward{transform:rotateZ(-180deg)}
     .pagination li a:hover{background-color:#cecece;text-decoration:none;color:#fff}
-           
+   
 
-.form_basic{display:flex;align-items:center;margin:7px 0}
+.form_basic{display:flex;align-items:center;margin:12px 0}
 .form_basic label{width:150px;font-size:16px;font-weight:400;color:#333}
 .form_basic div{width:calc(100% - 150px)}
 .readonly{background:#eee}
 
+/* custom radio button */
+.radio_button_wrap{display:flex;height:45px;align-items:center}
+.checkcontainer {position:relative;padding-left:28px;margin-bottom:12px;cursor:pointer;font-size:16px;margin-right:20px;-webkit-user-select:none; /* Chrome, Opera, Safari */
+    -moz-user-select:none; /* Firefox 2+ */    -ms-user-select:none; /* IE 10+ */    user-select:none; /* Standard syntax */}
 
-/* 라디오버튼 커스텀 */
-.radio_button_wrap{display:flex;align-items:center;min-height:45px}
-.radio_button_wrap .radio_button{cursor:pointer;position:relative;padding-left:30px;margin-right:10px}
+.checkcontainer input {position:absolute;opacity:0;cursor:pointer}
+.checkmark {position:absolute;top:0;left:0;height:25px;width:25px;background-color:#eee}
+.checkcontainer:hover input ~ .checkmark {background-color:#fff;border:1px solid #BDC6E8}
+.checkcontainer input:checked ~ .checkmark {background-color:#5A71E9}
+.checkmark:after {content:"";position:absolute;display:none}
+.checkcontainer input:checked ~ .checkmark:after {display:block}
+.checkcontainer .checkmark:after {left:10px;top:6px;width:7px;height:12px;border:solid white;border-width:0 3px 3px 0;
+    -webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
 
-/* 기존 라디오 버튼 삭제 */
-.radio_button input[type="radio"] {position:absolute;opacity:0;height:0;width:0;}
+.radiobtn{position:absolute;top:0;left:0;height:22px;width:22px;background-color:#fff;border-radius:50%;border:1px solid #BDC6E8;box-shadow:0 1px 2px rgba(129, 138, 182,.6)}
+.checkcontainer input:checked ~ .radiobtn{background-color:#fff;border:1px solid #BDC6E8}
+.radiobtn:after {  content:"";position:absolute;display:none}
+.checkcontainer input:checked ~ .radiobtn:after {display:block}
+.checkcontainer .radiobtn:after {top:50%;left:50%;transform:translate(-50%, -50%);width:12px;height:12px;border-radius:50%;background:#5A71E9}
 
-/* 라디오 버튼, 외부 원 */
-.radio_button_wrap .radio_button .custom_radio {position: absolute;top:0;left:0;height:20px;width:20px;border-radius:50%;
-    background-color: #fff;border:1px solid #ddd;}
-
-/* 라디오 버튼 선택 시 배경 색상 변경, 외부 원 */
-.radio_button_wrap .radio_button input[type="radio"]:checked ~ .custom_radio {background-color:#fff;}
-
-/* 내부 원 */
-.radio_button_wrap .custom_radio:after {content: "";position: absolute;display:none;top: 50%;left: 50%;transform: translate(-50%, -50%);background:#5A71E9;width:10px;height:10px;border-radius:50%}
-/* 라디오 버튼 선택 시 화면 표출, 내부 원 */
-.radio_button_wrap .radio_button input[type="radio"]:checked ~ .custom_radio:after {
-    display: block;
-}
+.readonly_calendar{border:1px solid #cdd0dd;height:45px;line-height:43px;min-width:85px;color:#70789D;
+    background:#eee url(../images/icon/icon_input_calendar.svg) 15px center no-repeat;background-size:12px;padding:0 10px 0 38px !important}

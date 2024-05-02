@@ -321,28 +321,199 @@
                     
                     <div class="form_basic">
                         <label for="">장비관할조직 <span>*</span></label>
-                        <div class="flex">
-                           
+                        <div class="flex">                           
                             <div class="radio_button_wrap">
                                 <form action="">
-                                    <label for="" class="radio_button">농어촌공사
-                                        <input type="radio" id="" name="">
-                                        <span class="custom_radio"></span>
+                                    <label class="checkcontainer">농어촌공사
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="radiobtn"></span>
                                     </label>
-                                    <label for="" class="radio_button">지방자치단체
-                                        <input type="radio" id="" name="">
-                                        <span class="custom_radio"></span>
-                                    </label>
+
+                                    <label class="checkcontainer">지방자치단체
+                                        <input type="radio" name="radio">
+                                        <span class="radiobtn"></span>
+                                      </label>
                                 </form>
                             </div>
-
                         </div>
                     </div>
 
+                    <div class="form_basic">
+                        <label for="">장비전원구분<span>*</span></label>
+                        <div class="flex">                           
+                            <div class="radio_button_wrap">
+                                <form action="">
+                                    <label class="checkcontainer">태양광
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                    <label class="checkcontainer">상용
+                                        <input type="radio" name="radio">
+                                        <span class="radiobtn"></span>
+                                      </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form_basic">
+                        <label for="">장비사용여부 <span>*</span></label>
+                        <div class="flex">                           
+                            <div class="radio_button_wrap">
+                                <form action="">
+                                    <label class="checkcontainer">사용
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                    <label class="checkcontainer">미사용
+                                        <input type="radio" name="radio">
+                                        <span class="radiobtn"></span>
+                                      </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form_basic">
+                        <label for="">강우계설치여부 <span>*</span></label>
+                        <div class="flex">                           
+                            <div class="radio_button_wrap">
+                                <form action="">
+                                    <label class="checkcontainer">설치
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                    <label class="checkcontainer">미설치
+                                        <input type="radio" name="radio">
+                                        <span class="radiobtn"></span>
+                                      </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="form_basic">
+                        <label for="">통신방식 <span>*</span></label>
+                        <div class="flex">                           
+                            <div class="radio_button_wrap">
+                                <form action="">
+                                    <label class="checkcontainer">CDMA(2G)
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                    <label class="checkcontainer">WCDMA(3G)
+                                        <input type="radio" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                    <label class="checkcontainer">LTE
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                    <label class="checkcontainer">LoRa
+                                        <input type="radio" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                    
+                                    <label class="checkcontainer">CatM1
+                                        <input type="radio" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                    <label class="checkcontainer">기타
+                                        <input type="radio" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form_basic">
+                        <label for="">모뎀번호</label>
+                        <div class="flex">
+                            <input type="text" id="equipment-code" name="" class="w100">
+                        </div>
+                    </div>
+
+                    <div class="form_basic">
+                        <label for="">운영상태 <span>*</span></label>
+                        <div class="flex">                           
+                            <div class="radio_button_wrap">
+                                <form action="">
+                                    <label class="checkcontainer">정상운용
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                    <label class="checkcontainer">오류검출
+                                        <input type="radio" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                    <label class="checkcontainer">장비점검
+                                        <input type="radio" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                    <label class="checkcontainer">승인대기
+                                        <input type="radio" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                    <label class="checkcontainer">운용정지
+                                        <input type="radio" name="radio">
+                                        <span class="radiobtn"></span>
+                                    </label>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form_basic">
+                        <label for="">장비설치일자</label>
+                        <div class="flex">
+                            <input type="text" id="equipment-code" name="" class="readonly_calendar w100" placeholder="2024-02-16">
+                        </div>
+                    </div>
+
+                    <div class="form_basic">
+                        <label for="">장비위치(경도)</label>
+                        <div class="flex">
+                            <input type="text" id="equipment-code" name="" class="w100">
+                        </div>
+                    </div>
+
+                    <div class="form_basic">
+                        <label for="">장비위치(위도)</label>
+                        <div class="flex">
+                            <input type="text" id="equipment-code" name="" class="w100">
+                        </div>
+                    </div>
+
+                    <div class="form_basic">
+                        <label for="">설치사업명</label>
+                        <div class="flex">
+                            <input type="text" id="equipment-code" name="" class="w100">
+                        </div>
+                    </div>
 
                 </div>
                 <!-- //등록폼 -->
 
+                <div class="bottom_btn_wrap">
+                    <a href="" class="bottom_btn_cancel mr-1">취소</a>
+                    <a href="" class="bottom_btn_confirm">등록</a>
+                </div>
 
 
 
