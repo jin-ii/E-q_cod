@@ -61,6 +61,8 @@
 .table_type3 .tr_title{border-bottom:2px solid #5e5f64;font-weight:700}
 .table_type3 .tr_title td{color:#555}
 .table_type3 .l_title{padding-left:35px} 
+.table_type3 a{color:#687192;}
+
 
 /* tip */
 .tip_white{color:#fff;font-weight:300;font-size:14px}
@@ -160,3 +162,9 @@
 
 .icon_cctv{display:block;width:34px;height:34px;border-radius:50%;box-shadow:0 2px 0px rgba(80, 85, 109, 0.6);
     background:#fff url(../images/icon/icon_cctv_off.png) center center no-repeat;background-size:18px;}
+
+
+/* 품질관리 디자인 이미지 작성 css -- 추후 지울것 */
+.area_graph_quality{margin:-10px auto 10px}
+
+.area_graph_box2{display:flex;justify-content:center;}
