@@ -80,7 +80,8 @@ iframe, object, embed{max-width:100%}
 .ml-1{margin-left:1px}
 .ml-4{margin-left:4px}
 .mt_1{margin-top:-1px}
-
+.mb-4{margin-bottom:4px}
+.mb-10{margin-bottom:10px}
 /* #form
 ================================================== */
 
@@ -90,7 +91,7 @@ select::-ms-expand {display:none;}  /*IE10,11*/
 select{appearance:none;-webkit-appearance: none; /*Chrome*/-moz-appearance: none; /*Firefox*/}
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button {-webkit-appearance:none;}
-input,select,textarea {-webkit-appearance:none;-moz-appearance:none; -ms-appearance:none; -o-appearance:none;appearance:none;
+input[type=text],select,textarea {-webkit-appearance:none;-moz-appearance:none; -ms-appearance:none; -o-appearance:none;appearance:none;
 vertical-align:middle;transition:border-color ease-in-out 0.225s; -webkit-transition:border-color ease-in-out 0.225s;outline:none;}
 
 select,input{font-family:"pretendard";font-size:14px}

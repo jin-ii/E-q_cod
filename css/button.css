@@ -8,6 +8,9 @@
 .btn_save_total{cursor:pointer;border:none;height:45px;background:#a5a8bb;color:#fff;padding:0 20px;white-space:nowrap}
 .btn_save_total:hover{background:#9fa2b4;font-weight:bold}
 
+.btn_download{cursor:pointer;display:inline-block;border:none;height:45px;line-height:45px;background:#696969;color:#fff;padding:0 20px;white-space:nowrap}
+.btn_download i{margin-right:10px}
+.btn_download:hover{background:#5a5a5a}
 
 /* 기본 버튼 */
 .btn{cursor:pointer;display:inline-block;padding:0 20px;font-size:14px;height:45px;line-height:43px;font-weight:bold;font-family:"malgungothic"}

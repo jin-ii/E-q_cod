@@ -133,28 +133,36 @@
 .form_basic div{width:calc(100% - 150px)}
 .readonly{background:#eee}
 
+.check_basic{display:flex;align-items:center;margin:12px 0}
+.check_basic label{font-size:15px;font-weight:400;color:#333}
+
 /* custom radio button */
 .radio_button_wrap{display:flex;height:45px;align-items:center}
 .checkcontainer {position:relative;padding-left:28px;margin-bottom:12px;cursor:pointer;font-size:16px;margin-right:20px;-webkit-user-select:none; /* Chrome, Opera, Safari */
     -moz-user-select:none; /* Firefox 2+ */    -ms-user-select:none; /* IE 10+ */    user-select:none; /* Standard syntax */}
 
-.checkcontainer input {position:absolute;opacity:0;cursor:pointer}
+.checkcontainer input[type=radio] {position:absolute;opacity:0;cursor:pointer}
 .checkmark {position:absolute;top:0;left:0;height:25px;width:25px;background-color:#eee}
-.checkcontainer:hover input ~ .checkmark {background-color:#fff;border:1px solid #BDC6E8}
-.checkcontainer input:checked ~ .checkmark {background-color:#5A71E9}
+.checkcontainer:hover input[type=radio] ~ .checkmark {background-color:#fff;border:1px solid #BDC6E8}
+.checkcontainer input[type=radio]:checked ~ .checkmark {background-color:#5A71E9}
 .checkmark:after {content:"";position:absolute;display:none}
-.checkcontainer input:checked ~ .checkmark:after {display:block}
+.checkcontainer input[type=radio]:checked ~ .checkmark:after {display:block}
 .checkcontainer .checkmark:after {left:10px;top:6px;width:7px;height:12px;border:solid white;border-width:0 3px 3px 0;
     -webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
 
 .radiobtn{position:absolute;top:0;left:0;height:22px;width:22px;background-color:#fff;border-radius:50%;border:1px solid #BDC6E8;box-shadow:0 1px 2px rgba(129, 138, 182,.6)}
-.checkcontainer input:checked ~ .radiobtn{background-color:#fff;border:1px solid #BDC6E8}
+.checkcontainer input[type=radio]:checked ~ .radiobtn{background-color:#fff;border:1px solid #BDC6E8}
 .radiobtn:after {  content:"";position:absolute;display:none}
-.checkcontainer input:checked ~ .radiobtn:after {display:block}
+.checkcontainer input[type=radio]:checked ~ .radiobtn:after {display:block}
 .checkcontainer .radiobtn:after {top:50%;left:50%;transform:translate(-50%, -50%);width:12px;height:12px;border-radius:50%;background:#5A71E9}
 
 .readonly_calendar{border:1px solid #cdd0dd;height:45px;line-height:43px;min-width:85px;color:#70789D;
     background:#eee url(../images/icon/icon_input_calendar.svg) 15px center no-repeat;background-size:12px;padding:0 10px 0 38px !important}
+
+
+/* custom checkbox */
+.checkbox_wrap{display:flex;height:45px;align-items:center;padding:0 10px}
+.checkbox_container{color:#70789D;margin-right:10px;cursor:pointer}
 
 
 /* 메인팝업 */
@@ -167,11 +175,3 @@
 
 .icon_cctv{display:block;width:34px;height:34px;border-radius:50%;box-shadow:0 2px 0px rgba(80, 85, 109, 0.6);
     background:#fff url(../images/icon/icon_cctv_off.png) center center no-repeat;background-size:18px;}
-
-
-/* 품질관리 디자인 이미지 작성 css -- 추후 지울것 */
-.area_graph_quality{margin:-10px auto 10px}
-
-
-
-.area_graph_box2{display:flex;justify-content:center;}

@@ -1,0 +1,6 @@
+
+/* 품질관리 */
+.area_graph_quality{margin:-10px auto 10px} /* 품질관리 디자인 이미지 작성 css -- 추후 지울것 */
+.area_graph_box2{display:flex;justify-content:center;}
+
+.area_viewer{width:100%;min-height:800px;height:100%;background:#f2f2f2 url(../images/common/ready_sample.png) center 40% no-repeat;}

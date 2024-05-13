@@ -137,11 +137,13 @@
 .search_box form{display:flex}
 .search_box form input,.search_box form select{margin-right:4px}
 .search_box .top_label{display:flex;align-items:center;padding-right:12px;max-width:130px;color:#252b55;font-weight:500;font-size:16px}
+.search_box .top_label2{display:flex;align-items:center;padding-right:4px;color:#5f6591;font-weight:500;font-size:15px}
+
 
 /* 서브 3뎁스  */
 .sub_gnb{width:100%;height:55px;background:#f8f8f8}
 .sub_gnb ul{display:flex;}
 .sub_gnb ul li a{display:flex;align-items:center;justify-content:center;min-height:55px;color:#666;min-width:140px;padding:0 30px;text-align:center;border-right:1px solid #ddd;background:#EAEAEA}
 .sub_gnb ul li:last-child a{border-right:none}
-.sub_gnb ul li a.active,.sub_gnb ul li a:hover{background:#a6b3d5;color:#fff}
+.sub_gnb ul li a.active,.sub_gnb ul li a:hover{background:#5271c3;color:#fff}
 
