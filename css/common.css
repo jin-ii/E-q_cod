@@ -49,7 +49,7 @@
 
 .table_type3{margin-bottom:15px}
 .table_type3 table{width:100%;border-top:1px solid #213882}
-.table_type3 table th,.table_type3 table td{text-align:center}
+.table_type3 table th,.table_type3 table td{text-align:center;padding:0 4px}
 .table_type3 table th{background:#909DC7;vertical-align:middle;padding:6px 12px;border-right:1px solid rgb(120, 144, 179);
     border-bottom:1px solid rgb(120, 144, 179);color:rgba(255,255,255,0.8);font-weight:400}
 .table_type3 table th{height:40px}
@@ -61,7 +61,12 @@
 .table_type3 .tr_title{border-bottom:2px solid #5e5f64;font-weight:700}
 .table_type3 .tr_title td{color:#555}
 .table_type3 .l_title{padding-left:35px} 
-.table_type3 a{color:#687192;}
+.table_type3 .td_link{color:#505e94;}
+.table_type3 .td_link:hover{text-decoration:underline}
+.table_type3 .td_link span b{color:#505e94;font-weight:500}
+.table_type3 .td_link span:hover b{text-decoration:underline}
+
+.td_input_type1{max-width:120px;height:35px !important;line-height:33px !important;text-align:right}
 
 
 /* tip */
@@ -166,5 +171,7 @@
 
 /* 품질관리 디자인 이미지 작성 css -- 추후 지울것 */
 .area_graph_quality{margin:-10px auto 10px}
+
+
 
 .area_graph_box2{display:flex;justify-content:center;}

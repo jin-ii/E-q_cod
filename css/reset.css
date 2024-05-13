@@ -79,6 +79,7 @@ iframe, object, embed{max-width:100%}
 .mr-4{margin-right:4px}
 .ml-1{margin-left:1px}
 .ml-4{margin-left:4px}
+.mt_1{margin-top:-1px}
 
 /* #form
 ================================================== */
@@ -95,13 +96,14 @@ vertical-align:middle;transition:border-color ease-in-out 0.225s; -webkit-transi
 select,input{font-family:"pretendard";font-size:14px}
 
 /* input  */
-input[type=text]{border:1px solid #cdd0dd;height:42px;line-height:40px;min-width:85px;color:#70789D;padding:0 10px;font-size:15px}
+input[type=text]{border:1px solid #cdd0dd;height:45px;line-height:43px;min-width:85px;color:#70789D;padding:0 10px;font-size:15px}
 
 input[type=radio]{border:1px solid #cdd0dd;width:18px;height:18px;border-radius:50%}
 
 /* select */
-select{border:1px solid #cdd0dd;height:45px;line-height:43px;min-width:85px;color:#70789D;
-  background:#fff url(../images/common/arrow_select_off.png) no-repeat;background-size:12px;background-position:95% center;padding:0 10px;
+select{border:1px solid #cdd0dd;height:45px;line-height:43px;color:#70789D;
+  background:#fff url(../images/common/arrow_select_off.png) no-repeat;background-size:12px;
+  background-position:95% center;padding:0 20px 0 10px
   }
 
 
@@ -114,3 +116,6 @@ select[readonly] {color:#555; background-color:#F7F8FB; border:1px solid #ddd;}
 /* #animation
 ================================================== */
 .animate{-webkit-transition: all 0.3s;-moz-transition: all 0.3s;transition: all 0.3s;}
+
+/* table */
+.white-space{white-space:nowrap}

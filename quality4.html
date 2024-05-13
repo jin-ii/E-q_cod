@@ -116,10 +116,10 @@
                             </a>
                             <div class="depth2" style="display:block">                                   
                                 <ul>
-                                    <li><a href="quality1.html" class="active">작업관리</a></li>
+                                    <li><a href="quality1.html">작업관리</a></li>
                                     <li><a href="quality2.html">품질수행</a></li>
                                     <li><a href="quality3.html">신뢰도평가</a></li>
-                                    <li><a href="quality4.html">수동보정</a></li>
+                                    <li><a href="quality4.html" class="active">수동보정</a></li>
                                     <li><a href="quality5.html">이력관리</a></li>
                                     <li><a href="quality6.html">리포트출력</a></li>
                                 </ul>
@@ -200,7 +200,7 @@
             <div class="contents">       
                 <!-- 타이틀 -->
                 <div class="sub_title">
-                    <h2 class="h2_title">작업관리</h2>
+                    <h2 class="h2_title">수동보정</h2>
                     <div class="home_location">
                         <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.4873 5.66807L9.06268 0.926822C8.51507 0.341815 7.77331 0.0133057 7.00001 0.0133057C6.22671 0.0133057 5.48495 0.341815 4.93734 0.926822L0.512757 5.66807C0.349672 5.84169 0.220373 6.04826 0.132355 6.27581C0.0443376 6.50337 -0.000647734 6.74738 7.04637e-06 6.9937V13.1293C7.04637e-06 13.6266 0.184382 14.1035 0.51257 14.4551C0.840759 14.8068 1.28588 15.0043 1.75001 15.0043H12.25C12.7141 15.0043 13.1593 14.8068 13.4874 14.4551C13.8156 14.1035 14 13.6266 14 13.1293V6.9937C14.0007 6.74738 13.9557 6.50337 13.8677 6.27581C13.7796 6.04826 13.6503 5.84169 13.4873 5.66807V5.66807ZM8.75001 13.7543H5.25001V11.2956C5.25001 10.7983 5.43438 10.3214 5.76257 9.96975C6.09076 9.61811 6.53588 9.42057 7.00001 9.42057C7.46414 9.42057 7.90926 9.61811 8.23745 9.96975C8.56563 10.3214 8.75001 10.7983 8.75001 11.2956V13.7543ZM12.8333 13.1293C12.8333 13.2951 12.7719 13.4541 12.6625 13.5713C12.5531 13.6885 12.4047 13.7543 12.25 13.7543H9.91668V11.2956C9.91668 10.4668 9.60938 9.67191 9.0624 9.08586C8.51542 8.49981 7.77356 8.17057 7.00001 8.17057C6.22646 8.17057 5.48459 8.49981 4.93761 9.08586C4.39063 9.67191 4.08334 10.4668 4.08334 11.2956V13.7543H1.75001C1.5953 13.7543 1.44692 13.6885 1.33753 13.5713C1.22813 13.4541 1.16667 13.2951 1.16667 13.1293V6.9937C1.16721 6.82806 1.22862 6.66931 1.33759 6.55182L5.76218 1.81245C6.091 1.46178 6.53606 1.26491 7.00001 1.26491C7.46395 1.26491 7.90902 1.46178 8.23784 1.81245L12.6624 6.5537C12.771 6.67073 12.8323 6.82871 12.8333 6.9937V13.1293Z" fill="#65657B"/>
@@ -212,27 +212,27 @@
                 </div>
                 <!-- //타이틀 -->
 
-                <!-- 상단검색바 -->
+                <!-- 상단검색바 1 -->
                 <div class="search_box">
                     <form action="">
+                        <h3 class="top_label">보정 저수지</h3>
                         <select id="">
-                            <option value="">본부</option>
                             <option value="">경기</option>
                             <option value="">경북</option>
                             <option value="">경남</option>
                             <option value="">제주</option>
                         </select>
                         <select id="">
-                            <option value="">지사</option>
+                            <option value="">여주.이천</option>
                         </select>
                         <select id="">
-                            <option value="">장비</option>
+                            <option value="">금사(장흥)</option>
                         </select>
                         <input type="text" class="input_type1" placeholder="장비명을 검색하세요">
-                        <select id="" class="w_150">
-                            <option value="">보정사유</option>
+                        <select id="">
+                            <option value="">시설명</option>
                         </select>
-                        
+                                              
                         
                         <div class="custom_select">
                             <select id="date" name="date" class="w_150">
@@ -249,140 +249,366 @@
                         </div>                
 
                         <button class="btn_search mr-1">검색</button>
-                        <button class="btn_save mr-1">저장</button>
-                        <button class="btn_save_total">전체저장</button>
+                        <button class="btn_save mr-4">저장</button>
+                       
+                        <button class="btn_save_total mr-1">매개변수 수정</button>
+                        <button class="btn_save_total mr-1">저수율 그래프 보기/해제</button>
                     </form>
                     <div class="search_btn_wrap">
                         <a href="" class="btn_arrow arrow_type2"><span>품절관리 FAQ</span><i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
-                <!-- //상단검색바 -->          
+                <!-- //상단검색바 1 -->          
+
+                
+                <!-- 상단검색바 2 -->
+                <div class="search_box mt_1">
+                    <form action="">
+                        <h3 class="top_label">비교 저수지</h3>
+                        <select id="">
+                            <option value="">경기</option>
+                            <option value="">경북</option>
+                            <option value="">경남</option>
+                            <option value="">제주</option>
+                        </select>
+                        <select id="">
+                            <option value="">여주.이천</option>
+                        </select>
+                        <select id="">
+                            <option value="">RIMS 일데이터</option>
+                        </select>
+                        <select id="">
+                            <option value="">금사(장흥)</option>
+                        </select>
+                        <input type="text" class="input_type1" placeholder="장비명을 검색하세요">
+                        <select id="">
+                            <option value="">시설명</option>
+                        </select>                                              
+                        
+                        <div class="custom_select">
+                            <select id="date" name="date" class="w_150">
+                                <option value="2024-02-15">2024-04-10</option>
+                            </select>
+                            <span class="icon"><i class="input_icon_calendar"></i></span>
+                        </div>
+                        <i class="hyphen">-</i>
+                        <div class="custom_select">
+                            <select id="date" name="date" class="w_150">
+                                <option value="2024-02-15">2024-05-10</option>
+                            </select>
+                            <span class="icon"><i class="input_icon_calendar"></i></span>
+                        </div>    
+                    </form>
+                    
+                </div>
+                <!-- //상단검색바2 -->     
 
                 <!-- 서브 콘텐츠 -->
                 <div class="contents_wrap">
                     <!-- 그래프영역 -->
                     <div class="area_graph_quality">                             
-                         <img src="./images/common/quality_graph1.png" alt="">                          
-                    </div>
+                         <img src="./images/common/quality_graph4.png" alt="">                          
+                    </div>                    
                     <!-- //그래프영역 -->
                     <div class="area_content">
                     <!-- 기본테이블 -->
-                    <div class="table_type3">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th rowspan="2">순번</th>
-                                        <th rowspan="2">부서</th>
-                                        <th colspan="5">계측시스템</th>
-                                    </tr>
-                                    <tr>
-                                        <th>전처리 대수</th>
-                                        <th>1차 필터보정[1일]</th>
-                                        <th>2차 필터보정[10일]</th>
-                                        <th>수동 대수</th>
-                                        <th>불가 대수</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td><a href="#" class="td_link">전체</a></td>
-                                        <td>1,740/1,821</td>
-                                        <td>147/1,821</td>
-                                        <td>45/1,821</td>
-                                        <td>1/1,821</td>
-                                        <td>6/1,821</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td><a href="#" class="td_link">경기</a></td>
-                                        <td>87/95</td>
-                                        <td>3/95</td>
-                                        <td>0/95</td>
-                                        <td>0/95</td>
-                                        <td>1/95</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td><a href="#" class="td_link">강원</a></td>
-                                        <td>62/73</td>
-                                        <td>7/73</td>
-                                        <td>0/73</td>
-                                        <td>0/73</td>
-                                        <td>0/73</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td><a href="#" class="td_link">충북</a></td>
-                                        <td>119/129</td>
-                                        <td>10/129</td>
-                                        <td>5/129</td>
-                                        <td>0/129</td>
-                                        <td>0/129</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td><a href="#" class="td_link">충남</a></td>
-                                        <td>180/190</td>
-                                        <td>14/190</td>
-                                        <td>6/190</td>
-                                        <td>0/190</td>
-                                        <td>1/190</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td><a href="#" class="td_link">전북</a></td>
-                                        <td>184/199</td>
-                                        <td>14/199</td>
-                                        <td>3/199</td>
-                                        <td>0/199</td>
-                                        <td>0/199</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td><a href="#" class="td_link">전남</a></td>
-                                        <td>487/491</td>
-                                        <td>52/491</td>
-                                        <td>18/491</td>
-                                        <td>1/491</td>
-                                        <td>4/491</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td><a href="#" class="td_link">경북</a></td>
-                                        <td>318/329</td>
-                                        <td>22/329</td>
-                                        <td>10/329</td>
-                                        <td>0/329</td>
-                                        <td>0/329</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td><a href="#" class="td_link">경남</a></td>
-                                        <td>298/306</td>
-                                        <td>22/306</td>
-                                        <td>2/306</td>
-                                        <td>0/306</td>
-                                        <td>0/306</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10</td>
-                                        <td><a href="#" class="td_link">제주</a></td>
-                                        <td>5/9</td>
-                                        <td>3/9</td>
-                                        <td>1/9</td>
-                                        <td>0/9</td>
-                                        <td>0/9</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- //기본테이블 -->
+                    <div class="table_type3 white-space">
+                        <table>
+                            <thead>
+                              <tr>
+                                <th rowspan="2">순번</th>
+                                <th rowspan="2">구분</th>
+                                <th rowspan="2">본부</th>
+                                <th rowspan="2">지사</th>
+                                <th rowspan="2">장비명</th>
+                                <th rowspan="2">표준코드</th>
+                                <th rowspan="2">계측일시</th>
+                                <th rowspan="2">강우량(mm)</th>
+                                <th colspan="3">품질관리 전</th>
+                                <th colspan="3">품질관리 후</th>
+                                <th colspan="4">품질관리 최종</th>
+                                <th colspan="7">비교대상 저수지</th>
+                              </tr>
+                              <tr>
+                                <th>저수위<span class="unit">(EL.m)</span></th>
+                                <th>저수량<span class="unit">(㎥)</span></th>
+                                <th>저수율<span class="unit">(%)</span></th>
+                                <th>저수위<span class="unit">(EL.m)</span></th>
+                                <th>저수량<span class="unit">(㎥)</span></th>
+                                <th>저수율<span class="unit">(%)</span></th>
+                                <th>저수위<span class="unit">(EL.m)</span></th>
+                                <th>저수량<span class="unit">(㎥)</span></th>
+                                <th>저수율<span class="unit">(%)</span></th>
+                                <th>보정사유</th>
+                                <th>본부</th>
+                                <th>지사</th>
+                                <th>장비명</th>
+                                <th>표준코드</th>
+                                <th>저수위<span class="unit">(EL.m)</span></th>
+                                <th>저수량<span class="unit">(㎥)</span></th>
+                                <th>저수율<span class="unit">(%)</span></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>계측</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012-00</td>
+                                <td>2024-05-13 10:10</td>
+                                <td>&nbsp;</td>
+                                <td></td>
+                                <td>131.21</td>
+                                <td>2,990,079</td>
+                                <td>80.5</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="text" value="131.21" class="td_input_type1"></td>
+                                <td>2,990,079</td>
+                                <td>80.5</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>계측</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012-00</td>
+                                <td>2024-05-13 10:00</td>
+                                <td>&nbsp;</td>
+                                <td></td>
+                                <td>131.21</td>
+                                <td>2,990,079</td>
+                                <td>80.5</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="text" value="131.21" class="td_input_type1"></td>
+                                <td>2,990,079</td>
+                                <td>80.5</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012</td>
+                                <td>131.21</td>
+                                <td>2989</td>
+                                <td>80.5</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>계측</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012-00</td>
+                                <td>2024-05-13 09:50</td>
+                                <td>&nbsp;</td>
+                                <td></td>
+                                <td>131.20</td>
+                                <td>2,987,851</td>
+                                <td>80.5</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="text" value="131.20" class="td_input_type1"></td>
+                                <td>2,987,851</td>
+                                <td>80.5</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>계측</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012-00</td>
+                                <td>2024-05-13 09:40</td>
+                                <td>&nbsp;</td>
+                                <td></td>
+                                <td>131.20</td>
+                                <td>2,987,851</td>
+                                <td>80.5</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="text" value="131.20" class="td_input_type1"></td>
+                                <td>2,987,851</td>
+                                <td>80.5</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>5</td>
+                                <td>계측</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012-00</td>
+                                <td>2024-05-13 09:30</td>
+                                <td>&nbsp;</td>
+                                <td></td>
+                                <td>131.19</td>
+                                <td>2,985,623</td>
+                                <td>80.4</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="text" value="131.19" class="td_input_type1"></td>
+                                <td>2,985,623</td>
+                                <td>80.4</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>6</td>
+                                <td>계측</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012-00</td>
+                                <td>2024-05-13 09:20</td>
+                                <td>&nbsp;</td>
+                                <td></td>
+                                <td>131.20</td>
+                                <td>2,987,851</td>
+                                <td>80.5</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="text" value="131.20" class="td_input_type1"></td>
+                                <td>2,987,851</td>
+                                <td>80.5</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>7</td>
+                                <td>계측</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012-00</td>
+                                <td>2024-05-13 09:10</td>
+                                <td>&nbsp;</td>
+                                <td></td>
+                                <td>131.21</td>
+                                <td>2,990,079</td>
+                                <td>80.5</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="text" value="131.21" class="td_input_type1"></td>
+                                <td>2,990,079</td>
+                                <td>80.5</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>8</td>
+                                <td>계측</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012-00</td>
+                                <td>2024-05-13 09:00</td>
+                                <td>&nbsp;</td>
+                                <td>0</td>
+                                <td>131.21</td>
+                                <td>2,990,079</td>
+                                <td>80.5</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="text" value="131.21" class="td_input_type1"></td>
+                                <td>2,990,079</td>
+                                <td>80.5</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>9</td>
+                                <td>계측</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012-00</td>
+                                <td>2024-05-13 08:50</td>
+                                <td>&nbsp;</td>
+                                <td></td>
+                                <td>131.21</td>
+                                <td>2,990,079</td>
+                                <td>80.5</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="text" value="131.21" class="td_input_type1"></td>
+                                <td>2,990,079</td>
+                                <td>80.5</td>
+                                <td>경기</td>
+                                <td>여주.이천</td>
+                                <td>금사(장흥)</td>
+                                <td>4173010012</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>                           
+                    </div>
+                    <!-- //기본테이블 -->
                     </div>
 
                 </div>
             </div>
             <!-- //서브콘텐츠 -->        
+
+            <style>
+                /* 예외 */
+                #wrap{overflow-y:scroll}
+                .navbar{position:fixed}
+                .contents_wrap{height:100%}
+            </style>
         </div>        
     </body>
 </html>
