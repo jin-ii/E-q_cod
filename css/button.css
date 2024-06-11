@@ -69,3 +69,23 @@
 .bottom_btn_cancel:hover{background:#e9e9e9}
 .bottom_btn_confirm{display:block;min-width:120px;height:45px;line-height:43px;padding:0 35px;background:#5B7FDC;color:#fff;text-align:center;font-size:16px}
 .bottom_btn_confirm:hover{background:#5679d3}
+
+
+/* 대시보드 맵 아이콘 */
+.map_icon_wrap{position:absolute;top:20px;right:10px;z-index:9;width:42px;display:flex;flex-wrap:wrap;justify-content:center;}
+.map_icon_wrap .map_icon{display:block;cursor:pointer;width:34px;height:34px;border-radius:3px;;border:0;margin-bottom:2px;}
+.map_icon_wrap .map_icon:hover{background-color:#f2f2f2}
+.map_icon_wrap .current_location{background:#fff url(../images/icon/icon_current_location.png) center center no-repeat;margin-bottom:10px}
+.map_icon_wrap .btn_zoom_in{background:#fff url(../images/icon/icon_btn_zoomin.png) center center no-repeat}
+.map_icon_wrap .btn_zoom_out{background:#fff url(../images/icon/icon_btn_zoomout.png) center center no-repeat}
+
+.map_icon_wrap ul{margin:10px 0 0 0;border-radius:3px;overflow:hidden}
+.map_icon_wrap ul.map_icon_con li a{display:block;width:34px;height:34px}
+.map_icon_wrap ul.map_icon_con li a:hover{background-color:#f2f2f2}
+.map_icon_wrap .btn_area{background:#fff url(../images/icon/icon_btn_area.png) center center no-repeat}
+.map_icon_wrap .btn_radius{background:#fff url(../images/icon/icon_btn_radius.png) center center no-repeat}
+.map_icon_wrap .btn_distance{background:#fff url(../images/icon/icon_btn_distance.png) center center no-repeat}
+
+.map_icon_wrap .btn_cctv{display:block;cursor:pointer;width:42px;height:42px;margin-top:20px;background:#fff url(../images/icon/icon_btn_cctv.png) center center no-repeat;
+   border-radius:3px;border:0}
+.map_icon_wrap .btn_cctv:hover{background-color:#f2f2f2}

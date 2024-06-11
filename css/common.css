@@ -114,6 +114,7 @@
 
 /* 타이틀 */
 .h3_title{font-size:17px;margin:20px 0 12px 0;color:#333;font-weight:500}
+.h3_title2{font-size:17px;margin:20px 0 12px 0;color:#333;font-weight:700;padding:0 0 10px 30px}
 
 /* pagination */
 .pagination{display:flex;justify-content:center;align-items:center;margin-top:20px}
