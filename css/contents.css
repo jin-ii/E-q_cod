@@ -22,26 +22,24 @@
     padding:12px 30px 12px 15px;font-size:15px;font-weight:300}
 
 
+/* cctv 수정 */
+#boxContainer{flex-grow:1;display:flex;flex-wrap:wrap;align-content:flex-start;padding:10px;height:calc(100vh - 250px)}
+.content_bgwrap{display:flex;flex-direction:column;width:100%;height:100vh;background:#f2f2f2}
 
-/* cctv2 */
-.h3_wrap{display:flex;align-items:center;}
-.h3_wrap select{position:absolute;right:20px}
-.content_bgwrap{width:100%;height:auto;background:#f2f2f2;padding:20px;border-top:1px solid #eee;border-bottom:1px solid #eee}
-.cctv_wrap{display:grid;gap:10px}
-.cctv_wrap .cctv_box{position:relative}
-.cctv_wrap.columns-1{grid-template-columns: 1fr}
-.cctv_wrap.columns-2{grid-template-columns: repeat(2, 1fr);}
-.cctv_wrap.columns-3{grid-template-columns: repeat(3, 1fr);}
-.cctv_wrap.columns-4{grid-template-columns: repeat(4, 1fr);}
+.h3_wrap{display:flex;align-items:center}
+.h3_wrap .controls{position:absolute;right:20px}
+.cctv_box{position:relative;background-color: #f0f0f0;border: 1px solid #ccc;margin:5px;}
+#boxContainer[data-grid="1"] .cctv_box {width:calc(100% - 10px);height: calc(100% - 10px);}
+#boxContainer[data-grid="2"] .cctv_box {width:calc(50% - 10px);height: calc(50% - 10px);}
+#boxContainer[data-grid="3"] .cctv_box {width:calc(33.333% - 10px);height: calc(33.333% - 10px);}
+#boxContainer[data-grid="4"] .cctv_box {width:calc(25% - 10px);height: calc(25% - 10px);}
 
-.cctv_wrap .cctv_box h4{width:100%;height: 40px;font-size:17px;background:#9496ac;color:#fff;font-weight:600;display:flex;align-items:center;padding:0 20px;}
-.cctv_wrap .cctv_box .cctv_screen{height:340px}
+.cctv_wrap .cctv_box h4{width:100%;height: 40px;position:absolute;font-size:17px;background:#9496ac;color:#fff;font-weight:600;display:flex;align-items:center;padding:0 20px;}
+.cctv_wrap .cctv_box .cctv_screen{width:100%;height:100%}
 .cctv_wrap .cctv_box .cctv_screen img{width:100%;height:100%}
-.cctv_wrap .cctv_box .alarm{width:100%;height:45px;line-height:45px;padding:0 20px;position:absolute;left:0;bottom:0;z-index:9;color:#fff;font-size:16px;font-weight:500}
+.cctv_wrap .cctv_box .alarm{width:100%;height:45px;line-height:45px;padding:0 20px;white-space:nowrap;overflow:hidden;position:absolute;left:0;bottom:0;z-index:9;color:#fff;font-size:16px;font-weight:500}
 .cctv_wrap .cctv_box .alarm-1{background:rgb(211, 47, 47,0.6);}
 .cctv_wrap .cctv_box .alarm-2{background:rgb(255, 170, 43,0.6);}
 .cctv_wrap .cctv_box .alarm-3{background:rgb(64, 124, 215,0.6);}
 .cctv_wrap .cctv_box ul.data_list{position:absolute;right:8px;bottom:52px;z-index:9;color:#fff;background:rgba(0,0,0,0.4);line-height:20px;
     padding:12px 30px 12px 15px;font-size:15px;font-weight:300}
-
-

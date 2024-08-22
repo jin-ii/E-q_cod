@@ -252,130 +252,102 @@
 
                 <div class="h3_wrap"> 
                     <h3 class="h3_title2">분석정보 표출</h3>
-                   
-                    <select name="" id="columnSelect">
-                        <option value="1">1개</option>
-                        <option value="2">2개</option>
-                        <option value="3">3개</option>
-                        <option value="4">4개</option>
-                    </select>
+                    <div class="controls">
+                        <select id="gridSelect">
+                            <option value="1">1x1</option>
+                            <option value="2">2x2</option>
+                            <option value="3">3x3</option>
+                            <option value="4">4x4</option>
+                        </select>
+                    </div>
+
                 </div>
                     
                 <div class="content_bgwrap"> 
 
-                    <div class="cctv_wrap" id="cctvBoxwrap" >
+                    <div class="cctv_wrap" id="boxContainer" data-grid="2">
+                        
+                        <!-- data-grid = 1일때 cctv_box 1개 -->
+                         <!-- data-grid = 2일때 cctv_box 4개 -->
+                          <!-- data-grid = 3일때 cctv_box 9개 -->
+                          <!-- data-grid = 4일때 cctv_box 16개 -->
+
+
                         <div class="cctv_box">
                             <h4>충북저수지</h4>
                             <div class="cctv_screen">
-                                <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">                                    
-                            </div> 
+                                <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">
+                            </div>
                             <div class="alarm alarm-1">
                                 호우특보 : 충청북도(청주시, 보은군, 괴산군, 옥천군)
                             </div>
                             <ul class="data_list">
-                                <li>저수지수위 123mm</li>
-                                <li>일누적강우량 102%</li>
+                                <li>저수지수위 120mm</li>
+                                <li>일누적강우량 100%</li>
                             </ul>
                         </div>
 
                         <div class="cctv_box">
                             <h4>충북저수지</h4>
                             <div class="cctv_screen">
-                                <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">                                    
-                            </div> 
-                            <div class="alarm alarm-2">
-                                호우특보 : 충청북도(청주시, 보은군, 괴산군, 옥천군)
+                                <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">
                             </div>
-                            <ul class="data_list">
-                                <li>저수지수위 123mm</li>
-                                <li>일누적강우량 102%</li>
-                            </ul>
-                        </div>
-
-                        <div class="cctv_box">
-                            <h4>충북저수지</h4>
-                            <div class="cctv_screen">
-                                <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">                                    
-                            </div> 
                             <div class="alarm alarm-3">
                                 호우특보 : 충청북도(청주시, 보은군, 괴산군, 옥천군)
                             </div>
                             <ul class="data_list">
-                                <li>저수지수위 123mm</li>
-                                <li>일누적강우량 102%</li>
+                                <li>저수지수위 120mm</li>
+                                <li>일누적강우량 100%</li>
                             </ul>
                         </div>
 
                         <div class="cctv_box">
                             <h4>충북저수지</h4>
                             <div class="cctv_screen">
-                                <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">                                    
-                            </div> 
+                                <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">
+                            </div>
+                            <div class="alarm alarm-2">
+                                호우특보 : 충청북도(청주시, 보은군, 괴산군, 옥천군)
+                            </div>
+                            <ul class="data_list">
+                                <li>저수지수위 120mm</li>
+                                <li>일누적강우량 100%</li>
+                            </ul>
+                        </div>
+
+                        <div class="cctv_box">
+                            <h4>충북저수지</h4>
+                            <div class="cctv_screen">
+                                <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">
+                            </div>
                             <div class="alarm alarm-1">
                                 호우특보 : 충청북도(청주시, 보은군, 괴산군, 옥천군)
                             </div>
                             <ul class="data_list">
-                                <li>저수지수위 123mm</li>
-                                <li>일누적강우량 102%</li>
+                                <li>저수지수위 120mm</li>
+                                <li>일누적강우량 100%</li>
                             </ul>
                         </div>
 
-                        <div class="cctv_box">
-                            <h4>충북저수지</h4>
-                            <div class="cctv_screen">
-                                <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">                                    
-                            </div> 
-                            <div class="alarm alarm-2">
-                                호우특보 : 충청북도(청주시, 보은군, 괴산군, 옥천군)
-                            </div>
-                            <ul class="data_list">
-                                <li>저수지수위 123mm</li>
-                                <li>일누적강우량 102%</li>
-                            </ul>
-                        </div>
-
-                        <div class="cctv_box">
-                            <h4>충북저수지</h4>
-                            <div class="cctv_screen">
-                                <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">                                    
-                            </div> 
-                            <div class="alarm alarm-3">
-                                호우특보 : 충청북도(청주시, 보은군, 괴산군, 옥천군)
-                            </div>
-                            <ul class="data_list">
-                                <li>저수지수위 123mm</li>
-                                <li>일누적강우량 102%</li>
-                            </ul>
-                        </div>
-                        </div>                           
-                                                          
                     </div>
-                               
-                     <!-- pagination -->
-                     <ul class="pagination">
-                        <li><a href="" class="arrow2 forward"><span class="hidden">맨앞으로</span></a></li>
-                        <li><a href="" class="arrow prev"><span class="hidden">이전</span></a></li>
-                        <li class="active"><a href="" class="td_link">1</a></li>
-                        <li><a href="" class="td_link">2</a></li>
-                        <li><a href="" class="td_link">3</a></li>
-                        <li><a href="" class="td_link">4</a></li>
-                        <li><a href="" class="td_link">5</a></li>
-                        <li><a href="" class="arrow next"><span class="hidden">다음</span></a></li>
-                        <li><a href="" class="arrow2 last"><span class="hidden">맨두ㅢ로</span></a></li>
-                    </ul>
-                    <!-- //pagination -->
-                    
+
                 </div>
+
+                 <!-- pagination -->
+                 <ul class="pagination">
+                    <li><a href="" class="arrow2 forward"><span class="hidden">맨앞으로</span></a></li>
+                    <li><a href="" class="arrow prev"><span class="hidden">이전</span></a></li>
+                    <li class="active"><a href="" class="td_link">1</a></li>
+                    <li><a href="" class="td_link">2</a></li>
+                    <li><a href="" class="td_link">3</a></li>
+                    <li><a href="" class="td_link">4</a></li>
+                    <li><a href="" class="td_link">5</a></li>
+                    <li><a href="" class="arrow next"><span class="hidden">다음</span></a></li>
+                    <li><a href="" class="arrow2 last"><span class="hidden">맨두ㅢ로</span></a></li>
+                </ul>
+                <!-- //pagination -->
                 <!-- //서브콘텐츠 -->        
-                <script>
-                    const container = document.getElementById('cctvBoxwrap');
-                    const select = document.getElementById('columnSelect');
-            
-                    select.addEventListener('change', (e) => {
-                        const columns = e.target.value;
-                        container.className = `cctv_wrap columns-${columns}`;
-                    });
-                </script>
+                
 
             <style>
                 /* 예외 */
