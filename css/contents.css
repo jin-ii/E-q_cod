@@ -29,10 +29,15 @@
 .h3_wrap{display:flex;align-items:center}
 .h3_wrap .controls{position:absolute;right:20px}
 .cctv_box{position:relative;background-color: #f0f0f0;border: 1px solid #ccc;margin:5px;}
-#boxContainer[data-grid="1"] .cctv_box {width:calc(100% - 10px);height: calc(100% - 10px);}
-#boxContainer[data-grid="2"] .cctv_box {width:calc(50% - 10px);height: calc(50% - 10px);}
-#boxContainer[data-grid="3"] .cctv_box {width:calc(33.333% - 10px);height: calc(33.333% - 10px);}
-#boxContainer[data-grid="4"] .cctv_box {width:calc(25% - 10px);height: calc(25% - 10px);}
+#boxContainer[data-grid-w="1"] .cctv_box { width: calc(100% - 10px); }
+#boxContainer[data-grid-w="2"] .cctv_box { width: calc(50% - 10px); }
+#boxContainer[data-grid-w="3"] .cctv_box { width: calc(33.333% - 10px); }
+#boxContainer[data-grid-w="4"] .cctv_box { width: calc(25% - 10px); }
+
+#boxContainer[data-grid-h="1"] .cctv_box { height: calc(100% - 10px); }
+#boxContainer[data-grid-h="2"] .cctv_box { height: calc(50% - 10px); }
+#boxContainer[data-grid-h="3"] .cctv_box { height: calc(33.333% - 10px); }
+#boxContainer[data-grid-h="4"] .cctv_box { height: calc(25% - 10px); }
 
 .cctv_wrap .cctv_box h4{width:100%;height: 40px;position:absolute;font-size:17px;background:#9496ac;color:#fff;font-weight:600;display:flex;align-items:center;padding:0 20px;}
 .cctv_wrap .cctv_box .cctv_screen{width:100%;height:100%}
