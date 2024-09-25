@@ -69,10 +69,11 @@
 .td_input_type1{max-width:120px;height:35px !important;line-height:33px !important;text-align:right}
 
 .area_popcont{display:flex;gap:40px}
-.area_popcont .area_list{overflow-y:scroll;width:30%;height:615px;}
-.area_popcont .area_img{width:70%}
+.area_popcont .area_list{overflow-y:scroll;width:32%;height:615px;padding-right:10px}
+.area_popcont .area_img{width:68%}
 .area_popcont .area_img img{width:100%;height:100%}
 .area_popcont .h5_wrap{margin:15px 0;display:flex;justify-content:space-between}
+.area_popcont .h5_wrap span{color:#999}
 .area_popcont .h5_title{font-size:17px;color:#222;}
 
 
