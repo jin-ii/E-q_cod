@@ -68,6 +68,26 @@
 
 .td_input_type1{max-width:120px;height:35px !important;line-height:33px !important;text-align:right}
 
+.area_popcont{display:flex;gap:40px}
+.area_popcont .area_list{overflow-y:scroll;width:30%;height:615px;}
+.area_popcont .area_img{width:70%}
+.area_popcont .area_img img{width:100%;height:100%}
+.area_popcont .h5_wrap{margin:15px 0;display:flex;justify-content:space-between}
+.area_popcont .h5_title{font-size:17px;color:#222;}
+
+
+.table_type{border-top:2px solid #222}
+.table_type table{width:100%}
+.table_type table th,.table_type2 table td{text-align:center}
+.table_type table th{background:#F2F5FF;vertical-align:middle;padding:6px 12px;border-right:1px solid rgb(209, 217, 228);
+    border-bottom:1px solid rgb(217 227 241);color:#6B7193;font-weight:700;font-size:14px}
+.table_type table th{height:40px}
+.table_type table td{color:#828282;padding:12px 7px;border:1px solid #ddd;vertical-align:middle}
+.table_type table td:first-child{border-left:0}
+.table_type table td:last-child{border-right:0}
+.table_type thead{position:sticky;top:0;z-index:1}
+
+
 
 /* tip */
 .tip_white{color:#fff;font-weight:300;font-size:14px}
