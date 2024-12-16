@@ -254,6 +254,8 @@
                 </div>
             </div>            
             <!-- //종합경보현황 -->
+
+
             <!-- 검색 -->
             <div class="total_search_wrap">
                 <div class="total_search">               
@@ -262,6 +264,28 @@
                 </div>
             </div>  
             <!-- //검색 -->
+             <div class="srh_flex_group">
+                <div class="srh_flex">
+                    <input type="text" class="main_srh" placeholder="2024-12-16 10:00" title="예시">
+                    <input type="text" class="main_srh" placeholder="시설을 검색하세요">
+                </div>
+                <div class="flex">
+                    <select name="" id="" class="main_srh_select">
+                        <option value="">통합변위</option>
+                    </select>
+                    <button class="btn_search">조회</button>
+                </div>
+              </div>
+            <style>
+              
+                .srh_flex_group{padding:0 20px;margin-bottom:20px}
+                .srh_flex{display:flex}
+                .srh_flex input{width:50%}
+                .main_srh{background:#7c82a7;color:rgba(255,255,255,0.7) !Important}
+                .main_srh::placeholder{color:rgba(255,255,255,0.7) !Important}
+                .main_srh_select{width:100%;height:45px;background:#7c82a7 url(../images/common/arrow_select_off.png) no-repeat!important;background-position:95% center !Important;color:rgba(255,255,255,0.7) !Important}
+              
+            </style>
             
             <div class="total_table_wrap">
                 <ul class="dashboard_tab">
