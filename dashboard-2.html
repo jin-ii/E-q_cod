@@ -359,12 +359,69 @@
             <!-- //right list 지역클릭시 -->
 
             <!-- cctv 리스트 팝업 -->
-            <div class="area_cctv_wrap">
-            <div class="cctv_listbox">
-                <h4>CCTV 화면</h4>
-                <div class="cctv_screen">
-                    <img src="../images/common/cctv_sample1.jpg" alt="CCTV 화면">
+            <div class="area_cctv_wrap active"> <!-- 팝업 처음에 강제 오픈 -->
+                <div class="title">
+                    <h4>CCTV 화면</h4>
+                    <a href="" class="btn_close"><img src="./images/common/icon_popup_close.png" alt=""></a>
                 </div>
+              
+            <div class="cctv_listbox">
+                <!-- 1 -->
+                <div class="cctv_screen_wrap">
+                    <div class="cctv_screen">
+                        <img src="../images/common/cctv_sample1.jpg" alt="CCTV 화면">
+                    </div>
+                    <div class="alarm alarm-1">
+                        호우특보 : 충청북도(청주시, 보은군, 괴산군, 옥천군)
+                    </div>
+                    <ul class="data_list">
+                        <li>저수지수위 123mm</li>
+                        <li>일누적강우량 102%</li>
+                    </ul>
+                </div>
+                <!-- //1 -->
+                <!-- 2 -->
+                <div class="cctv_screen_wrap">
+                    <div class="cctv_screen">
+                        <img src="../images/common/cctv_sample1.jpg" alt="CCTV 화면">
+                    </div>
+                    <div class="alarm alarm-1">
+                        호우특보 : 충청북도(청주시, 보은군, 괴산군, 옥천군)
+                    </div>
+                    <ul class="data_list">
+                        <li>저수지수위 123mm</li>
+                        <li>일누적강우량 102%</li>
+                    </ul>
+                </div>
+                <!-- //2 -->
+                <!-- 3 -->
+                <div class="cctv_screen_wrap">
+                    <div class="cctv_screen">
+                        <img src="../images/common/cctv_sample1.jpg" alt="CCTV 화면">
+                    </div>
+                    <div class="alarm alarm-1">
+                        호우특보 : 충청북도(청주시, 보은군, 괴산군, 옥천군)
+                    </div>
+                    <ul class="data_list">
+                        <li>저수지수위 123mm</li>
+                        <li>일누적강우량 102%</li>
+                    </ul>
+                </div>
+                <!-- //3 -->
+                <!-- 4 -->
+                <div class="cctv_screen_wrap">
+                    <div class="cctv_screen">
+                        <img src="../images/common/cctv_sample1.jpg" alt="CCTV 화면">
+                    </div>
+                    <div class="alarm alarm-1">
+                        호우특보 : 충청북도(청주시, 보은군, 괴산군, 옥천군)
+                    </div>
+                    <ul class="data_list">
+                        <li>저수지수위 123mm</li>
+                        <li>일누적강우량 102%</li>
+                    </ul>
+                </div>
+                <!-- //4 -->
             </div>
         </div>
         <!-- //cctv 리스트 팝업 -->
@@ -373,32 +430,29 @@
         </section>    
         <!-- //container -->  
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const btnCCTV = document.querySelector('.btn_cctv'); // CCTV 버튼
-        const cctvWrap = document.querySelector('.area_cctv_wrap'); // CCTV 영역
+document.addEventListener('DOMContentLoaded', () => {
+    const btnCCTV = document.querySelector('.btn_cctv'); // CCTV 버튼
+    const cctvWrap = document.querySelector('.area_cctv_wrap'); // CCTV 팝업 영역
+    const btnClose = document.querySelector('.btn_close'); // 닫기 버튼
 
-        if (btnCCTV && cctvWrap) {
-            btnCCTV.addEventListener('click', (event) => {
-                event.stopPropagation(); // 클릭 이벤트가 부모로 전파되지 않도록 방지
+    if (btnCCTV && cctvWrap && btnClose) {
+        // CCTV 버튼 클릭 시 팝업 표시/숨김
+        btnCCTV.addEventListener('click', (event) => {
+            event.preventDefault(); // 기본 동작 방지
+            cctvWrap.classList.toggle('active'); // active 클래스 토글
+            btnCCTV.classList.toggle('active'); // 버튼 색상 변경
+        });
 
-                // active 클래스 토글
-                if (cctvWrap.classList.contains('active')) {
-                    cctvWrap.classList.remove('active'); // 숨기기
-                } else {
-                    cctvWrap.classList.add('active'); // 표시
-                }
-            });
-
-            // 화면의 다른 곳을 클릭하면 CCTV 영역 숨기기
-            document.addEventListener('click', (event) => {
-                if (!cctvWrap.contains(event.target) && !btnCCTV.contains(event.target)) {
-                    cctvWrap.classList.remove('active'); // 숨기기
-                }
-            });
-        } else {
-            console.error('btnCCTV 또는 cctvWrap 요소를 찾을 수 없습니다.');
-        }
-    });
+        // 닫기 버튼 클릭 시 팝업 닫기
+        btnClose.addEventListener('click', (event) => {
+            event.preventDefault(); // 기본 동작 방지
+            cctvWrap.classList.remove('active'); // active 클래스 제거
+            btnCCTV.classList.remove('active'); // 버튼 색상 원래대로
+        });
+    } else {
+        console.error('btnCCTV, cctvWrap 또는 btnClose 요소를 찾을 수 없습니다.');
+    }
+});
     </script>
 </body>
 </html>
