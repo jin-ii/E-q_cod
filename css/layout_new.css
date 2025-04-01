@@ -31,36 +31,45 @@
 #header .header_login_info .profile_img span{color:#C3C7FB;font-size:14px;font-weight:400;letter-spacing:0;padding-left:6px}
 #header .header_login_info a{color:#fff;font-size:16px;}
 
-#main_container_wrap{margin-top:68px;display:flex;justify-content:space-between;}
-#main_container_wrap .left_list{width:460px;height:100vh;background:#F2F5FF;padding:20px}
-#main_container_wrap .right_list{width:460px;height:100vh;background:#F2F5FF;padding:20px;}
-
+#main_container_wrap{margin-top:68px;display:flex; height: calc(100vh - 68px);margin-top: 68px; }
+.left_list, .right_list {
+    width: 460px; /* 고정된 너비 */
+    height: 100%; /* 남은 높이를 모두 차지 */
+    background: #F2F5FF;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* 내부 콘텐츠 스크롤 허용 */
+}
 
 /* main table */
 .main_table_type1{margin-top:10px;max-height:80%;overflow-y:scroll}
 .main_table_type1 table{width:100%;}
 .main_table_type1 th{background:#CCD9FD;color:#3856CB;font-weight:700;font-size:14px;border-right:1px solid #C1CAE4;padding:4px;vertical-align: middle;}
-.main_table_type1 td{min-height:45px;padding:16px 4px;text-align:center;color:#646C95;border-bottom:1px solid #C1CAE4;background:#fff;font-size:16px}
+.main_table_type1 td{min-height:45px;padding:16px 4px;text-align:center;color:#646C95;border-bottom:1px solid #C1CAE4;background:#fff}
 .main_table_type1 tr:nth-child(odd) td{background-color: #fff}
 .main_table_type1 tr:nth-child(even) td{background-color: #F0F3FB}
 
 .main_table_type2{margin-top:10px;max-height:80%;overflow-y:scroll}
 .main_table_type2 table{width:100%;}
 .main_table_type2 th{background:#CCD9FD;color:#3856CB;font-weight:700;font-size:14px;border-right:1px solid #C1CAE4;padding:4px;vertical-align: middle;height:45px}
-.main_table_type2 td{min-height:45px;padding:16px 4px;text-align:center;color:#646C95;border-bottom:1px solid #C1CAE4;background:#fff;font-size:16px}
+.main_table_type2 td{min-height:45px;padding:16px 4px;text-align:center;color:#646C95;border-bottom:1px solid #C1CAE4;background:#fff}
 .main_table_type2 tr:nth-child(odd) td{background-color: #fff}
 .main_table_type2 tr:nth-child(even) td{background-color: #F0F3FB}
 
 
 /* recent_status_top #최근지진 계측현황 */ 
 .left_list .article_status{padding-bottom:20px}
+.left_list .aricle_list{height:calc(100vh - 280px)}
 
 /* 계측소검색 */
 .article_measure_search .search_wrapper{display:flex;flex-wrap:wrap;gap:12px;padding:12px 0}
-.article_measure_search .search_wrapper > * {flex: 1 1 calc(33.33% - 12px);}
+.article_measure_search .search_wrapper > * {
+    flex: 1 1 calc(33.33% - 12px);
+   
+}
 
 /* 지도api 임시 */
-.map_placeholder{position:relative;flex:1;height:100vh;background:#222;color: #fff;display: flex;justify-content: center;align-items: center;font-size: 18px;font-weight: bold;}
+.map_placeholder{position:relative;flex:1;height:100%;background:#222;color: #fff;display: flex;justify-content: center;align-items: center;font-size: 18px;font-weight: bold;}
 
 
 /* 범례1 */
