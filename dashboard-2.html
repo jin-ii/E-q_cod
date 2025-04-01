@@ -44,8 +44,8 @@
             
             <!-- left list -->
             <div class="left_list">
-
-                <!-- <article class="article_status">            
+<!-- 
+                <article class="article_status">            
                     <ul class="dashboard_tab2">
                         <li><a href="" class="active">최근지진</a></li>
                         <li><a href="">계측현황</a></li> 
@@ -222,14 +222,7 @@
 
             <!-- Map placeholder -->
             <div class="map_placeholder">
-               <div class="map_area" style="width:100%"> <!-- 임시로 100% 지도이미지때문에 -->
-                <img src="./images/common/sample_map2.jpg" alt="" style="width:100%">
-                <div class="map_float">
-                    <select id="" style="width:400px">
-                        <option value="">2025-03-17 11:39 북한 황해북도 송정 2.2</option>
-                    </select>
-                </div>
-               </div>
+               <div class="map_area">지도api들어가는곳</div>
                      <!-- 범례1 -->
                       <div class="legend-container">
                         <div class="legend-title">지진반경</div>
@@ -280,146 +273,133 @@
             <!-- //Map placeholder -->
 
 
-            <!-- right list -->
-             <div class="right_list">
-                <h3 class="dash_title">계측소 검색</h3>
-                <!-- 계측소 검색 -->
-                <div class="article_measure_search">                   
-                    <div class="search_wrapper">
-                        <div class="custom-checkbox-wrapper">
-                            <input type="checkbox" id="checkbox1" class="custom-checkbox">
-                            <label for="checkbox1" class="custom-checkbox-label">지진계</label>
+            <!-- right list 지역클릭시-->
+             <div class="right_list area_on">
+                <div class="title_wrap">
+                    <a href="" class="btn_back"><img src="images/icon/icon_btn_back.png" alt="이전"></a>
+                    <h3 class="dash_title">강화 <span>고구저수지</span> </h3>
+                    <a href="" class="btn_cctv">CCTV 영상</a>                 
+                </div>
+                <!-- 1 -->
+                <div class="graph_list_box">
+                    <div class="search_wrap">
+                        <select id="">
+                            <option value="">10분별</option>
+                        </select>
+                        <input type="text"  placeholder="2025-03-06 00시" class="w100">
+                        <i class="hyphen">-</i>
+                        <input type="text"  placeholder="2025-03-06 00시" class="w100">
+                        <button class="btn_search">검색</button>
+                    </div>
+                    <div class="graph_area_wrap">
+                        <!-- 범례예시 -->
+                        <div class="legend-items-row">
+                            <div class="legend-item">
+                                <div class="legend-color color-blue"></div>
+                                <span>좌안</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color color-red"></div>
+                                <span>중앙</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color color-yellow"></div>
+                                <span>우안</span>
+                            </div>
                         </div>
-                        <div class="custom-checkbox-wrapper">
-                            <input type="checkbox" id="checkbox2" class="custom-checkbox">
-                            <label for="checkbox2" class="custom-checkbox-label">누수계</label>
-                        </div>
-                        <div class="custom-checkbox-wrapper">
-                            <input type="checkbox" id="checkbox3" class="custom-checkbox">
-                            <label for="checkbox3" class="custom-checkbox-label">변위계</label>
-                        </div>
-                        <div class="custom-checkbox-wrapper">
-                            <input type="checkbox" id="checkbox4" class="custom-checkbox">
-                            <label for="checkbox4" class="custom-checkbox-label">저수위계</label>
-                        </div>
-                        <div class="custom-checkbox-wrapper">
-                            <input type="checkbox" id="checkbox5" class="custom-checkbox">
-                            <label for="checkbox5" class="custom-checkbox-label">강우량계</label>
-                        </div>
-                        <div class="custom-checkbox-wrapper">
-                            <input type="checkbox" id="checkbox6" class="custom-checkbox">
-                            <label for="checkbox6" class="custom-checkbox-label">유속계</label>
+                        <!-- //범례예시 -->
+                        <div class="graph">
+                            그래프 들어가는곳
                         </div>
                     </div>
-
                 </div>
-                <!-- //계측소 검색 -->
+                <!-- //1 -->
 
-               <div class="main_table_type2">  <!-- th가 고정일때 -->
-                    <table>
-                        <colgroup>
-                        
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>지역</th>
-                                <th>전체</th>
-                                <th>점검대상</th>
-                                <th>지진계</th>
-                                <th>누수계</th>
-                                <th>변위계</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>전국</td>
-                                <td>982</td>
-                                <td>590</td>
-                                <td>101</td>
-                                <td>58</td>
-                                <td>24</td>
-                            </tr>
-                            <tr>
-                                <td>경기</td>
-                                <td>65</td>
-                                <td>60</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>강원</td>
-                                <td>61</td>
-                                <td>58</td>
-                                <td>0</td>
-                                <td>1</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>충북</td>
-                                <td>82</td>
-                                <td>70</td>
-                                <td>10</td>
-                                <td>2</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>충남</td>
-                                <td>117</td>
-                                <td>75</td>
-                                <td>25</td>
-                                <td>10</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <td>전북</td>
-                                <td>129</td>
-                                <td>101</td>
-                                <td>19</td>
-                                <td>3</td>
-                                <td>6</td>
-                            </tr>
-                            <tr>
-                                <td>전남</td>
-                                <td>218</td>
-                                <td>90</td>
-                                <td>11</td>
-                                <td>15</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>경북</td>
-                                <td>166</td>
-                                <td>123</td>
-                                <td>23</td>
-                                <td>6</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>경남</td>
-                                <td>142</td>
-                                <td>11</td>
-                                <td>10</td>
-                                <td>19</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>제주</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                 </div>
+                 <!-- 2 -->
+                 <div class="graph_list_box">
+                    <h4 class="dash_title_h4">누수계측</h4>
+                    <div class="search_wrap">
+                        <select id="">
+                            <option value="">10분별</option>
+                        </select>
+                        <input type="text"  placeholder="2025-03-06 00시" class="w100">
+                        <i class="hyphen">-</i>
+                        <input type="text"  placeholder="2025-03-06 00시" class="w100">
+                        <button class="btn_search">검색</button>
+                    </div>
+                    <div class="graph_area_wrap">                       
+                        <div class="graph">
+                            그래프 들어가는곳
+                        </div>
+                    </div>
+                </div>
+                <!-- //2 -->
+
+                 <!-- 3 -->
+                 <div class="graph_list_box">
+                    <h4 class="dash_title_h4">변위계측</h4>
+                    <div class="search_wrap">
+                        <select id="">
+                            <option value="">10분별</option>
+                        </select>
+                        <input type="text"  placeholder="2025-03-06 00시" class="w100">
+                        <i class="hyphen">-</i>
+                        <input type="text"  placeholder="2025-03-06 00시" class="w100">
+                        <button class="btn_search">검색</button>
+                    </div>
+                    <div class="graph_area_wrap">               
+                        <div class="graph">
+                            <div class="graph_nodata">계측기 미설치 </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //3 -->
+
              </div>
-            <!-- //right list -->
+            <!-- //right list 지역클릭시 -->
+
+            <!-- cctv 리스트 팝업 -->
+            <div class="area_cctv_wrap">
+            <div class="cctv_listbox">
+                <h4>CCTV 화면</h4>
+                <div class="cctv_screen">
+                    <img src="../images/common/cctv_sample1.jpg" alt="CCTV 화면">
+                </div>
+            </div>
+        </div>
+        <!-- //cctv 리스트 팝업 -->
+
 
         </section>    
         <!-- //container -->  
-    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btnCCTV = document.querySelector('.btn_cctv'); // CCTV 버튼
+        const cctvWrap = document.querySelector('.area_cctv_wrap'); // CCTV 영역
+
+        if (btnCCTV && cctvWrap) {
+            btnCCTV.addEventListener('click', (event) => {
+                event.stopPropagation(); // 클릭 이벤트가 부모로 전파되지 않도록 방지
+
+                // active 클래스 토글
+                if (cctvWrap.classList.contains('active')) {
+                    cctvWrap.classList.remove('active'); // 숨기기
+                } else {
+                    cctvWrap.classList.add('active'); // 표시
+                }
+            });
+
+            // 화면의 다른 곳을 클릭하면 CCTV 영역 숨기기
+            document.addEventListener('click', (event) => {
+                if (!cctvWrap.contains(event.target) && !btnCCTV.contains(event.target)) {
+                    cctvWrap.classList.remove('active'); // 숨기기
+                }
+            });
+        } else {
+            console.error('btnCCTV 또는 cctvWrap 요소를 찾을 수 없습니다.');
+        }
+    });
+    </script>
 </body>
 </html>
 
