@@ -46,14 +46,14 @@
 .main_table_type1 table{width:100%;}
 .main_table_type1 th{background:#CCD9FD;color:#3856CB;font-weight:700;font-size:14px;border-right:1px solid #C1CAE4;padding:4px;vertical-align: middle;}
 .main_table_type1 td{min-height:45px;padding:16px 4px;text-align:center;color:#646C95;border-bottom:1px solid #C1CAE4;background:#fff}
-.main_table_type1 tr:nth-child(odd) td{background-color: #fff}
+.main_table_type1 tr:nth-child(odd) td{background-color:rgba(255, 255, 255, 0.6)}
 .main_table_type1 tr:nth-child(even) td{background-color: #F0F3FB}
 
 .main_table_type2{margin-top:10px;max-height:80%;overflow-y:scroll}
 .main_table_type2 table{width:100%;}
 .main_table_type2 th{background:#CCD9FD;color:#3856CB;font-weight:700;font-size:14px;border-right:1px solid #C1CAE4;padding:4px;vertical-align: middle;height:45px}
 .main_table_type2 td{min-height:45px;padding:16px 4px;text-align:center;color:#646C95;border-bottom:1px solid #C1CAE4;background:#fff}
-.main_table_type2 tr:nth-child(odd) td{background-color: #fff}
+.main_table_type2 tr:nth-child(odd) td{background-color:rgba(255, 255, 255, 0.6)}
 .main_table_type2 tr:nth-child(even) td{background-color: #F0F3FB}
 
 
