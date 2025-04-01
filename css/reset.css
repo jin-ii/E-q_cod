@@ -67,6 +67,7 @@ iframe, object, embed{max-width:100%}
 .w70{width:70%}
 .w80{width:80%}
 
+
 .w_80{width:80px}
 .w_100{width:100px}
 .w_130{width:130px}
@@ -77,11 +78,15 @@ iframe, object, embed{max-width:100%}
 /* margin */
 .mr-1{margin-right:1px}
 .mr-4{margin-right:4px}
+.mt-4{margin-top:4px}
 .ml-1{margin-left:1px}
 .ml-4{margin-left:4px}
 .mt_1{margin-top:-1px}
+
 .mb-4{margin-bottom:4px}
 .mb-10{margin-bottom:10px}
+
+
 /* #form
 ================================================== */
 
@@ -120,3 +125,8 @@ select[readonly] {color:#555; background-color:#F7F8FB; border:1px solid #ddd;}
 
 /* table */
 .white-space{white-space:nowrap}
+
+
+
+/* new reset add */
+.gap-2{gap:2px}

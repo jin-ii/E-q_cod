@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDIS 저수지 지진 재해정보시스템</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-menu {
+            display: flex;
+            gap: 20px;
+        }
+        .header-menu a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .header-user {
+            text-align: right;
+        }
+        .main {
+            display: flex;
+            flex-grow: 1;
+        }
+        .sidebar-left {
+            width: 250px;
+            background-color: #ddd;
+            padding: 10px;
+        }
+        .sidebar-right {
+            width: 300px;
+            background-color: #eee;
+            padding: 10px;
+        }
+        .map-container {
+            flex-grow: 1;
+            background-color: #fff;
+            text-align: center;
+        }
+        .map-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        /* 추가적인 스타일 */
+        .sidebar-left h2, .sidebar-right h2 {
+            margin-top: 0;
+        }
+        .sidebar-left ul, .sidebar-right ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar-left li, .sidebar-right li {
+            margin-bottom: 5px;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-logo">
+                <h1>REDIS 저수지 지진 재해정보시스템</h1>
+            </div>
+            <div class="header-menu">
+                <a href="#">CCTV영상</a>
+                <a href="#">지진</a>
+                <a href="#">누수</a>
+                <a href="#">계측</a>
+                <a href="#">게시판</a>
+                <a href="#">관리</a>
+            </div>
+            <div class="header-user">
+                <span>관리자 Mananger</span>
+                <a href="#">로그아웃</a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="sidebar-left">
+                <h2>최근 지진</h2>
+                <p>2025-03-17 11:39 북한 황해북도 송정 2.2</p>
+                <h2>전체 계측소</h2>
+                <label for="본부">본부:</label>
+                <select id="본부">
+                    <option value="본부">본부</option>
+                </select>
+                <label for="지사">지사:</label>
+                <select id="지사">
+                    <option value="지사">지사</option>
+                </select>
+                <label for="시설이름">시설이름:</label>
+                <input type="text" id="시설이름">
+                <button>검색</button>
+                <h2>계측소 목록</h2>
+                <div class="table-container">
+                    <table id="metering-table-list">
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>지역</th>
+                                <th>본부</th>
+                                <th>시설</th>
+                                <th>지진계</th>
+                                <th>누수계</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="map-container">
+                <img src="https://via.placeholder.com/800x600" alt="한국 지도">
+            </div>
+            <div class="sidebar-right">
+                <h2>계측소 검색</h2>
+                <ul>
+                    <li><input type="checkbox" id="지진계"><label for="지진계">지진계</label></li>
+                    <li><input type="checkbox" id="누수계"><label for="누수계">누수계</label></li>
+                    <li><input type="checkbox" id="변위계"><label for="변위계">변위계</label></li>
+                    <li><input type="checkbox" id="강우량계"><label for="강우량계">강우량계</label></li>
+                    <li><input type="checkbox" id="유속계"><label for="유속계">유속계</label></li>
+                    <li><input type="checkbox" id="저수위계"><label for="저수위계">저수위계</label></li>
+                </ul>
+                <h2>계측소 정보</h2>
+                <div class="table-container">
+                    <table id="metering-table">
+                        <thead>
+                            <tr>
+                                <th>지역</th>
+                                <th>전체</th>
+                                <th>점검대상</th>
+                                <th>지진계</th>
+                                <th>누수계</th>
+                                <th>변위계</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>지진반경</h2>
+                <ul>
+                    <li><input type="checkbox" id="전체" checked><label for="전체">전체</label></li>
+                    <li><input type="checkbox" id="30km"><label for="30km">30km</label></li>
+                    <li><input type="checkbox" id="50km"><label for="50km">50km</label></li>
+                </ul>
+                <p>● 관심 65초과극포시</p>
+                <p>● 주의 55초과~65 이하</p>
+                <p>● 경계 45초과~55 이하</p>
+                <p>● 심각 45이하</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; 2025 REDIS 저수지 지진 재해정보시스템</p>
+        </div>
+    </div>
+    <script>
+        const meteringData = [
+            { id: 1, region: "경기", branch: "강화 옹진", facility: "고구(23)", seismic: true, leakage: false },
+            { id: 2, region: "강원", branch: "강화 옹진", facility: "고려(21)", seismic: true, leakage: false },
+            { id: 3, region: "충북", branch: "안성", facility: "고삼(16)", seismic: true, leakage: true },
+            { id: 4, region: "충남", branch: "평택", facility: "고잔(23)", seismic: true, leakage: false },
+            { id: 5, region: "전북", branch: "화성, 수원", facility: "과림(23)", seismic: true, leakage: false },
+            { id: 6, region: "전남", branch: "강화 옹진", facility: "과림(23)", seismic: true, leakage: false },
+            { id: 7, region: "경북", branch: "안성", facility: "국화(16)", seismic: true, leakage: true },
+            { id: 8, region: "경남", branch: "여주, 이천", facility: "금광(16)", seismic: true, leakage: false },
+            { id: 9, region: "제주", branch: "연천, 포천, 가평", facility: "금사(장흥)(20)", seismic: true, leakage: false },
+            { id: 10, region: "경기", branch: "연천, 포천, 가평", facility: "금주(22)", seismic: true, leakage: false },
+            { id: 11, region: "경기", branch: "화성, 수원", facility: "금주(22)", seismic: true, leakage: false },
+            { id: 12, region: "경기", branch: "평택", facility: "금주(22)", seismic: true, leakage: false },
+            { id: 13, region: "경기", branch: "강화 옹진", facility: "금주(22)", seismic: true, leakage: false },
+            { id: 14, region: "경기", branch: "강화 옹진", facility: "금주(22)", seismic: false, leakage: false },
+            { id: 15, region: "경기", branch: "강화 옹진", facility: "금주(22)", seismic: true, leakage: false }
+        ];
+
+        const tableData = [
+            { region: "전국", total: 982, checked: 590, seismic: 101, leakage: 58, displacement: 24 },
+            { region: "경기", total: 65, checked: 60, seismic: 3, leakage: 2, displacement: "-" },
+            { region: "강원", total: 61, checked: 58, seismic: 0, leakage: 1, displacement: 2 },
+            { region: "충북", total: 82, checked: 70, seismic: 10, leakage: 2, displacement: "-" },
+            { region: "충남", total: 117, checked: 75, seismic: 25, leakage: 10, displacement: 7 },
+            { region: "전북", total: 129, checked: 101, seismic: 19, leakage: 3, displacement: 6 },
+            { region: "전남", total: 218, checked: 90, seismic: 11, leakage: 15, displacement: 2 },
+            { region: "경북", total: 166, checked: 123, seismic: 23, leakage: 6, displacement: 4 },
+            { region: "경남", total: 142, checked: 11, seismic: 10, leakage: 19, displacement: 3 },
+            { region: "제주", total: 2, checked: 2, seismic: "-", leakage: "-", displacement: "-" }
+        ];
+
+        const meteringTableList = document.getElementById("metering-table-list");
+        const tableBodyList = meteringTableList.querySelector("tbody");
+        meteringData.forEach(item => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${item.id}</td>
+                <td>${item.region}</td>
+                <td>${item.branch}</td>
+                <td>${item.facility}</td>
+                <td>${item.seismic ? '●' : ''}</td>
+                <td>${item.leakage ? '●' : ''}</td>
+            `;
+            tableBodyList.appendChild(row);
+        });
+
+        const meteringTable = document.getElementById("metering-table");
+        const tableBody = meteringTable.querySelector("tbody");
+        tableData.forEach(item => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${item.region}</td>
+                <td>${item.total}</td>
+                <td>${item.checked}</td>
+                <td>${item.seismic}</td>
+                <td>${item.leakage}</td>
+                <td>${item.displacement}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>
