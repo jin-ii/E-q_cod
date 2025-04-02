@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EQMS 스마트 재해예방 계측시스템</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/contents.css">
+    <link rel="stylesheet" href="./css/layout_new.css">
+
+    <!-- js -->
+    <script defer src="./js/common.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <h1><a href=""><img src="./images/common/logo_redis.png" alt="REDis 저수지 지진 재해정보시스템"></a></h1>
+            <div class="top_menu">
+                <ul>
+                    <li><a href="">계측현황</a></li>
+                    <li><a href="">CCTV영상</a></li>
+                    <li><a href="">지진</a></li>
+                    <li><a href="">누수</a></li>
+                    <li><a href="">계측</a></li>
+                    <li><a href="">게시판</a></li>
+                    <li><a href="">관리</a></li>
+                </ul>
+            </div>
+            <div class="header_login_info">
+                <p class="profile_img"><img src="./images/common/bg_avatar2.png" alt="">관리자<span>Manager</span></p>
+                <a href="">로그아웃</a>                
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <section id="main_container_wrap">
+            
+            <!-- left list -->
+            <div class="left_list seismic_result">
+            
+                <h3 class="dash_title">지진계측결과</h3>
+
+               <article class="article_seismic">            
+                    <ul class="dashboard_tab2">
+                        <li><a href="" class="active">전체</a></li>
+                        <li><a href="">국내</a></li> 
+                        <li><a href="">국외</a></li>
+                    </ul>                    
+
+                    <div class="search_wrap">
+                        <input type="text" placeholder="규모 1.2이상">
+                        <input type="text" placeholder="2025-03-06 00시">
+                        <i class="hyphen">-</i>
+                        <input type="text" placeholder="2025-03-06 00시">
+                        <button class="btn_search">검색</button>
+                    </div>
+                   
+                </article>
+
+                <div class="aricle_list">  
+                    <div class="main_table_type1">
+                        <table>
+                            <colgroup>
+                            
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">번호</th>
+                                    <th rowspan="2">발생시간</th>
+                                    <th rowspan="2">진앙지</th>
+                                    <th rowspan="2">규모(mag)</th>
+                                    <th colspan="2">보고서</th>
+                                </tr>
+                                <tr>
+                                    <th>신속</th>
+                                    <th>계측</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2025-03-17 11:39</td>
+                                    <td class="epicenter-column">북한 황해북도 송림 남쪽 7km 지역</td>
+                                    <td class="magnitude-column">2.2</td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2025-03-15 8:42</td>
+                                    <td class="epicenter-column">남대서양 사우스 샌드위치 제도 해역</td>
+                                    <td class="magnitude-column">6.0</td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>2025-03-13 0:40</td>
+                                    <td class="epicenter-column">울산 동구 동북동쪽 51km 해역</td>
+                                    <td class="magnitude-column">6.5</td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>2025-03-10 11:33</td>
+                                    <td class="epicenter-column">아이슬란드 아쿠레이리 북동쪽 731km 해역</td>
+                                    <td class="magnitude-column">6.1</td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>2025-03-07 1:21</td>
+                                    <td class="epicenter-column">칠레 안토파가스타 동북동쪽 138km 지역</td>
+                                    <td class="magnitude-column">6</td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>2025-03-05 22:27</td>
+                                    <td class="epicenter-column">대만 자이시 남쪽 37km 지역</td>
+                                    <td class="magnitude-column">5.2</td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>2025-02-26 7:55</td>
+                                    <td class="epicenter-column">인도네시아 마나도 남쪽 121km 해역</td>
+                                    <td class="magnitude-column">6.1</td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>2025-02-24 3:16</td>
+                                    <td class="epicenter-column">바누아투 루간빌 북북서쪽 472km 해역</td>
+                                    <td class="magnitude-column">6</td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>2025-02-22 6:30</td>
+                                    <td class="epicenter-column">충남 태안군 서쪽 33km 해역</td>
+                                    <td class="magnitude-column">2</td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>2025-02-17 11:20</td>
+                                    <td class="epicenter-column">전남 여수시 거문도 서남서쪽 38km 해역</td>
+                                    <td class="magnitude-column">2.1</td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                    <td><a href=""><img src="./images/icon/icon_btn_download.png"></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                 </div>
+
+            </div>
+       
+
+            <!-- Map placeholder -->
+            <div class="map_placeholder">
+                <div class="map_area" style="width:100%"> <!-- 임시로 100% 지도이미지때문에 -->
+                    <img src="./images/common/sample_map3.jpg" alt="" style="width:100%">
+                </div>
+                    
+                    <!-- 범례2 -->
+                    <div class="legend-container" style="position:absolute;left:20px">
+
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <div class="legend-color color-blue"></div>
+                                <span>관심 (65초과)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color color-yellow"></div>
+                                <span>주의 (55초과~65이하)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color color-orange"></div>
+                                <span>경계 (45초과~55이하)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color color-red"></div>
+                                <span>심각 (45이하)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //범례1 -->
+                  
+             
+
+            </div>
+            <!-- //Map placeholder -->
+
+
+            <!-- right list 지역클릭시-->
+             <div class="right_list">
+                <div class="title_wrap">
+                    <h3 class="dash_title2">실시간 PGA 모니터링</h3>          
+                    <div class="monitoring_tabs">
+                        <div class="monitoring_tab">전체<span>74개소</span></div>
+                        <div class="monitoring_tab">수신<span>72개소</span></div>
+                        <div class="monitoring_tab">미수신<span>2개소</span></div>
+                    </div>
+                </div>
+
+                
+                <div class="pga_monitoring">
+                    <table class="station_table" id="stationTable">
+                        <thead>
+                            <tr>
+                                <th>관측소</th>
+                                <th>자유장</th>
+                                <th>댐기초</th>
+                                <th>댐마루</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-station="가북" class="selected">
+                                <td><div class="seismic_station_name">가북(창원)</div></td>
+                                <td><div class="seismic_station_info info_color1">0.00422</div></td>
+                                <td><div class="seismic_station_info">0.00672</div></td>
+                                <td><div class="seismic_station_info">0.03605</div></td>
+                            </tr>
+                            <tr data-station="경천">
+                                <td><div class="seismic_station_name">경천(문경)</div></td>
+                                <td><div class="seismic_station_info">0.00230</div></td>
+                                <td><div class="seismic_station_info">0.00832</div></td>
+                                <td><div class="seismic_station_info">0.01433</div></td>
+                            </tr>
+                            <tr data-station="경천2">
+                                <td><div class="seismic_station_name">경천(완주)</div></td>
+                                <td><div class="seismic_station_info">0.00314</div></td>
+                                <td><div class="seismic_station_info">0.00642</div></td>
+                                <td><div class="seismic_station_info">0.02382</div></td>
+                            </tr>
+                            <tr data-station="계산">
+                                <td><div class="seismic_station_name">계산(고창)</div></td>
+                                <td><div class="seismic_station_info">0.00142</div></td>
+                                <td><div class="seismic_station_info">0.00945</div></td>
+                                <td><div class="seismic_station_info">0.00164</div></td>
+                            </tr>
+                            <tr data-station="고삼">
+                                <td><div class="seismic_station_name">고삼(안성)</div></td>
+                                <td><div class="seismic_station_info">0.00116</div></td>
+                                <td><div class="seismic_station_info">0.00305</div></td>
+                                <td><div class="seismic_station_info">0.00140</div></td>
+                            </tr>
+                            <tr data-station="고풍">
+                                <td><div class="seismic_station_name">고풍(서산)</div></td>
+                                <td><div class="seismic_station_info">0.00744</div></td>
+                                <td><div class="seismic_station_info">0.00843</div></td>
+                                <td><div class="seismic_station_info">0.00951</div></td>
+                            </tr>
+                            <tr data-station="광주">
+                                <td><div class="seismic_station_name">광주(담양)</div></td>
+                                <td><div class="seismic_station_info info_color2">미수신</div></td>
+                                <td><div class="seismic_station_info">0.00760</div></td>
+                                <td><div class="seismic_station_info">0.00577</div></td>
+                            </tr>
+                            <tr data-station="구성">
+                                <td><div class="seismic_station_name">구성(곡성)</div></td>
+                                <td><div class="seismic_station_info info_color2">0.00177</div></td>
+                                <td><div class="seismic_station_info">0.00182</div></td>
+                                <td><div class="seismic_station_info">0.00821</div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+               
+
+             </div>
+            <!-- //right list 지역클릭시 -->
+
+          
+
+           
+        </section>    
+        <!-- //container -->  
+        <!-- 모니터링 이벤트 예시 -->
+        <template id="chartTemplate">
+            <div class="chart_row_content">               
+                <div class="chart">
+                    <img src="./images/common/sample_monitoring1.jpg" alt="자유장 차트">                      
+                </div>
+                <div class="chart">
+                    <img src="./images/common/sample_monitoring2.jpg" alt="차트2">                     
+                </div>
+              
+            </div>
+        </template>
+        <!-- //모니터링 이벤트 예시 -->
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {   
+            // 모니터링 탭
+            const monitoringTabs = document.querySelectorAll('.monitoring-tab');
+            monitoringTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    monitoringTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+                      
+            // 관측소 테이블 행 클릭 이벤트
+            const stationRows = document.querySelectorAll('#stationTable tbody tr');
+            const chartTemplate = document.getElementById('chartTemplate');
+            let activeChartRow = null;
+            
+            stationRows.forEach((row) => {
+                row.addEventListener('click', function() {
+                    // 이전에 선택된 행의 클래스 제거
+                    stationRows.forEach(r => r.classList.remove('selected'));
+                    
+                    // 현재 행에 선택 클래스 추가
+                    this.classList.add('selected');
+                    
+                    // 이전에 추가된 차트 행이 있으면 제거
+                    if (activeChartRow) {
+                        activeChartRow.remove();
+                        activeChartRow = null;
+                    }
+                    
+                    // 새로운 차트 행 추가
+                    const chartRow = document.createElement('tr');
+                    chartRow.className = 'chart-row';
+                    const chartCell = document.createElement('td');
+                    chartCell.colSpan = 4; // 4개 열을 모두 차지
+                    chartCell.innerHTML = chartTemplate.innerHTML;
+                    chartRow.appendChild(chartCell);
+                    
+                    // 현재 행 다음에 차트 행 삽입
+                    this.insertAdjacentElement('afterend', chartRow);
+                    activeChartRow = chartRow;
+                    
+                    // 클릭한 관측소 이름 로그 출력
+                    const stationName = this.getAttribute('data-station');
+                    console.log(`선택된 관측소: ${stationName}`);
+                });
+            });
+            
+            // 첫 번째 행 자동 클릭 (페이지 로드 시 첫 번째 행의 차트 표시)
+            if (stationRows.length > 0) {
+                stationRows[0].click();
+            }
+        });
+        </script>
+
+</body>
+</html>
+
