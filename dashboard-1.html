@@ -24,9 +24,30 @@
             <div class="top_menu">
                 <ul>
                     <li><a href="">계측현황</a></li>
-                    <li><a href="">CCTV영상</a></li>
-                    <li><a href="">지진</a></li>
-                    <li><a href="">누수</a></li>
+                    <li><a href="">CCTV영상</a>
+                       <ul class="sub_menu">
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">지진</a>
+                        <ul class="sub_menu">
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">누수</a>
+                        <ul class="sub_menu">
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                        </ul>
+                    </li>
                     <li><a href="">계측</a></li>
                     <li><a href="">게시판</a></li>
                     <li><a href="">관리</a></li>
@@ -419,7 +440,27 @@
 
         </section>    
         <!-- //container -->  
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const menuItems = document.querySelectorAll('#header .top_menu ul li');
+
+    menuItems.forEach((menuItem) => {
+        const subMenu = menuItem.querySelector('.sub_menu');
+
+        if (subMenu) {
+            // 부모 메뉴 hover 시 서브 메뉴 표시
+            menuItem.addEventListener('mouseenter', () => {
+                subMenu.style.display = 'block';
+            });
+
+            // 부모 메뉴 hover 해제 시 서브 메뉴 숨김
+            menuItem.addEventListener('mouseleave', () => {
+                subMenu.style.display = 'none';
+            });
+        }
+    });
+});
+    </script>
 </body>
 </html>
 
