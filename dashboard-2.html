@@ -32,7 +32,14 @@
                             <li><a href="">2뎁스메뉴</a></li>
                         </ul>
                     </li>
-                    <li><a href="">지진</a></li>
+                    <li><a href="">지진</a>
+                        <ul class="sub_menu">
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                        </ul>
+                    </li>
                     <li><a href="">누수</a></li>
                     <li><a href="">계측</a></li>
                     <li><a href="">게시판</a></li>
@@ -436,31 +443,27 @@
 
         </section>    
         <!-- //container -->  
-    <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const btnCCTV = document.querySelector('.btn_cctv'); // CCTV 버튼
-    const cctvWrap = document.querySelector('.area_cctv_wrap'); // CCTV 팝업 영역
-    const btnClose = document.querySelector('.btn_close'); // 닫기 버튼
-
-    if (btnCCTV && cctvWrap && btnClose) {
-        // CCTV 버튼 클릭 시 팝업 표시/숨김
-        btnCCTV.addEventListener('click', (event) => {
-            event.preventDefault(); // 기본 동작 방지
-            cctvWrap.classList.toggle('active'); // active 클래스 토글
-            btnCCTV.classList.toggle('active'); // 버튼 색상 변경
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+        const menuItems = document.querySelectorAll('#header .top_menu ul li');
+    
+        menuItems.forEach((menuItem) => {
+            const subMenu = menuItem.querySelector('.sub_menu');
+    
+            if (subMenu) {
+                // 부모 메뉴 hover 시 서브 메뉴 표시
+                menuItem.addEventListener('mouseenter', () => {
+                    subMenu.style.display = 'block';
+                });
+    
+                // 부모 메뉴 hover 해제 시 서브 메뉴 숨김
+                menuItem.addEventListener('mouseleave', () => {
+                    subMenu.style.display = 'none';
+                });
+            }
         });
-
-        // 닫기 버튼 클릭 시 팝업 닫기
-        btnClose.addEventListener('click', (event) => {
-            event.preventDefault(); // 기본 동작 방지
-            cctvWrap.classList.remove('active'); // active 클래스 제거
-            btnCCTV.classList.remove('active'); // 버튼 색상 원래대로
-        });
-    } else {
-        console.error('btnCCTV, cctvWrap 또는 btnClose 요소를 찾을 수 없습니다.');
-    }
-});
-    </script>
+    });
+        </script>
 </body>
 </html>
 
