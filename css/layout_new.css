@@ -1,10 +1,20 @@
 @charset "utf-8";
 /* common */
 .custom-checkbox {position:absolute;opacity:0;width:20px;height:20px;cursor: pointer; }
-.custom-checkbox-label {display:flex;position:relative;padding-left:24px;cursor: pointer; user-select:none;font-size:16px;color:#333;}
+.custom-checkbox-label {display:flex;position:relative;padding-left:57px;cursor:pointer; user-select:none;font-size:16px;color:#333;}
 .custom-checkbox-label::before {content: "";position:absolute;left:0;top:0;width:16px;height:16px;border-radius:3px;background-color:#CCD3EA; }
 .custom-checkbox:checked + .custom-checkbox-label::before{background-color: #5A71E9;border-color: #5A71E9}
 .custom-checkbox:checked + .custom-checkbox-label::after{content: "";position:absolute;left:5px;top:1px;width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.custom-checkbox-wrapper{display:flex;align-items:center;gap:5px;position:relative;cursor:pointer}
+.custom-checkbox-label.icon-seismic > span::before {content: '';position:absolute;left:25px;top:50%;transform:translateY(-50%);width:24px;height:24px;background-size:contain;background-repeat:no-repeat;background-position:center;}
+.custom-checkbox-label.icon-seismic > span.name1::before{background-image:url('../images/icon/icon_input_with1.png')}
+.custom-checkbox-label.icon-seismic > span.name2::before{background-image:url('../images/icon/icon_input_with2.png')}
+.custom-checkbox-label.icon-seismic > span.name3::before{background-image:url('../images/icon/icon_input_with3.png')}
+.custom-checkbox-label.icon-seismic > span.name4::before{background-image:url('../images/icon/icon_input_with4.png')}
+.custom-checkbox-label.icon-seismic > span.name5::before{background-image:url('../images/icon/icon_input_with5.png')}
+.custom-checkbox-label.icon-seismic > span.name6::before{background-image:url('../images/icon/icon_input_with6.png')}
+
+.checkbox-basic .custom-checkbox-label{padding-left:24px}
 
 
 /* title */
@@ -61,17 +71,34 @@
 .main_table_type2 tr:nth-child(odd) td{background-color:rgba(255, 255, 255, 0.6)}
 .main_table_type2 tr:nth-child(even) td{background-color: #F0F3FB}
 
+.main_table_type3{margin-top:10px;max-height:80%;overflow-y:scroll}
+.main_table_type3 table{width:100%;}
+.main_table_type3 th{background:#CCD9FD;color:#3856CB;font-weight:700;font-size:14px;border-right:1px solid #C1CAE4;padding:4px;vertical-align: middle;height:45px}
+.main_table_type3 td{min-height:45px;padding:14px 4px;text-align:center;color:#646C95;border-bottom:1px solid #C1CAE4;background:#fff}
+.main_table_type3 td.td_title{background:#7893DF;color:#fff;vertical-align:middle;border-bottom:2px solid #747D94}
+.main_table_type3 td.td_title2{background:#EDF1FF;color:#222;font-weight:300}
+.main_table_type3 tr:nth-child(2n + 2) td{border-bottom:2px solid #8790a7}
+
+
 /* recent_status_top #최근지진 계측현황 */ 
 .left_list .article_status{padding-bottom:20px}
 .left_list .aricle_list{height:calc(100vh - 280px)}
 
 /* 계측소검색 */
-.article_measure_search .search_wrapper{display:flex;flex-wrap:wrap;gap:12px;padding:12px 0}
+.article_measure_search .search_wrapper{display:flex;flex-wrap:wrap;gap:12px;padding:16px 0}
 .article_measure_search .search_wrapper > * {flex:1 1 calc(33.33% - 12px)}
-
+.search_wrap{display:flex;gap:1px}
 /* 지도api 임시 */
+.map_select{padding:12px;background:rgba(255,255,255,0.8)}
 .map_placeholder{position:relative;flex:1;height:100%;background:#222;color: #fff;display: flex;justify-content: center;align-items: center;font-size: 18px;font-weight: bold;}
 .map_float{position:absolute;left:20px;top:20px}
+
+/* 지도 라디오버튼 */
+.map_select2{padding:20px 25px;background:rgba(255,255,255,0.8)}
+.map_select2 h5{color:#5A71E9;margin-bottom:8px}
+.map_select_list{display:flex}
+.map_select_list .custom-radio-wrapper{display:flex;font-size:15px;margin-right:20px}
+.map_select_list .custom-radio-wrapper label{color:#676767;font-weight:400;padding-left:6px;align-items:center}
 
 /* 범례1 */
 .legend-container{position:absolute;bottom:20px;left:20px;background-color:rgba(0,0,0,0.8);padding:20px 45px 25px 15px;box-shadow:0 1px 5px rgba(0,0,0,0.1);min-height:130px}
@@ -85,8 +112,15 @@
 .color-red{background-color:#F85C5C;}
 
 /* 범례2 */
-.legend-container{position:absolute;bottom:20px;left:20px;background-color:rgba(0,0,0,0.8);padding:20px 45px 25px 15px;box-shadow:0 1px 5px rgba(0,0,0,0.1)}
+.legend-container{position:absolute;bottom:20px;left:20px;background-color:rgb(40, 48, 72, 0.9);padding:20px 45px 25px 15px;box-shadow:0 1px 5px rgba(0,0,0,0.1)}
 .legend-container .legend-items .custom-checkbox-label{color:#fff;font-weight:400;font-size:14px}
+
+/* 범례3 */
+.legend-container-table{position:absolute;bottom:20px;left:20px;background-color:rgb(40, 48, 72, 0.9);padding:12px;box-shadow:0 1px 5px rgba(0,0,0,0.1);min-height:130px}
+.legend-container-table table th,.legend-container-table table td{font-size:14px;padding:6px 10px;font-weight:300}
+.legend-container-table table th{border-bottom:1px solid rgba(255,255,255,0.2)}
+.legend-container-table table td{border-bottom:1px solid rgba(255,255,255,0.2);text-align:center}
+
 
 /* 누수 지역선택시 */
 .area_on{position:relative;background:#313E68}
@@ -101,6 +135,12 @@
 .area_on .graph_area_wrap .legend-items-row .legend-item{margin-right:12px}
 .area_on .graph_area_wrap .graph{width:100%;height:200px;background:#fff;display:flex;justify-content:center;align-items:center;position:relative;margin-top:5px}
 .area_on .graph_area_wrap .graph .graph_nodata{width:100%;height:200px;background:#4C587D url(../images/icon/icon_bg_nodata.png) center 40% no-repeat;color:#BDC8EA;position:absolute;top:0px;left:0;display:flex;justify-content:center;align-items:center;padding-top:35px}
+
+.table_area_wrap{width:100%}
+.table_area_wrap table{width:100%;border-top:2px solid #1A2550}
+.table_area_wrap table th,.table_area_wrap table td{font-size:14px;padding:6px 10px;font-weight:300;color:#fff}
+.table_area_wrap table th{background:#566AB4;border-bottom:1px solid rgba(255,255,255,0.2);}
+.table_area_wrap table td{background:#334380;border-bottom:1px solid rgba(255,255,255,0.2);text-align:left}
 
 /* cctv팝업 */
 .area_cctv_wrap{position:absolute;top:68px;right:485px;z-index:10;width:300px;background:#4B64B4;opacity:0;visibility: hidden;transform: translateX(-10px);transition:all 0.3s ease;}

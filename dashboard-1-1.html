@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EQMS 스마트 재해예방 계측시스템</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/contents.css">
+    <link rel="stylesheet" href="./css/layout_new.css">
+
+    <!-- js -->
+    <script defer src="./js/common.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <h1><a href=""><img src="./images/common/logo_redis.png" alt="REDis 저수지 지진 재해정보시스템"></a></h1>
+            <div class="top_menu">
+                <ul>
+                    <li><a href="">계측현황</a></li>
+                    <li><a href="">CCTV영상</a>
+                       <ul class="sub_menu">
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">지진</a>
+                        <ul class="sub_menu">
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                            <li><a href="">2뎁스메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">누수</a>
+                    
+                    </li>
+                    <li><a href="">계측</a></li>
+                    <li><a href="">게시판</a></li>
+                    <li><a href="">관리</a></li>
+                </ul>
+            </div>
+            <div class="header_login_info">
+                <p class="profile_img"><img src="./images/common/bg_avatar2.png" alt="">관리자<span>Manager</span></p>
+                <a href="">로그아웃</a>                
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <section id="main_container_wrap">
+            
+            <!-- left list -->
+            <div class="left_list">
+
+                <!-- <article class="article_status">            
+                    <ul class="dashboard_tab2">
+                        <li><a href="" class="active">최근지진</a></li>
+                        <li><a href="">계측현황</a></li> 
+                    </ul>                    
+                    <select id="" class="w100">
+                        <option value="">2025-03-17 11:39 북한 황해북도 송정 2.2</option>
+                    </select>
+                </article> -->
+
+
+                <div class="aricle_list">
+
+                    <h3 class="dash_title">전체계측소</h3>       
+                         <div class="flex gap-2">           
+                            <select id="" class="w100">
+                                <option value="">본부</option>
+                            </select>                        
+                            <select id="" class="w100">
+                                <option value="">지사</option>
+                            </select>
+                        </div>  
+                        <div class="flex w100 mt-4">
+                            <input type="text" placeholder="시설이름을 입력해주세요" class="w100">
+                            <button class="btn_search">검색</button>
+                        </div>
+
+
+                        <div class="main_table_type1"> <!-- th 안에 또 th가 있을때 -->
+                            <table>
+                                <colgroup>
+                                
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">번호</th>
+                                        <th rowspan="2">본부</th>
+                                        <th rowspan="2">지사</th>
+                                        <th rowspan="2">관측소명</th>
+                                        <th colspan="2">계측내용</th>
+                                    </tr>
+                                    <tr>
+                                        <th>지진</th>
+                                        <th>누수</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>경기</td>
+                                        <td>강화 옹진</td>
+                                        <td>고구(23)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>강원</td>
+                                        <td>강화 옹진</td>
+                                        <td>고려(21)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>충북</td>
+                                        <td>안성</td>
+                                        <td>고삼(16)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td><img src="./images/common/metrics_point_red.png" alt=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>충남</td>
+                                        <td>평택</td>
+                                        <td>고잔(23)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>전북</td>
+                                        <td>화성, 수원</td>
+                                        <td>과림(23)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>전남</td>
+                                        <td>강화 옹진</td>
+                                        <td>과림(23)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>경북</td>
+                                        <td>안성</td>
+                                        <td>국화(16)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td><img src="./images/common/metrics_point_red.png" alt=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>경남</td>
+                                        <td>여주, 이천</td>
+                                        <td>금광(16)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>제주</td>
+                                        <td>연천, 포천, 가평</td>
+                                        <td>금사(장흥)(20)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>경기</td>
+                                        <td>연천, 포천, 가평</td>
+                                        <td>금주(22)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>경기</td>
+                                        <td>화성, 수원</td>
+                                        <td>금주(22)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>경기</td>
+                                        <td>평택</td>
+                                        <td>금주(22)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>경기</td>
+                                        <td>강화 옹진</td>
+                                        <td>금주(22)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>경기</td>
+                                        <td>강화 옹진</td>
+                                        <td>금주(22)</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>경기</td>
+                                        <td>강화 옹진</td>
+                                        <td>금주(22)</td>
+                                        <td><img src="./images/common/metrics_point_blue.png" alt=""></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                 </div>
+
+            </div>
+            <!-- //left list -->
+
+            <!-- Map placeholder -->
+            <div class="map_placeholder">
+               <div class="map_area" style="width:100%"> <!-- 임시로 100% 지도이미지때문에 -->
+                <img src="./images/common/sample_map2.jpg" alt="" style="width:100%">
+                <div class="map_float">
+                    <select id="" style="width:400px">
+                        <option value="">2025-03-17 11:39 북한 황해북도 송정 2.2</option>
+                    </select>
+                </div>
+               </div>
+                     <!-- 범례1 -->
+                      <div class="legend-container">
+                        <div class="legend-title">지진반경</div>
+                        <div class="legend-items">
+                            <div class="custom-checkbox-wrapper">
+                                <input type="checkbox" id="checkbox11" class="custom-checkbox">
+                                <label for="checkbox11" class="custom-checkbox-label">전체</label>
+                            </div>
+                            <div class="custom-checkbox-wrapper">
+                                <input type="checkbox" id="checkbox22" class="custom-checkbox">
+                                <label for="checkbox22" class="custom-checkbox-label">30km</label>
+                            </div>
+                            <div class="custom-checkbox-wrapper">
+                                <input type="checkbox" id="checkbox33" class="custom-checkbox">
+                                <label for="checkbox33" class="custom-checkbox-label">50km</label>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <!-- //범례1-->
+                    <!-- 범례2 -->
+                    <div class="legend-container" style="position:absolute;left:140px">
+
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <div class="legend-color color-blue"></div>
+                                <span>관심 (65초과)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color color-yellow"></div>
+                                <span>주의 (55초과~65이하)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color color-orange"></div>
+                                <span>경계 (45초과~55이하)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color color-red"></div>
+                                <span>심각 (45이하)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //범례1 -->
+                  
+             
+
+            </div>
+            <!-- //Map placeholder -->
+
+
+            <!-- right list -->
+             <div class="right_list">
+                <h3 class="dash_title">계측소 검색</h3>
+                <!-- 계측소 검색 -->
+                <div class="article_measure_search">                   
+                    <div class="search_wrapper">
+                        <div class="custom-checkbox-wrapper">
+                            <input type="checkbox" id="checkbox1" class="custom-checkbox">
+                            <label for="checkbox1" class="custom-checkbox-label">지진계</label>
+                        </div>
+                        <div class="custom-checkbox-wrapper">
+                            <input type="checkbox" id="checkbox2" class="custom-checkbox">
+                            <label for="checkbox2" class="custom-checkbox-label">누수계</label>
+                        </div>
+                        <div class="custom-checkbox-wrapper">
+                            <input type="checkbox" id="checkbox3" class="custom-checkbox">
+                            <label for="checkbox3" class="custom-checkbox-label">변위계</label>
+                        </div>
+                        <div class="custom-checkbox-wrapper">
+                            <input type="checkbox" id="checkbox4" class="custom-checkbox">
+                            <label for="checkbox4" class="custom-checkbox-label">저수위계</label>
+                        </div>
+                        <div class="custom-checkbox-wrapper">
+                            <input type="checkbox" id="checkbox5" class="custom-checkbox">
+                            <label for="checkbox5" class="custom-checkbox-label">강우량계</label>
+                        </div>
+                        <div class="custom-checkbox-wrapper">
+                            <input type="checkbox" id="checkbox6" class="custom-checkbox">
+                            <label for="checkbox6" class="custom-checkbox-label">유속계</label>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- //계측소 검색 -->
+
+               <div class="main_table_type2">  <!-- th가 고정일때 -->
+                    <table>
+                        <colgroup>
+                        
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>지역</th>
+                                <th>전체</th>
+                                <th>점검대상</th>
+                                <th>지진계</th>
+                                <th>누수계</th>
+                                <th>변위계</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>전국</td>
+                                <td>982</td>
+                                <td>590</td>
+                                <td>101</td>
+                                <td>58</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>경기</td>
+                                <td>65</td>
+                                <td>60</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>강원</td>
+                                <td>61</td>
+                                <td>58</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>충북</td>
+                                <td>82</td>
+                                <td>70</td>
+                                <td>10</td>
+                                <td>2</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>충남</td>
+                                <td>117</td>
+                                <td>75</td>
+                                <td>25</td>
+                                <td>10</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>전북</td>
+                                <td>129</td>
+                                <td>101</td>
+                                <td>19</td>
+                                <td>3</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>전남</td>
+                                <td>218</td>
+                                <td>90</td>
+                                <td>11</td>
+                                <td>15</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>경북</td>
+                                <td>166</td>
+                                <td>123</td>
+                                <td>23</td>
+                                <td>6</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>경남</td>
+                                <td>142</td>
+                                <td>11</td>
+                                <td>10</td>
+                                <td>19</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>제주</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            <!-- //right list -->
+
+        </section>    
+        <!-- //container -->  
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const menuItems = document.querySelectorAll('#header .top_menu ul li');
+
+    menuItems.forEach((menuItem) => {
+        const subMenu = menuItem.querySelector('.sub_menu');
+
+        if (subMenu) {
+            // 부모 메뉴 hover 시 서브 메뉴 표시
+            menuItem.addEventListener('mouseenter', () => {
+                subMenu.style.display = 'block';
+            });
+
+            // 부모 메뉴 hover 해제 시 서브 메뉴 숨김
+            menuItem.addEventListener('mouseleave', () => {
+                subMenu.style.display = 'none';
+            });
+        }
+    });
+});
+    </script>
+</body>
+</html>
+
