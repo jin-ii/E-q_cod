@@ -240,12 +240,35 @@
             <div class="map_placeholder">
                <div class="map_area" style="width:100%"> <!-- 임시로 100% 지도이미지때문에 -->
                 <img src="./images/common/sample_map2.jpg" alt="" style="width:100%">
-                <div style="position:absolute;left:100px;top:40%"><img src="./images/icon/icon_map_earthquake.png" alt="지진표시아이콘"></div>
+                <div style="position:absolute;left:100px;top:300px"><img src="./images/icon/icon_map_earthquake.png" alt="지진표시아이콘"></div>
+                <div style="position:absolute;left:200px;top:300px"><img src="./images/icon/icon_map_earthquake2.png" alt="지진표시아이콘2"></div>
+                
+                <div class="earthquake-alert" style="position:absolute;left:300px;top:300px">
+                    <div class="alert-wave"></div>
+                    <div class="alert-wave"></div>
+                    <div class="alert-wave"></div>
+                    <img src="./images/icon/icon_map_earthquake3.png" alt="지진표시아이콘3" class="earthquake-icon">
+                </div>
+
+                <div class="earthquake-alert-red" style="position:absolute;left:400px;top:300px">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <img src="./images/icon/icon_map_earthquake4.png" alt="지진표시아이콘4" class="earthquake-icon">
+                </div>
+
+                <div style="position:absolute;left:500px;top:300px"><img src="./images/icon/icon_map_earthquake5.png" alt="지진표시아이콘5"></div>
+                <div style="position:absolute;left:600px;top:300px"><img src="./images/icon/icon_map_earthquake6.png" alt="지진표시아이콘6"></div>
+                
+                <div class="earthquake-alert-purple" style="position:absolute;left:700px;top:300px">
+                    <div class="alert-wave"></div>
+                    <div class="alert-wave"></div>
+                    <img src="./images/icon/icon_map_earthquake7.png" alt="지진표시아이콘7" class="earthquake-icon">
+                </div>
 
                 <div class="map_float">
 
              
-                   <div class="map_select2">
+                   <!-- <div class="map_select2">
                     <h5>지도에서 계측 현황을 확인하세요</h5>
                     <form action="" class="map_select_list">
                         <div class="custom-radio-wrapper">
@@ -261,7 +284,7 @@
                             <label for="radio3" class="custom-radio-label">변위계</label>
                         </div>
                     </form>
-                   </div>
+                   </div> -->
 
                 </div>
                </div>
@@ -360,198 +383,272 @@
                 <h3 class="dash_title">계측소 검색</h3>
                 
                 <!-- 계측소 검색 -->
-                <div class="article_measure_search">                   
-                    <div class="search_wrapper">
-                        <div class="custom-checkbox-wrapper">
-                            <input type="checkbox" id="checkbox1" class="custom-checkbox">                            
-                            <label for="checkbox1" class="custom-checkbox-label icon-seismic"><span class="name1">지진계</span></label>
-                        </div>
-                        <div class="custom-checkbox-wrapper">
-                            <input type="checkbox" id="checkbox2" class="custom-checkbox">                            
-                            <label for="checkbox2" class="custom-checkbox-label icon-seismic"><span class="name2">누수계</span></label>
-                        </div>
-                        <div class="custom-checkbox-wrapper">
-                            <input type="checkbox" id="checkbox3" class="custom-checkbox">                            
-                            <label for="checkbox3" class="custom-checkbox-label icon-seismic"><span class="name3">변위계</span></label>
-                        </div>
-                        <div class="custom-checkbox-wrapper">
-                            <input type="checkbox" id="checkbox4" class="custom-checkbox">                            
-                            <label for="checkbox4" class="custom-checkbox-label icon-seismic"><span class="name4">저수위계</span></label>
-                        </div>
-                        <div class="custom-checkbox-wrapper">
-                            <input type="checkbox" id="checkbox5" class="custom-checkbox">                            
-                            <label for="checkbox5" class="custom-checkbox-label icon-seismic"><span class="name5">강우량계</span></label>
-                        </div>
-                        <div class="custom-checkbox-wrapper">
-                            <input type="checkbox" id="checkbox6" class="custom-checkbox">                            
-                            <label for="checkbox6" class="custom-checkbox-label icon-seismic"><span class="name6">유속계</span></label>
+                <div class="search_wrap">
+                    <select id="" class="w100">
+                        <option value="">2025-03-06 00시</option>
+                    </select>                    
+                    <button class="btn_search">검색</button>
+                </div>      
+                <!-- //계측소 검색 -->
+                
+                              
+                <article class="article_seismic">            
+                    <ul class="dashboard_tab2">
+                        <li><a href="" class="active">누수</a></li>
+                        <li><a href="">수위</a></li> 
+                        <li><a href="">변위</a></li>
+                        <li><a href="">지진</a></li>
+                        <li><a href="">집계</a></li>
+                    </ul>    
+
+                    <!-- tab1 누수 내용 -->
+                    <div class="dashboard_tab_cont tab1">
+                        <div class="main_table_type2">  <!-- th가 고정일때 -->
+                            <table>
+                                <colgroup>                                
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>지역</th>
+                                        <th>구분</th>
+                                        <th>개소수</th>
+                                        <th>관심</th>
+                                        <th>주의</th>
+                                        <th>경계</th>
+                                        <th>심각</th>
+                                        <th>점검대상</th>
+                                        <th>통신이상</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="td_title">전국</td>
+                                        <td class="td_title2">누수계</td>
+                                        <td>982</td>
+                                        <td>498</td>
+                                        <td>36</td>
+                                        <td>41</td>
+                                        <td>346</td>
+                                        <td>10</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td_title">경기</td>
+                                        <td class="td_title2">누수계</td>
+                                        <td>982</td>
+                                        <td>498</td>
+                                        <td>36</td>
+                                        <td>41</td>
+                                        <td>346</td>
+                                        <td>10</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td_title">강원</td>
+                                        <td class="td_title2">누수계</td>
+                                        <td>982</td>
+                                        <td>498</td>
+                                        <td>36</td>
+                                        <td>41</td>
+                                        <td>346</td>
+                                        <td>10</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td_title">충북</td>
+                                        <td class="td_title2">누수계</td>
+                                        <td>982</td>
+                                        <td>498</td>
+                                        <td>36</td>
+                                        <td>41</td>
+                                        <td>346</td>
+                                        <td>10</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td_title">충남</td>
+                                        <td class="td_title2">누수계</td>
+                                        <td>982</td>
+                                        <td>498</td>
+                                        <td>36</td>
+                                        <td>41</td>
+                                        <td>346</td>
+                                        <td>10</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td_title">전북</td>
+                                        <td class="td_title2">누수계</td>
+                                        <td>982</td>
+                                        <td>498</td>
+                                        <td>36</td>
+                                        <td>41</td>
+                                        <td>346</td>
+                                        <td>10</td>
+                                        <td>21</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
+                    <!-- //tab1 누수 내용 -->
 
-                </div>
-                <!-- //계측소 검색 -->
-                <div class="search_wrap">
-                    <select id="">
-                        <option value="">10분별</option>
-                    </select>
-                    <input type="text"  placeholder="2025-03-06 00시" class="w100">
-                    <i class="hyphen">-</i>
-                    <input type="text"  placeholder="2025-03-06 00시" class="w100">
-                    <button class="btn_search">검색</button>
-                </div>
+                     <!-- tab4 집계 내용 -->
+                     <div class="dashboard_tab_cont tab5">
+                        <div class="main_table_type3">  <!-- th가 고정일때 -->
+                            <table>
+                                <colgroup>                                
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>지역</th>
+                                        <th>구분</th>
+                                        <th>개소수</th>
+                                        <th>관심</th>
+                                        <th>주의</th>
+                                        <th>경계</th>
+                                        <th>심각</th>
+                                        <th>점검대상</th>
+                                        <th>통신이상</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2" class="td_title">전국</td>
+                                        <td class="td_title2">누수계</td>
+                                        <td>982</td>
+                                        <td>498</td>
+                                        <td>36</td>
+                                        <td>41</td>
+                                        <td>346</td>
+                                        <td>10</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="td_title2">변위계</td>
+                                      <td>65</td>
+                                      <td>30</td>
+                                      <td>7</td>
+                                      <td>8</td>
+                                      <td>6</td>
+                                      <td>47</td>
+                                      <td>42</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" class="td_title">경기</td>
+                                        <td class="td_title2">누수계</td>
+                                        <td>982</td>
+                                        <td>498</td>
+                                        <td>36</td>
+                                        <td>41</td>
+                                        <td>346</td>
+                                        <td>10</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="td_title2">변위계</td>
+                                      <td>65</td>
+                                      <td>30</td>
+                                      <td>7</td>
+                                      <td>8</td>
+                                      <td>6</td>
+                                      <td>47</td>
+                                      <td>42</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" class="td_title">강원</td>
+                                        <td class="td_title2">누수계</td>
+                                        <td>982</td>
+                                        <td>498</td>
+                                        <td>36</td>
+                                        <td>41</td>
+                                        <td>346</td>
+                                        <td>10</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="td_title2">변위계</td>
+                                      <td>65</td>
+                                      <td>30</td>
+                                      <td>7</td>
+                                      <td>8</td>
+                                      <td>6</td>
+                                      <td>47</td>
+                                      <td>42</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" class="td_title">충북</td>
+                                        <td class="td_title2">누수계</td>
+                                        <td>982</td>
+                                        <td>498</td>
+                                        <td>36</td>
+                                        <td>41</td>
+                                        <td>346</td>
+                                        <td>10</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="td_title2">변위계</td>
+                                      <td>65</td>
+                                      <td>30</td>
+                                      <td>7</td>
+                                      <td>8</td>
+                                      <td>6</td>
+                                      <td>47</td>
+                                      <td>42</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" class="td_title">충남</td>
+                                        <td class="td_title2">누수계</td>
+                                        <td>982</td>
+                                        <td>498</td>
+                                        <td>36</td>
+                                        <td>41</td>
+                                        <td>346</td>
+                                        <td>10</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="td_title2">변위계</td>
+                                      <td>65</td>
+                                      <td>30</td>
+                                      <td>7</td>
+                                      <td>8</td>
+                                      <td>6</td>
+                                      <td>47</td>
+                                      <td>42</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2" class="td_title">전북</td>
+                                        <td class="td_title2">누수계</td>
+                                        <td>982</td>
+                                        <td>498</td>
+                                        <td>36</td>
+                                        <td>41</td>
+                                        <td>346</td>
+                                        <td>10</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="td_title2">변위계</td>
+                                      <td>65</td>
+                                      <td>30</td>
+                                      <td>7</td>
+                                      <td>8</td>
+                                      <td>6</td>
+                                      <td>47</td>
+                                      <td>42</td>
+                                    </tr>                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- //tab4 집계 내용 -->
 
-                
+                </article>
+            
 
-
-               <div class="main_table_type3">  <!-- th가 고정일때 -->
-                <table>
-                    <colgroup>
-                    
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>지역</th>
-                            <th>구분</th>
-                            <th>개소수</th>
-                            <th>관심</th>
-                            <th>주의</th>
-                            <th>경계</th>
-                            <th>심각</th>
-                            <th>점검대상</th>
-                            <th>통신이상</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2" class="td_title">전국</td>
-                            <td class="td_title2">누수계</td>
-                            <td>982</td>
-                            <td>498</td>
-                            <td>36</td>
-                            <td>41</td>
-                            <td>346</td>
-                            <td>10</td>
-                            <td>21</td>
-                        </tr>
-                        <tr>
-                          <td class="td_title2">변위계</td>
-                          <td>65</td>
-                          <td>30</td>
-                          <td>7</td>
-                          <td>8</td>
-                          <td>6</td>
-                          <td>47</td>
-                          <td>42</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2" class="td_title">경기</td>
-                            <td class="td_title2">누수계</td>
-                            <td>982</td>
-                            <td>498</td>
-                            <td>36</td>
-                            <td>41</td>
-                            <td>346</td>
-                            <td>10</td>
-                            <td>21</td>
-                        </tr>
-                        <tr>
-                          <td class="td_title2">변위계</td>
-                          <td>65</td>
-                          <td>30</td>
-                          <td>7</td>
-                          <td>8</td>
-                          <td>6</td>
-                          <td>47</td>
-                          <td>42</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2" class="td_title">강원</td>
-                            <td class="td_title2">누수계</td>
-                            <td>982</td>
-                            <td>498</td>
-                            <td>36</td>
-                            <td>41</td>
-                            <td>346</td>
-                            <td>10</td>
-                            <td>21</td>
-                        </tr>
-                        <tr>
-                          <td class="td_title2">변위계</td>
-                          <td>65</td>
-                          <td>30</td>
-                          <td>7</td>
-                          <td>8</td>
-                          <td>6</td>
-                          <td>47</td>
-                          <td>42</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2" class="td_title">충북</td>
-                            <td class="td_title2">누수계</td>
-                            <td>982</td>
-                            <td>498</td>
-                            <td>36</td>
-                            <td>41</td>
-                            <td>346</td>
-                            <td>10</td>
-                            <td>21</td>
-                        </tr>
-                        <tr>
-                          <td class="td_title2">변위계</td>
-                          <td>65</td>
-                          <td>30</td>
-                          <td>7</td>
-                          <td>8</td>
-                          <td>6</td>
-                          <td>47</td>
-                          <td>42</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2" class="td_title">충남</td>
-                            <td class="td_title2">누수계</td>
-                            <td>982</td>
-                            <td>498</td>
-                            <td>36</td>
-                            <td>41</td>
-                            <td>346</td>
-                            <td>10</td>
-                            <td>21</td>
-                        </tr>
-                        <tr>
-                          <td class="td_title2">변위계</td>
-                          <td>65</td>
-                          <td>30</td>
-                          <td>7</td>
-                          <td>8</td>
-                          <td>6</td>
-                          <td>47</td>
-                          <td>42</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2" class="td_title">전북</td>
-                            <td class="td_title2">누수계</td>
-                            <td>982</td>
-                            <td>498</td>
-                            <td>36</td>
-                            <td>41</td>
-                            <td>346</td>
-                            <td>10</td>
-                            <td>21</td>
-                        </tr>
-                        <tr>
-                          <td class="td_title2">변위계</td>
-                          <td>65</td>
-                          <td>30</td>
-                          <td>7</td>
-                          <td>8</td>
-                          <td>6</td>
-                          <td>47</td>
-                          <td>42</td>
-                        </tr>
-                       
-                    </tbody>
-                </table>
-                 </div>
+               
              </div>
             <!-- //right list -->
 
@@ -575,6 +672,29 @@
                 subMenu.style.display = 'none';
             });
         }
+    });
+});
+
+
+$(document).ready(function() {
+    // 초기 상태 설정
+    $('.dashboard_tab_cont').hide();
+    $('.dashboard_tab_cont.tab1').show();
+    $('.dashboard_tab2 li:first-child a').addClass('active');
+
+    // 탭 버튼 클릭 이벤트
+    $('.dashboard_tab2 li a').click(function(e) {
+        e.preventDefault();
+        
+        var tabIndex = $(this).parent().index() + 1;
+        
+        // 모든 탭 관련 요소 초기화
+        $('.dashboard_tab2 li a').removeClass('active');
+        $('.dashboard_tab_cont').hide();
+        
+        // 현재 선택된 탭 활성화
+        $(this).addClass('active');
+        $('.dashboard_tab_cont.tab' + tabIndex).show();
     });
 });
     </script>
