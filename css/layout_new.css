@@ -195,160 +195,39 @@
 .station_table .info_color1{background-color:#6297FA}
 .station_table .info_color2{background-color:#6A94C7}
 
-
-.earthquake-alert {
-    position: relative;
-    width: 32px; /* 아이콘 크기에 맞게 조정 */
-    height: 32px;
+/* 아이콘1 - 노란색 파동 효과 */
+.earthquake-alert{position:relative;width:32px;height:32px}
+.earthquake-icon{position:relative;z-index:2;width:100%;height:100%}
+.alert-wave{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;height:100%;border:7px solid rgba(255,238,5,0.8);border-radius:50%;animation:wave 2s infinite;box-shadow:0 0 10px rgba(255,255,255,0.4)}
+.alert-wave:nth-child(2){animation-delay:0.5s}
+.alert-wave:nth-child(3){animation-delay:1s}
+@keyframes wave{
+    0%{width:100%;height:100%;opacity:0.8;border-width:4px}
+    100%{width:200%;height:200%;opacity:0;border-width:2px}
 }
 
-.earthquake-icon {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
+/* 아이콘2 - 빨간색 펄스 효과 */
+.earthquake-alert-red{position:relative;width:32px;height:32px}
+.earthquake-alert-red .earthquake-icon{position:relative;z-index:2;width:100%;height:100%;animation:shake 0.8s infinite}
+.earthquake-alert-red .pulse-ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;height:100%;border-radius:50%;background:rgba(255,2,2,0.685);animation:pulse 2s infinite}
+.earthquake-alert-red .pulse-ring:nth-child(2){animation-delay:1s}
+@keyframes pulse{
+    0%{transform:translate(-50%,-50%) scale(1);opacity:0.8;background:rgba(255,0,0,0.7);box-shadow:0 0 0 0 rgba(255,0,0,0.7)}
+    70%{transform:translate(-50%,-50%) scale(1.8);opacity:0.3;background:rgba(255,0,0,0.6);box-shadow:0 0 0 10px rgba(255,0,0,0)}
+    100%{transform:translate(-50%,-50%) scale(2);opacity:0;background:rgba(255,0,0,0);box-shadow:0 0 0 0 rgba(255,0,0,0)}
 }
-.alert-wave {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    border: 7px solid rgba(255, 238, 5, 0.8); /* 두께 증가: 2px -> 4px */
-    border-radius: 50%;
-    animation: wave 2s infinite;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* 빛나는 효과 추가 */
+@keyframes shake{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.1)}
 }
 
-
-.alert-wave:nth-child(2) {
-    animation-delay: 0.5s;
-}
-
-.alert-wave:nth-child(3) {
-    animation-delay: 1s;
-}
-
-@keyframes wave {
-    0% {
-        width: 100%;
-        height: 100%;
-        opacity: 0.8;
-        border-width: 4px; /* 시작할 때 두께 */
-    }
-    100% {
-        width: 200%;
-        height: 200%;
-        opacity: 0;
-        border-width: 2px; /* 퍼질 때 자연스럽게 얇아지도록 */
-    }
-}
-
-
-.earthquake-alert-red {
-    position: relative;
-    width: 32px;
-    height: 32px;
-}
-
-.earthquake-alert-red .earthquake-icon {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    animation: shake 0.8s infinite;
-}
-
-.earthquake-alert-red .pulse-ring {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: rgba(255, 2, 2, 0.685);
-    animation: pulse 2s infinite;
-}
-
-.earthquake-alert-red .pulse-ring:nth-child(2) {
-    animation-delay: 1s;
-}
-
-
-@keyframes pulse {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0.8;
-        background: rgba(255, 0, 0, 0.7); /* 시작 투명도 증가 */
-        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
-    }
-    70% {
-        transform: translate(-50%, -50%) scale(1.8); /* 2.5에서 1.8로 축소 */
-        opacity: 0.3; /* 0.2에서 0.3으로 증가 */
-        background: rgba(255, 0, 0, 0.6);
-        box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); /* 15px에서 10px로 축소 */
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(2); /* 3에서 2로 축소 */
-        opacity: 0;
-        background: rgba(255, 0, 0, 0);
-        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
-    }
-}
-@keyframes shake {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-}
-
-
-.earthquake-alert-purple {
-    position: relative;
-    width: 32px;
-    height: 32px;
-}
-
-.earthquake-alert-purple .earthquake-icon {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-}
-
-.earthquake-alert-purple .alert-wave {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    animation: wave-purple 2s infinite;
-}
-
-.earthquake-alert-purple .alert-wave:nth-child(1) {
-    border: 5px solid rgba(77, 0, 212, 0.7); /* 첫 번째 원: 70% 투명도, 5px 두께 */
-}
-
-.earthquake-alert-purple .alert-wave:nth-child(2) {
-    border: 6px solid rgba(77, 0, 212, 0.6); /* 두 번째 원: 60% 투명도, 6px 두께 */
-    animation-delay: 0.5s;
-}
-
-@keyframes wave-purple {
-    0% {
-        width: 100%;
-        height: 100%;
-        opacity: 1;
-    }
-    100% {
-        width: 200%;
-        height: 200%;
-        opacity: 0;
-    }
+/* 아이콘3 - 보라색 파동 효과 */
+.earthquake-alert-purple{position:relative;width:32px;height:32px}
+.earthquake-alert-purple .earthquake-icon{position:relative;z-index:2;width:100%;height:100%}
+.earthquake-alert-purple .alert-wave{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;height:100%;border-radius:50%;animation:wave-purple 2s infinite}
+.earthquake-alert-purple .alert-wave:nth-child(1){border:5px solid rgba(77,0,212,0.7)}
+.earthquake-alert-purple .alert-wave:nth-child(2){border:6px solid rgba(77,0,212,0.6);animation-delay:0.5s}
+@keyframes wave-purple{
+    0%{width:100%;height:100%;opacity:1}
+    100%{width:200%;height:200%;opacity:0}
 }
