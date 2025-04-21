@@ -51,7 +51,7 @@
 .table_type3 table{width:100%;border-top:1px solid #213882}
 .table_type3 table th,.table_type3 table td{text-align:center;padding:0 4px}
 .table_type3 table th{background:#909DC7;vertical-align:middle;padding:6px 12px;border-right:1px solid rgb(120, 144, 179);
-    border-bottom:1px solid rgb(120, 144, 179);color:rgba(255,255,255,0.8);font-weight:400}
+    border-bottom:1px solid rgb(120, 144, 179);color:#fff;font-weight:400}
 .table_type3 table th{height:40px}
 .table_type3 table td{color:#828282;height:45px;line-height:43px;border:1px solid #ddd;vertical-align:middle}
 .table_type3 table td:first-child{border-left:0}

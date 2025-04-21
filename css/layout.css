@@ -4,7 +4,7 @@
 #wrap{width:100%;overflow:hidden}
 
 /* 왼쪽메뉴 공통 */
-.navbar{position:absolute;top:0;left:0;z-index:1;width:280px;height:100vh;background-color:#F2F5FF;box-shadow:0 0 25px rgba(67, 81, 144,.4)}
+.navbar{position:fixed;top:0;left:0;z-index:1;width:280px;height:100vh;background-color:#F2F5FF;box-shadow:0 0 25px rgba(67, 81, 144,.4);margin-top:68px;padding-top:20px}
 .navbar h1{padding:20px 0 30px 20px}
 
 /* 로그인정보 */
@@ -21,7 +21,7 @@
 .navbar .btn_wrap a i{margin-left:auto;font-size:12px;color:#9CA6CC}
 
 /* 메뉴 */
-.nav_menu{margin-top:20px;height:calc(100vh - 350px);overflow-y:scroll}
+.nav_menu{margin-top:20px;height:calc(100vh - 250px);overflow-y:scroll}
 .nav_menu ul li a.menu_item{display:flex;align-items:center;max-height:60px;line-height:60px;color:#404C8B;padding:0 20px;font-size:16px}
 .nav_menu ul li a.menu_item svg{margin-right:12px;fill:#5D6E91}
 .nav_menu ul li a.menu_item i{margin-left:auto;color:#c1c4d3}
@@ -36,7 +36,7 @@
 .nav_menu ul li div.depth2 ul{position:relative}
 .nav_menu ul li div.depth2 ul:before{content:'';position:absolute;left:0;top:-10px;width:1px;height:calc(100% - 8px);background:#ACB3D3}
 .nav_menu ul li div.depth2 ul li{position:relative}
-.nav_menu ul li div.depth2 ul li:before{content:'';position:absolute;top:50%;left:0;width:9px;height:1px;background:#ACB3D3}
+.nav_menu ul li div.depth2 ul li:before{ content: none;}
 .nav_menu ul li div.depth2 ul li a{position:relative;display:flex;align-items:center;color:#636d95;padding:0 0 0 20px;line-height:38px;font-weight:400}
 .nav_menu ul li div.depth2 ul li a:hover,.nav_menu ul li div.depth2 ul li a.active{color:#3c4a8b;font-weight:700;background:none}
 .nav_menu ul li div.depth2 ul li a.active:before{content:'';position:absolute;left:-2px;top:50%;transform:translateY(-50%);border-radius:50%;width:6px;height:6px;background:#435190}
@@ -48,7 +48,27 @@
 .nav_menu ul li div.depth2 ul li a i{transform:rotate(180deg)}
 .nav_menu ul li div.depth2 ul li a.active i{transform:rotate(0deg)}
 .nav_menu ul li div ul li a i{color:#666 !Important;margin-left:auto}
+/* 새로운 스타일 추가 */
+.nav_menu ul li div.depth3 li > a {
+    position: relative;
+    padding-left: 20px;
+}
 
+.nav_menu ul li div.depth3 li > a:before {
+    content: '';
+    position: absolute;
+    left: -19px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 1px;
+    background: #777;
+}
+
+/* active 상태일 때 선 스타일 변경 */
+.nav_menu ul li div.depth3 li > a.active:before {
+    background: #5A71E9;
+}
 /* 관리자 접속정보 */
 .site_info{position:fixed;bottom:40px;left:20px}
 .site_info a{display:flex;align-items:center;max-height:60px;line-height:60px;color:#404C8B}
@@ -121,12 +141,12 @@
 ================================================== */
 
 /* 서브 콘텐츠 */
-.contents{position:relative;left:280px;width:calc(100% - 280px);height:100vh;background:#fff;}
+.contents{position:relative;left:280px;width:calc(100% - 280px);height:calc(100vh - 68px);background:#fff;margin-top:68px}
 .contents_wrap{padding:20px;height:calc(100vh - 140px);display:flex;flex-direction:column;}
 .contents_wrap2{height:calc(100vh - 140px);display:flex;flex-direction:column;}
 
 /* 서브 타이틀 */
-.contents .sub_title{width:100%;height:70px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;}
+.contents .sub_title{width:100%;height:60px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;}
 .contents .sub_title .h2_title{font-size:22px;color:#222;letter-spacing:-.9px}
 .contents .home_location{display:flex}
 .contents .home_location span{color:#52526C;font-size:13px}
