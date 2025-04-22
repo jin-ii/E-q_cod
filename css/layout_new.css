@@ -231,3 +231,13 @@
     0%{width:100%;height:100%;opacity:1}
     100%{width:200%;height:200%;opacity:0}
 }
+
+
+/* 서브탭 */
+.lnb_tab{display:flex;margin:15px 0}
+.lnb_tab li{min-width:175px}
+.lnb_tab li a{display:block;height:45px;line-height:43px;background:#EAECF3;text-align:center;color:#6C7EB4;padding:0 30px}
+.lnb_tab li:last-child a{margin-right:0}
+.lnb_tab li a.active{background:#6675C5;color:#fff}
+.lnb_tab li a:hover{background:#6675C5;color:#fff;font-weight:700}
+.lnb_tab li a.active:hover{background:#6675C5;}
