@@ -94,7 +94,8 @@
 
 /* 계측소검색 */
 .article_measure_search .search_wrapper{display:flex;flex-wrap:wrap;gap:12px;padding:16px 0}
-.article_measure_search .search_wrapper > * {flex:1 1 calc(33.33% - 12px)}
+
+
 .search_wrap{display:flex;gap:1px}
 /* 지도api 임시 */
 .map_select{padding:12px;background:rgba(255,255,255,0.8)}

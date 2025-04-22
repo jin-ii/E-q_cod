@@ -5,12 +5,20 @@
 .btn_save{cursor:pointer;border:none;height:45px;background:#696969;color:#fff;padding:0 20px;white-space:nowrap}
 .btn_save:hover{background:#5a5a5a;font-weight:bold}
 
+.btn_confirm{cursor:pointer;border:none;height:45px;background:#5b6493;color:#fff;padding:0 20px;white-space:nowrap}
+.btn_confirm:hover{background:#5b6493;font-weight:bold}
+
+
 .btn_save_total{cursor:pointer;border:none;height:45px;background:#a5a8bb;color:#fff;padding:0 20px;white-space:nowrap}
 .btn_save_total:hover{background:#9fa2b4;font-weight:bold}
 
 .btn_download{cursor:pointer;display:inline-block;border:none;height:45px;line-height:45px;background:#696969;color:#fff;padding:0 20px;white-space:nowrap}
 .btn_download i{margin-right:10px}
 .btn_download:hover{background:#5a5a5a}
+
+.btn_excel{display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;height:45px;background:#fff;color:#198153;padding:0 20px;border:1px solid #1D8F5D;white-space:nowrap}
+.btn_excel i{margin-right:4px}
+.btn_excel:hover{background:#ecf7f2;border:1px solid #1D8F5D;font-weight:bold}
 
 /* 기본 버튼 */
 .btn{cursor:pointer;display:inline-block;padding:0 20px;font-size:14px;height:45px;line-height:43px;font-weight:bold;font-family:"malgungothic"}
@@ -69,6 +77,48 @@
 .bottom_btn_cancel:hover{background:#e9e9e9}
 .bottom_btn_confirm{display:block;min-width:120px;height:45px;line-height:43px;padding:0 35px;background:#5B7FDC;color:#fff;text-align:center;font-size:16px}
 .bottom_btn_confirm:hover{background:#5679d3}
+
+/* 버튼타입 추가 */
+.btn_colorl{cursor:pointer;display:flex;align-items:center;border:none;height:45px;background:#566096;color:#fff;padding:0 24px;white-space:nowrap}
+.btn_colorl:hover{background:#4e5688;}
+
+.btn_color2{cursor:pointer;display:flex;align-items:center;border:none;height:45px;background:#7F8CC7;color:#fff;padding:0 24px;white-space:nowrap}
+.btn_color2:hover{background:#6a76ac;}
+
+.btn_color3{cursor:pointer;display:flex;align-items:center;border:none;height:45px;background:#707590;color:#fff;padding:0 24px;white-space:nowrap}
+.btn_color3:hover{background:#686d86;}
+
+.btn_small{display:inline-block;width:75px;padding:0 8px;height:30px;line-height:28px;font-size:14px}
+.btn_small i{margin-left:2px;font-size:12px}
+
+.btn_label{cursor:default;display:inline-block;width:75px;padding:0 8px;height:30px;line-height:28px;font-size:14px}
+
+.btn_send{background:#5A71E9;color:#fff;}
+
+.btn_resend{background:#fff;color:#5A71E9;border:1px solid #5A71E9;}
+
+.btn_checked{background:#fff;color:#797979;border:1px solid #797979;}
+.btn_unchecked{background:#fff;color:#F58282;border:1px solid #EFA8A8;}
+.btn_detailview{background:#fff;color:#6e7caa;border:1px solid #a1a5bb;}
+.btn_detailview:hover{background:#6e7caa;color:#fff;border:1px solid #6e7caa}
+
+.btn_checked{background:#fff;color:#797979;border:1px solid #797979;font-weight:700}
+.btn_unchecked{background:#fff;color:#e46565;border:1px solid #e46565;}
+
+/* 요청취소 */
+.btn_cancel_request{background:#fff;color:#0AB8B8;border:1px solid #0AB8B8;font-weight:700}
+
+/* 취소완료 */
+.btn_cancel_checked{background:#0AB8B8;color:#fff;border:1px solid #0AB8B8;font-weight:700}
+
+/* 점검완료 */
+.btn_status_checked{background:#636363;color:#fff;font-weight:700}
+
+/* 이력현황 */
+.btn_history{background:#fff;color:#5A71E9;border:1px solid #5A71E9;font-weight:700}
+.btn_history:hover{background:#5A71E9;color:#fff;border:1px solid #5A71E9}
+
+
 
 
 /* 대시보드 맵 아이콘 */
