@@ -1,16 +1,73 @@
 //nav slide menu
 $(function(){
 
-    // 상위 메뉴 클릭시 하위 메뉴 오픈
-    const menuItem = $(".menu_item");
-    menuItem.click(function(e) {
-        e.preventDefault()
-        $(".depth2").stop().slideUp();
-        menuItem.removeClass("active")
+    const menuItem = $(".nav_menu .depth1 .menu_item");
+    const navbar = $(".navbar");
+    const depth2Menu = $(".depth2");
+    
+    // 초기 상태 설정 - 페이지 로드 시 depth2 메뉴 숨김
+    depth2Menu.hide();
+    
+    // 메뉴 접힘/펼침 상태 체크
+    let isExpanded = false;
+    
+    // #navi_wrap이 있는 경우 (dashboard1-4.html)
+    if ($("#navi_wrap").length) {
+        navbar.hover(
+            function() {
+                isExpanded = true;
+            },
+            function() {
+                isExpanded = false;
+                // 메뉴가 접힐 때 모든 active 상태와 depth2 메뉴 초기화
+                menuItem.removeClass("active");
+                depth2Menu.stop().slideUp();
+            }
+        );
+        
+        menuItem.click(function(e) {
+            e.preventDefault();
+            
+            // 펼쳐진 상태에서만 메뉴 동작
+            if(isExpanded) {
+                toggleDepth2Menu($(this));
+            }
+        });
+    } 
+    // .navbar만 있는 경우 (sub_new1.html)
+    else {
+        menuItem.click(function(e) {
+            e.preventDefault();
+            toggleDepth2Menu($(this));
+        });
+    }
 
-        $(this).addClass("active");
-        $(this).next().stop().slideDown();
+    // depth2 메뉴 토글 함수
+    function toggleDepth2Menu($clickedItem) {
+        if($clickedItem.hasClass("active")) {
+            $clickedItem.removeClass("active");
+            $clickedItem.next(".depth2").stop().slideUp();
+        } else {
+            menuItem.removeClass("active");
+            depth2Menu.stop().slideUp();
+            $clickedItem.addClass("active");
+            if($clickedItem.next(".depth2").length > 0) {
+                $clickedItem.next(".depth2").stop().slideDown();
+            }
+        }
+    }
 
+    // 좌측 영역 접기/펼치기
+    $('.btn_fold_left').click(function(e){
+        e.preventDefault();
+        $('.left_list').toggleClass('fold');
+        $(this).toggleClass('fold');
+    });
+
+    $('.btn_fold_right').click(function(e){
+        e.preventDefault();
+        $('.right_list').toggleClass('fold');
+        $(this).toggleClass('fold');
     });
 
     //탭메뉴
