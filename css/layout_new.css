@@ -45,7 +45,7 @@
 /* layout  */
 #header {width:100%;height:68px;position:fixed;top:0;background:#3D448D;display:flex;align-items:center;padding:0 20px;box-shadow:0 10px 15px rgba(0,0,0,0.1);z-index:9} 
 #header .top_menu{margin:0 auto;display:flex;justify-content:center;align-items:center;height:100%}
-#header .top_menu ul{display:flex;gap:50px}
+#header .top_menu ul{display:flex;gap:40px}
 #header .top_menu ul li{position:relative;}
 #header .top_menu ul li a{color:#fff;font-size:17px;padding:0 25px 30px 25px;transition:color 0.3s ease;}
 #header .top_menu ul li a::after {content: '';position:absolute;bottom:-25px;left:0;width:0;height:4px;background-color:#5A71E9;transition: width 0.3s ease;}
@@ -254,71 +254,45 @@
 .lnb_tab li a.active:hover{background:#6675C5;}
 
 
-/* 왼쪽메뉴 기본 상태 */
-#navi_wrap{width:65px;height:100%;position:fixed;z-index:4;overflow:hidden;left:0;transition:width 0.3s;}
+/****** 왼쪽메뉴 ******/
+#navi_wrap{width:65px;height:100%;position:fixed;z-index:4;overflow:hidden;left:0px;transition:width 0.3s;}
+
 /* 접힌 상태에서 active 스타일 무시 */
-#navi_wrap:not(:hover) .nav_menu .depth1 a{justify-content:center;background:transparent !important;}
-#navi_wrap:not(:hover) .nav_menu .depth1 a.active{background:transparent !important;}
-#navi_wrap:not(:hover) .nav_menu .depth1 svg{width:24px;height:24px;margin:0;}
-#navi_wrap:not(:hover) .nav_menu .depth1 svg path{fill:#646C95 !important;}
 
 /* 메뉴 아이템 기본 스타일 */
 #navi_wrap .nav_menu{overflow:hidden !important;}
-#navi_wrap .nav_menu .depth1 a{display:flex;align-items:center;padding:15px 20px;}
-#navi_wrap .nav_menu .depth1 svg{width:24px;height:24px;}
-#navi_wrap .nav_menu .depth1 .menu_txt,#navi_wrap .nav_menu .depth1 i,#navi_wrap .nav_menu .depth2,#navi_wrap .nav_menu .depth3{display:none;}
+#navi_wrap .nav_menu .depth1 a{display:flex;align-items:center;padding:20px;}
+#navi_wrap .nav_menu .depth1 svg{width:24px;height:24px; flex-shrink: 0;}
+#navi_wrap .nav_menu .depth1 .menu_txt{opacity:0;transform:translateX(-20px);transition:all 0.3s ease-in-out;white-space:nowrap;position:absolute;left:60px;}
+#navi_wrap:hover .nav_menu .depth1 .menu_txt,
 
-/* hover 시 메뉴 스타일 변경 */
-#navi_wrap:hover{width:240px;}
-#navi_wrap:hover .nav_menu{overflow-y:auto !Important;}
-#navi_wrap:hover .nav_menu .depth1 a{justify-content:flex-start;}
-#navi_wrap:hover .nav_menu .depth1 svg{margin-right:15px;}
-#navi_wrap:hover .nav_menu .depth1 .menu_txt,#navi_wrap:hover .nav_menu .depth1 i{display:block;}
+#navi_wrap.fixed-open .nav_menu .depth1 .menu_txt{opacity:1;transform:translateX(0);position:relative;left:auto;margin-left:15px;}
+#navi_wrap .nav_menu .depth1 a i{opacity:0;visibility:hidden;transition:all 0.3s ease-in-out;}
+#navi_wrap:hover .nav_menu .depth1 a i,
+#navi_wrap.fixed-open .nav_menu .depth1 a i{opacity:1;visibility:visible;}
+#navi_wrap .nav_menu .depth1 .depth2,#navi_wrap .nav_menu .depth1 .depth3{display:none;}
+#navi_wrap:hover .nav_menu .depth1 .depth2,
+#navi_wrap:hover .nav_menu .depth1 .depth3,
+#navi_wrap.fixed-open .nav_menu .depth1 .depth2,
+#navi_wrap.fixed-open .nav_menu .depth1 .depth3{display:block;}
+#navi_wrap:hover,
+#navi_wrap.fixed-open{width:240px;}
+#navi_wrap:hover .nav_menu,
+#navi_wrap.fixed-open .nav_menu{overflow-y:auto!important;}
+#navi_wrap:hover .nav_menu .depth1 a,
+#navi_wrap.fixed-open .nav_menu .depth1 a{justify-content:flex-start;}
+#navi_wrap:hover .nav_menu .depth1 svg,
+#navi_wrap.fixed-open .nav_menu .depth1 svg{margin-right:15px;}
+#navi_wrap .nav_menu .depth1 .depth3 ul li a{padding:0 12px;font-size:14px;color:#646C95}
 
 
-#main_container_wrap .btn_fold_left{
-    position: absolute;
-    right: -47px; /* 버튼 크기에 따라 조정 */
-    top: 0px; /* header 높이에 맞춰 조정 */
-    z-index: 3; /* 다른 요소들 위에 표시 */
-    width: 47px; /* 버튼 크기 지정 */
-    height: 47px; /* 버튼 크기 지정 */
-    cursor: pointer;
-     transition: transform 0.3s ease;
-}
 
-
-.left_list.fold {
-    margin-left: -420px; /* width(485px) - navi_wrap width(65px) */
-}
-
-.btn_fold_left img {
-    transition: transform 0.3s ease;
-}
-
-.btn_fold_left.fold img {
-    transform: rotate(180deg);
-}
-
-/* 오른쪽 메뉴 스타일 */
-.right_list.fold {
-    margin-right: -485px; /* 완전히 숨기기 위해 width 만큼 이동 */
-}
-
-#main_container_wrap .btn_fold_right {
-    position: absolute;
-    left: -47px;
-    top: 0px;
-    z-index: 3;
-    width: 47px;
-    height: 47px;
-    cursor: pointer;
-   transition: transform 0.3s ease;
-   
-}
-
-.btn_fold_right img{  transition: transform 0.3s ease;transform: rotate(180deg);}
-
-.btn_fold_right.fold img {
-    transform: rotate(360deg);
-}
+/* 접기버튼 */
+#main_container_wrap .btn_fold_left{position:absolute;right:-47px;top:0;z-index:3;width:47px;height:47px;cursor:pointer;transition:transform 0.3s ease;}
+.left_list.fold{margin-left:-420px;}
+.btn_fold_left img{transition:transform 0.3s ease;}
+.btn_fold_left.fold img{transform:rotate(180deg);}
+.right_list.fold{margin-right:-485px;}
+#main_container_wrap .btn_fold_right{position:absolute;left:-47px;top:0;z-index:3;width:47px;height:47px;cursor:pointer;transition:transform 0.3s ease;}
+.btn_fold_right img{transition:transform 0.3s ease;transform:rotate(180deg);}
+.btn_fold_right.fold img{transform:rotate(360deg);}

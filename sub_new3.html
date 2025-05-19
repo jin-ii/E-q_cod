@@ -52,8 +52,25 @@
                     <a href="">로그아웃</a>                
                 </div>
             </header>
-             <!-- 왼쪽메뉴 -->
-             <nav id="navi_wrap" class="navbar waves-effect fixed-open always-open-menu">         
+            <!-- 왼쪽메뉴 -->
+            <nav class="navbar">
+                <!-- <h1><a href="index.html"><img src="./images/common/logo.svg" alt="EQMS 스마트재해예방 계측시스템"></a></h1> -->
+                <!-- 로그인 정보 
+                <div class="login_wrap">
+                    <div class="login_info">
+                        <div class="avatar"><img src="./images/common/bg_avatar.png" alt="프로필 아이콘"></div>
+                        <div class="profile">
+                            <h5>김호진 관리자</h5>
+                            <p class="profile_id">kimhojin</p>
+                        </div>
+                    </div>
+                    <div class="btn_wrap">
+                        <a href="#" class="btn_logout"><span>로그아웃</span><i class="fa-sharp fa-solid fa-chevron-right"></i></a>
+                        <a href="#" class="btn_myinfo">나의정보<i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                //로그인 정보 -->
+
                 <!-- 메인메뉴 -->
                 <div class="nav_menu scrollbar_custom">
                     <ul>
@@ -69,10 +86,10 @@
                                     />
                                     </svg>
                                                                 
-                                <span class="menu_txt">계측현황d</span>
+                                <span class="menu_txt">계측현황</span>
                                 <i class="fa-sharp fa-solid fa-chevron-right"></i>
                             </a>
-                           <div class="depth2" >
+                           <div class="depth2" style="display:block">
                                 <ul>
                                     <li><a href="sub.html" class="active">GIS기반 통합정보<i class="fa-solid fa-angle-down"></i></a>
                                     
@@ -199,7 +216,7 @@
                 <!-- //메인메뉴 -->
 
             </nav>
-        <!-- //왼쪽메뉴 -->
+            <!-- //왼쪽메뉴 -->
             <!-- 서브콘텐츠 -->
             <div class="contents">       
                 <!-- 타이틀 -->
@@ -207,8 +224,8 @@
 <!--                     
                     <h2 class="h2_title">장비운영현황</h2> -->
                     <ul class="lnb_tab">
-                        <li><a href="" class="active">과거파형조회</a></li>
-                        <li><a href="">이벤트전송이력</a></li> 
+                        <li><a href="" class="">과거파형조회</a></li>
+                        <li><a href="" class="active">이벤트전송이력</a></li> 
                         <li><a href="">관리,점검보고서</a></li>
                         <li><a href="">데이터장애이력</a></li>
                         <li><a href="">장비고장,점검이력</a></li>
@@ -240,14 +257,9 @@
                             <option value="">구례</option>
                         </select>
                         <select id="" class="w_150">
-                            <option value="">항목선택</option>
+                            <option value="">시설선택</option>
                         </select>
-                        <select id="" class="w_150">
-                            <option value="">일별</option>
-                        </select>
-                        <select id="">
-                            <option value="">2023-12-10</option>
-                        </select>
+                       <input type="text" id="" class="w_150" placeholder="시설명 검색"/>
                         
                         <div class="custom_select">
                             <select id="date" name="date" class="w_150">
@@ -269,56 +281,14 @@
 
                         <button class="btn_search mr-1">검색</button>
                         <button class="btn_save mr-1">저장</button>
-                        <button class="btn_confirm">등록</button>
                     </form>
                     <div class="search_btn_wrap">
                         <a href="" class="btn_arrow arrow_type2"><span>버튼샘플2</span><i class="fa-solid fa-chevron-right"></i></a>
                         <a href="" class="btn_arrow arrow_type1"><span>홍수위 제정고 보기</span><i class="fa-solid fa-chevron-right"></i></a>
                     
                     </div>
-                </div>
-                <!-- //상단검색바 -->          
 
-                <p style="margin-top:70px;">라디오버튼이 있을때 참고 (과거파형조회 예시)</p>
-
-                 <!-- 상단검색바 -->
-                 <div class="search_box">
-                    <form action="">
-                        <select id="">
-                            <option value="">본부</option>
-                            <option value="">경기</option>
-                            <option value="">경북</option>
-                            <option value="">경남</option>
-                            <option value="">제주</option>
-                        </select>
-                        <select id="">
-                            <option value="">관측소</option>
-                        </select>
-                     
-                        <h4 class="top_label2">발생시간</h4>
-                        <div class="custom_select">
-                            <select id="date" name="date" class="w_150">
-                                <option value="2024-02-15">2024-02-15</option>
-                                <option value="2024-02-16">2024-02-16</option>
-                                <option value="2024-02-17">2024-02-17</option>
-                            </select>
-                            <span class="icon"><i class="input_icon_calendar"></i></span>
-                        </div>
-                        <i class="hyphen">-</i>
-                        <div class="custom_select">
-                            <select id="date" name="date" class="w_150">
-                                <option value="2024-02-15">2024-02-15</option>
-                                <option value="2024-02-16">2024-02-16</option>
-                                <option value="2024-02-17">2024-02-17</option>
-                            </select>
-                            <span class="icon"><i class="input_icon_calendar"></i></span>
-                        </div>
-                
-                        
-                        <h4 class="top_label2">스케일조정</h4>
-                        <input type="text" class="input_type1" placeholder="스케일조정값을 입력하세요">
-
-                        <h4 class="top_label2">구간지정</h4>
+                       <h4 class="top_label2">구간지정</h4>
 
                         <div class="radio_button_wrap2">                           
                             <label class="checkcontainer">3분
@@ -337,117 +307,11 @@
 
                         <h4 class="top_label2">자료방식</h4>
 
-                        <div class="radio_button_wrap2">                           
-                            <label class="checkcontainer">PGA
-                                <input type="radio" checked="checked" name="radio">
-                                <span class="radiobtn"></span>
-                            </label>
-                            <label class="checkcontainer">mini-seed(20)
-                                <input type="radio" name="radio">
-                                <span class="radiobtn"></span>
-                            </label>           
-                            <label class="checkcontainer">10분
-                                <input type="radio" name="radio">
-                                <span class="radiobtn"></span>
-                            </label>                          
-                        </div>
-
-                        <button class="btn_search mr-1">검색</button>
-                    </form>
-                   
-                </div>
-                <!-- //상단검색바 -->    
-              
-
-                <p style="margin-top:70px;">엑셀버튼,화살표없는 버튼 추가 (이벤트전송이력 예시)</p>
-
-                <!-- 상단검색바 -->
-                <div class="search_box">
-                   <form action="">
-                    <h4 class="top_label2">발생시간</h4>                    
-                    <div class="custom_select">
-                        <select id="date" name="date" class="w_150">
-                            <option value="2024-02-15">2024-02-15</option>
-                            <option value="2024-02-16">2024-02-16</option>
-                            <option value="2024-02-17">2024-02-17</option>
-                        </select>
-                        <span class="icon"><i class="input_icon_calendar"></i></span>
-                    </div>
-                    <i class="hyphen">-</i>
-                    <div class="custom_select">
-                        <select id="date" name="date" class="w_150">
-                            <option value="2024-02-15">2024-02-15</option>
-                            <option value="2024-02-16">2024-02-16</option>
-                            <option value="2024-02-17">2024-02-17</option>
-                        </select>
-                        <span class="icon"><i class="input_icon_calendar"></i></span>
-                    </div>
-
-                    <h4 class="top_label2">발생지역</h4>
-                    <input type="text" class="input_type1" placeholder="">   
-                       <button class="btn_search mr-1">검색</button>
-                   </form>
-
-                   <div class="search_btn_wrap">
-                    <a href="" class="btn_colorl "><span>PGA생성</span></a>
-                    <a href="" class="btn_color2"><span>파형자료생성</span></a>
-                    <a href="" class="btn_color3"><span>보고서 생성</span></a>
-                    <a href="" class="btn_excel"><i><img src="./images/icon/icon_btn_excel.png" alt="엑셀 아이콘"></i>엑셀로 저장</a>
-                
-                </div>
                   
-               </div>
-               <!-- //상단검색바 -->
-
-                <p style="margin-top:70px;">검색 저장 외 버튼 참고</p>
-
-                <div class="search_box">
-                    <form action="">
-                        <h3 class="top_label">보정 저수지</h3>
-                        <select id="">
-                            <option value="">경기</option>
-                            <option value="">경북</option>
-                            <option value="">경남</option>
-                            <option value="">제주</option>
-                        </select>
-                        <select id="">
-                            <option value="">여주.이천</option>
-                        </select>
-                        <select id="">
-                            <option value="">금사(장흥)</option>
-                        </select>
-                        <input type="text" class="input_type1" placeholder="장비명을 검색하세요">
-                        <select id="">
-                            <option value="">시설명</option>
-                        </select>
-                                              
-                        
-                        <div class="custom_select">
-                            <select id="date" name="date" class="w_150">
-                                <option value="2024-02-15">2024-04-10</option>
-                            </select>
-                            <span class="icon"><i class="input_icon_calendar"></i></span>
-                        </div>
-                        <i class="hyphen">-</i>
-                        <div class="custom_select">
-                            <select id="date" name="date" class="w_150">
-                                <option value="2024-02-15">2024-05-10</option>
-                            </select>
-                            <span class="icon"><i class="input_icon_calendar"></i></span>
-                        </div>                
-
-                        <button class="btn_search mr-1">검색</button>
-                        <button class="btn_save mr-4">저장</button>
-                       
-                        <button class="btn_save_total mr-1">매개변수 수정</button>
-                        <button class="btn_save_total mr-1">저수율 그래프 보기/해제</button>
-                    </form>
-                    <div class="search_btn_wrap">
-                        <a href="" class="btn_arrow arrow_type2"><span>품절관리 FAQ</span><i class="fa-solid fa-chevron-right"></i></a>
-                    </div>
                 </div>
+                <!-- //상단검색바 -->          
 
-                <!-- 서브 콘텐츠 -->
+                 <!-- 서브 콘텐츠 -->
                 <div class="contents_wrap">      
            
                      <!-- 기본테이블 -->
@@ -535,67 +399,20 @@
                     </div>
                     <!-- //기본테이블 -->
 
-                       <!-- 기본테이블 -->
-                       <div class="table_type3">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>구분</th>
-                                    <th>합계</th>
-                                    <th>전년기준</th>
-                                    <th>신규설치</th>
-                                    <th>정상운영</th>
-                                    <th>장비점검</th>
-                                    <th>운영정지</th>
-                                    <th>일정값 지속(3일)</th>
-                                    <th>요청취소</th>
-                                    <th>이력현황</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                               
-                                <tr>
-                                    <td>저수지</td>
-                                    <td>5,414</td>
-                                    <td>5,300</td>
-                                    <td>114</td>
-                                    <td>4,680</td>
-                                    <td>4</td>
-                                    <td>146</td>
-                                    <td>79</td>
-                                    <td><p class="btn_label btn_cancel_request">요청취소</p></td>
-                                    <td><a href="" class="btn_small btn_history">이력현황<i class="fa-solid fa-chevron-right"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>수로부전체</td>
-                                    <td>5,414</td>
-                                    <td>5,300</td>
-                                    <td>114</td>
-                                    <td>4,680</td>
-                                    <td>4</td>
-                                    <td>146</td>
-                                    <td>79</td>
-                                    <td><p class="btn_label btn_cancel_checked">취소완료</p></td>
-                                    <td><a href="" class="btn_small btn_history">이력현황<i class="fa-solid fa-chevron-right"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td class="l_title">양수장</td>
-                                    <td>5,414</td>
-                                    <td>5,300</td>
-                                    <td>114</td>
-                                    <td>4,680</td>
-                                    <td>4</td>
-                                    <td>146</td>
-                                    <td>79</td>
-                                    <td><p class="btn_label btn_status_checked">점검완료</p>
-                                        <td><a href="" class="btn_small btn_history">이력현황<i class="fa-solid fa-chevron-right"></i></a></td>
-                                </tr>
-                       
-                            </tbody>
-                        </table>
-                    </div>
-                    <p>버튼과 아닌것이 헷갈려서 그냥 라벨은 btn_label로 !! 버튼은 btn_small로 나눔, 버튼은 화살표를 표시하는 방향으로..</p>
-                    <!-- //기본테이블 -->
+                    
+
+                </div>
+
+
+                
+            </div>
+            <!-- //서브콘텐츠 -->        
+
+         
+
+                
+              
+
 
                     
 
