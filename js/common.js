@@ -77,18 +77,24 @@ $(function(){
    
      // 외부 클릭시 메뉴 초기화 (메뉴 접기만 해당)
     $(document).click(function(e) {
-        if (!$(e.target).closest('#navi_wrap').length) {
-            $naviWrap.removeClass('expanded');
-            resetMenus();
+
+        if (window.location.pathname.endsWith('dashboard-1-4.html')) {
+            if (!$(e.target).closest('#navi_wrap').length) {
+                $naviWrap.removeClass('expanded');
+                resetMenus();
+            }
         }
+
     });
 
       // 외부 영역 클릭 시 메뉴 닫기 (always-open-menu 클래스가 없는 경우에만)
     $(document).click(function(e) {
         // always-open-menu 클래스가 없는 경우에만 fixed-open 클래스 제거
-        if (!$(e.target).closest('#navi_wrap').length && !isAlwaysOpenMenu) {
-            $naviWrap.removeClass('fixed-open expanded');
-            resetMenus();
+        if (window.location.pathname.endsWith('dashboard-1-4.html')) {
+            if (!$(e.target).closest('#navi_wrap').length && !isAlwaysOpenMenu) {
+                $naviWrap.removeClass('fixed-open expanded');
+                resetMenus();
+            }
         }
     });
 

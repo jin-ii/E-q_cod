@@ -296,3 +296,8 @@
 #main_container_wrap .btn_fold_right{position:absolute;left:-47px;top:0;z-index:3;width:47px;height:47px;cursor:pointer;transition:transform 0.3s ease;}
 .btn_fold_right img{transition:transform 0.3s ease;transform:rotate(180deg);}
 .btn_fold_right.fold img{transform:rotate(360deg);}
+
+
+
+.search_box_sub{display:none;padding:4px 20px;background:#fff;border: 1px solid #BEC5E4;min-width:300px;z-index:9999}
+.search_box_sub .radio_button_wrap2 {margin-left:15px}
