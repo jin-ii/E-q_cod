@@ -302,8 +302,8 @@
 .search_box_sub .radio_button_wrap2 {margin-left:15px}
 
 /* form박스 작성시 라디오버튼 카테고리 */
-.form_block .form_group{display:flex;align-items:center;gap:10px;min-height:45px;}
-.form_block .form_group .label_title{color:#555;font-size:16px;font-weight:400;white-space:nowrap;min-width:100px;display:flex;margin-bottom:12px}
+.form_block .form_group{display:flex;align-items:center;gap:10px;min-height:45px;width:100%}
+.form_block .form_group .label_title{color:#555;font-size:16px;font-weight:400;white-space:nowrap;min-width:100px;display:flex;margin-bottom:12px;}
 .form_block .radio_button_wrap{display:flex;align-items:flex-start} /* div상단부터 시작하게 */
-.form_block .radio_button_wrap .radio_wrap{display:flex;width:100%}
-.form_block .form_group .checkcontainer{display:flex;min-width:150px}
+.form_block .radio_button_wrap .radio_wrap{display:flex;width:100%;flex-wrap:wrap;}
+.form_block_wrap{width:100%}
