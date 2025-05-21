@@ -297,7 +297,12 @@
 .btn_fold_right img{transition:transform 0.3s ease;transform:rotate(180deg);}
 .btn_fold_right.fold img{transform:rotate(360deg);}
 
-
-
+/* 검색바 라디오버튼 파형조회 클릭시 팝업 이벤트*/
 .search_box_sub{display:none;padding:4px 20px;background:#fff;border: 1px solid #BEC5E4;min-width:300px;z-index:9999}
 .search_box_sub .radio_button_wrap2 {margin-left:15px}
+
+/* form박스 작성시 라디오버튼 카테고리 */
+.form_group{display:flex;align-items:center;gap:10px;min-height:45px}
+.form_group .label_title{color:#555;font-size:16px;font-weight:400;white-space:nowrap;min-width:100px}
+.form_block div{display:flex;align-items:flex-start;padding-top:5px} /* div상단부터 시작하게 */
+.form_block .form_group .checkcontainer{display:flex;min-width:150px}
