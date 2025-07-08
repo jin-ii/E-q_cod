@@ -9,6 +9,7 @@
         <!-- css -->
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/layout.css">
+         <link rel="stylesheet" href="./css/layout_new.css">
         <link rel="stylesheet" href="./css/contents.css">
 
         <!-- js -->
@@ -286,6 +287,7 @@
                 <h3 class="h3_title2">분석정보 표출</h3>
 
                 <div class="media_bgwrap">  
+                    <div class="total_count">전체 9 /<p class="count"><strong>1</strong> 페이지</p></div>
                     <div class="media_cctv_wrap">
                             <div class="cctv_box">
                                 <h4>충북저수지</h4>
@@ -392,6 +394,17 @@
                 <!-- //서브콘텐츠 -->        
 
             <style>
+                .total_count{display:flex;justify-content:flex-end;color:#767676;line-height:23px;font-size:14px}
+                .total_count .count{padding-left:7px}
+                .total_count strong{color:#767676;font-weight:700}
+
+              
+                .cctv_box{margin:0}
+                .media_cctv_wrap .cctv_box {
+                    width: calc(100% / 3 - 7px)
+                }
+                .media_cctv_wrap .cctv_box h4{color:#fff;background:#313131}
+                .media_cctv_wrap .cctv_box{width:calc(100% / 3 - 7px)}
                 /* 예외 */
                 #wrap{overflow-y:scroll}
                 .navbar{position:fixed}
