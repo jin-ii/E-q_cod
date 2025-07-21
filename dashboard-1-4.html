@@ -378,7 +378,7 @@
                 <img src="./images/common/sample_map2.jpg" alt="" style="width:100%">
               
                </div>
-                     <!-- 범례1 -->
+                     <!-- 범례1 
                       <div class="legend-container">
                         <div class="legend-title">지진반경</div>
                         <div class="legend-items">
@@ -397,69 +397,73 @@
                         
                         </div>
                     </div>
-                    <!-- //범례1-->
+                   //범례1-->
                     <!-- 범례2 -->
-                    <div class="legend-container-table" style="position:absolute;left:140px">
-                        <table>
-                            <colgroup>
-                                
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>계측기타입</th>
-                                    <th>
-                                        <div class="legend-item">
-                                            <div class="legend-color color-blue"></div>
-                                            <span>관심 (65초과)</span>
-                                        </div>
-                                    </th>
-                                    <th>
-                                        <div class="legend-item">
-                                            <div class="legend-color color-yellow"></div>
-                                            <span>주의 (65초과)</span>
-                                        </div>
-                                    </th>
-                                    <th>
-                                        <div class="legend-item">
-                                            <div class="legend-color color-orange"></div>
-                                            <span>경계 (65초과)</span>
-                                        </div>
-                                    </th>
-                                    <th>
-                                        <div class="legend-item">
-                                            <div class="legend-color color-red"></div>
-                                            <span>심각 (65초과)</span>
-                                        </div>
-                                    </th>
-                                </tr>     
-                            </thead>
-                            <tbody>                      
-                                <tr>
-                                    <td>저수위</td>
-                                    <td>-이하</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-이상</td>
-                                </tr>
-                                <tr>
-                                    <td>저수위</td>
-                                    <td>-이하</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-이상</td>
-                                </tr>
-                                <tr>
-                                    <td>저수위</td>
-                                    <td>-이하</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-이상</td>
-                                </tr>
-                              
-                            </tbody>
-                        </table>
-                       
-                    </div>
+                    <div class="legend-container-table" style="position:absolute;left:20px">
+                        <div class="legend_title">
+                             <h3>범례</h3>
+                             <div class="btn_fold"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="legend_contents">
+                            <table>
+                                <colgroup>                                    
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>계측기타입</th>
+                                        <th>
+                                            <div class="legend-item">
+                                                <div class="legend-color color-blue"></div>
+                                                <span>관심 (65초과)</span>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="legend-item">
+                                                <div class="legend-color color-yellow"></div>
+                                                <span>주의 (65초과)</span>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="legend-item">
+                                                <div class="legend-color color-orange"></div>
+                                                <span>경계 (65초과)</span>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="legend-item">
+                                                <div class="legend-color color-red"></div>
+                                                <span>심각 (65초과)</span>
+                                            </div>
+                                        </th>
+                                    </tr>     
+                                </thead>
+                                <tbody>                      
+                                    <tr>
+                                        <td>저수위</td>
+                                        <td>-이하</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-이상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>저수위</td>
+                                        <td>-이하</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-이상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>저수위</td>
+                                        <td>-이하</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-이상</td>
+                                    </tr>
+                                  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
                     <!-- //범례1 -->
                   
              
@@ -790,6 +794,21 @@ $(document).ready(function() {
 });
 
 
+    </script>
+
+    <!-- 범례 아코디언 스크립트 -->
+    <script>
+        // 범례 아코디언 기능
+        const legendTitle = document.querySelector('.legend_title');
+        const legendContents = document.querySelector('.legend_contents');
+        const legendContainer = document.querySelector('.legend-container-table');
+        const btnFold = document.querySelector('.btn_fold');
+
+        legendTitle.addEventListener('click', function() {
+            legendContents.classList.toggle('collapsed');
+            legendContainer.classList.toggle('collapsed');
+            btnFold.classList.toggle('collapsed');
+        });
     </script>
 </body>
 </html>

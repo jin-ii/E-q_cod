@@ -129,16 +129,27 @@
 .color-yellow{background-color:#F7C33B;}
 .color-orange{background-color:#F7A355;}
 .color-red{background-color:#F85C5C;}
+/* 범례 기능 추가 */
+.legend-container-table{transition:height 0.3s ease,min-height 0.3s ease}
+.legend-container-table.collapsed{height:auto !important;min-height:auto !important}
+.legend_title{display:flex;justify-content:space-between;align-items:center;padding:0;cursor:pointer}
+.legend_title h3{font-size:15px;color:#fff;margin:0}
+.legend_title .btn_fold{display:flex;align-items:center;justify-content:center;width:20px;height:20px}
+.legend_title .btn_fold i{color:#fff;font-size:14px;transition:transform 0.3s ease}
+.legend_title .btn_fold.collapsed i{transform:rotate(-180deg)}
+.legend_contents{opacity:1;transform:scaleY(1);transform-origin:top;transition:opacity 0.3s ease, transform 0.3s ease}
+.legend_contents.collapsed{opacity:0;transform:scaleY(0);height:0;overflow:hidden}
+
+.legend-container-table{position:absolute;bottom:20px;left:20px;background-color:rgb(40, 48, 72, 0.9);padding:12px;box-shadow:0 1px 5px rgba(0,0,0,0.1);min-height:130px}
+.legend-container-table table th,.legend-container-table table td{font-size:14px;padding:6px 10px;font-weight:300}
+.legend-container-table table th{border-bottom:1px solid rgba(255,255,255,0.2)}
+.legend-container-table table td{border-bottom:1px solid rgba(255,255,255,0.2);text-align:center}
 
 /* 범례2 */
 .legend-container{position:absolute;bottom:20px;left:20px;background-color:rgb(40, 48, 72, 0.9);padding:20px 45px 25px 15px;box-shadow:0 1px 5px rgba(0,0,0,0.1)}
 .legend-container .legend-items .custom-checkbox-label{color:#fff;font-weight:400;font-size:14px}
 
-/* 범례3 */
-.legend-container-table{position:absolute;bottom:20px;left:20px;background-color:rgb(40, 48, 72, 0.9);padding:12px;box-shadow:0 1px 5px rgba(0,0,0,0.1);min-height:130px}
-.legend-container-table table th,.legend-container-table table td{font-size:14px;padding:6px 10px;font-weight:300}
-.legend-container-table table th{border-bottom:1px solid rgba(255,255,255,0.2)}
-.legend-container-table table td{border-bottom:1px solid rgba(255,255,255,0.2);text-align:center}
+
 
 
 /* 누수 지역선택시 */
