@@ -346,10 +346,17 @@
                                         </svg>
                                         <div class="btn-feedback"></div>
                                     </button>
-                                    <button class="control-btn ptz-btn center" data-direction="home">
-                                        <i class="fa-solid fa-rotate-right"></i>
-                                        <div class="btn-feedback"></div>
-                                    </button>
+                                    <div class="ptz-center-controls">
+                                        <button class="control-btn ptz-center-btn zoom-in-center" id="zoomInCenter">
+                                            <span style="font-weight: bold; font-size: 20px;">+</span>
+                                            <div class="btn-feedback"></div>
+                                        </button>
+                                        <div class="zoom-text">Zoom</div>
+                                        <button class="control-btn ptz-center-btn zoom-out-center" id="zoomOutCenter">
+                                            <span style="font-weight: bold; font-size: 20px;">−</span>
+                                            <div class="btn-feedback"></div>
+                                        </button>
+                                    </div>
                                     <button class="control-btn ptz-btn" data-direction="right">
                                         <svg viewBox="0 0 24 24">
                                             <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
@@ -405,6 +412,10 @@
     .control-btn:active{transform:translateY(0);box-shadow:0 4px 16px rgba(0,0,0,0.5),inset 0 2px 4px rgba(0,0,0,0.3);}
     .ptz-pad{position:absolute;bottom:30px;left:30px;width:180px;height:180px;pointer-events:auto;}
     .ptz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;width:100%;height:100%;}
+    .ptz-center-controls{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;width:100%;height:100%;background-color:#ffffff;border-radius:8px;padding:8px;box-sizing:border-box;}
+    .ptz-center-btn{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;background-color:#ffffff;border:1px solid rgba(0,0,0,0.2);color:#333;}
+    .ptz-center-btn:hover{background-color:#f5f5f5;border-color:rgba(0,0,0,0.4);}
+    .zoom-text{color:#333;font-size:12px;font-weight:500;margin:2px 0;}
     .ptz-btn{border-radius:8px;}
     .ptz-btn svg{width:20px;height:20px;fill:currentColor;transition:all 0.3s ease;}
     .ptz-btn:hover svg{transform:scale(1.15);}
@@ -532,6 +543,15 @@
         });
 
         document.getElementById('zoomOut').addEventListener('click', () => {
+            adjustZoom('out');
+        });
+
+        // 가운데 영역의 줌 버튼 이벤트
+        document.getElementById('zoomInCenter').addEventListener('click', () => {
+            adjustZoom('in');
+        });
+
+        document.getElementById('zoomOutCenter').addEventListener('click', () => {
             adjustZoom('out');
         });
 
