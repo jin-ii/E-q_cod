@@ -290,14 +290,14 @@
                     <div class="total_count">전체 9 /<p class="count"><strong>1</strong> 페이지</p></div>
                     <div class="media_cctv_wrap">
                             <div class="cctv_box">
-                                <h4>충북저수지</h4>
+                                <h4>충북저수지<button type="button" class="btn_light" title="조명 ON/OFF"><i class="fa-solid fa-lightbulb"></i></button></h4>
                                 <div class="cctv_screen">
-                                    <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">                                    
-                                </div> 
+                                    <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">
+                                </div>
                                 <div class="alarm alarm-1">
                                     호우특보 : 충청북도(청주시, 보은군, 괴산군, 옥천군)
                                 </div>
-                                <a href="" class="btn_expand"><img src="images/icon/icon_cctv_expand.png" alt="확대"></a>                              
+                                <a href="" class="btn_expand"><img src="images/icon/icon_cctv_expand.png" alt="확대"></a>
                                 <ul class="data_list">
                                     <li>저수지수위 <strong>123mm</strong></li>
                                     <li>일누적강우량 <strong>102%</strong></li>
@@ -305,10 +305,10 @@
                             </div>
                
                             <div class="cctv_box">
-                                <h4>충북저수지</h4>
+                                <h4>충북저수지<button type="button" class="btn_light" title="조명 ON/OFF"><i class="fa-solid fa-lightbulb"></i></button></h4>
                                 <div class="cctv_screen">
-                                    <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">                                    
-                                </div> 
+                                    <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">
+                                </div>
                                 <div class="alarm alarm-2">
                                     호우특보 : 충청북도(청주시, 보은군, 괴산군, 옥천군)
                                 </div>
@@ -320,7 +320,7 @@
                             </div>
 
                             <div class="cctv_box">
-                                <h4>충북저수지</h4>
+                                <h4>충북저수지<button type="button" class="btn_light" title="조명 ON/OFF"><i class="fa-solid fa-lightbulb"></i></button></h4>
                                 <div class="cctv_screen">
                                     <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">                                    
                                 </div> 
@@ -334,7 +334,7 @@
                             </div>
 
                             <div class="cctv_box">
-                                <h4>충북저수지</h4>
+                                <h4>충북저수지<button type="button" class="btn_light" title="조명 ON/OFF"><i class="fa-solid fa-lightbulb"></i></button></h4>
                                 <div class="cctv_screen">
                                     <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">                                    
                                 </div> 
@@ -348,7 +348,7 @@
                             </div>
 
                             <div class="cctv_box">
-                                <h4>충북저수지</h4>
+                                <h4>충북저수지<button type="button" class="btn_light" title="조명 ON/OFF"><i class="fa-solid fa-lightbulb"></i></button></h4>
                                 <div class="cctv_screen">
                                     <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">                                    
                                 </div> 
@@ -362,7 +362,7 @@
                             </div>
 
                             <div class="cctv_box">
-                                <h4>충북저수지</h4>
+                                <h4>충북저수지<button type="button" class="btn_light" title="조명 ON/OFF"><i class="fa-solid fa-lightbulb"></i></button></h4>
                                 <div class="cctv_screen">
                                     <img src="images/common/cctv_sample1.jpg" alt="cctv샘플">                                    
                                 </div> 
@@ -407,11 +407,32 @@
                 }
                 .media_cctv_wrap .cctv_box h4{color:#fff;background:#313131}
                 .media_cctv_wrap .cctv_box{width:calc(100% / 3 - 7px)}
+                /* 전구 아이콘 */
+                .cctv_box h4{display:flex;align-items:center;justify-content:space-between}
+                .btn_light{
+                    background:rgba(0,0,0,0.4);border:none;cursor:pointer;
+                    width:34px;height:34px;display:flex;justify-content:center;align-items:center;
+                    color:#fff;font-size:16px;line-height:1;opacity:0.9;
+                    transition:color .2s,text-shadow .2s,background .2s;
+                }
+                .btn_light:hover{background:rgba(0,0,0,0.5)}
+                .btn_light.on{
+                    color:#ffc107;
+                    text-shadow:0 0 8px rgba(255,193,7,.6),0 0 16px rgba(255,193,7,.3);
+                }
                 /* 예외 */
                 #wrap{overflow-y:scroll}
                 .navbar{position:fixed}
                 .contents_wrap{height:100%}
             </style>
+
+            <script>
+                document.querySelectorAll('.btn_light').forEach(function(btn){
+                    btn.addEventListener('click',function(){
+                        this.classList.toggle('on');
+                    });
+                });
+            </script>
         </div>        
     </body>
 </html>
